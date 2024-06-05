@@ -1,6 +1,6 @@
 {
     "id": "21664034",
-    "path": "~/GitHub/FIP606.site/index.qmd",
+    "path": "~/GitHub/FIP606_2024/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
     "hash": "0",
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "30:0"
+        "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
     "lastKnownWriteTime": 1717596467,
