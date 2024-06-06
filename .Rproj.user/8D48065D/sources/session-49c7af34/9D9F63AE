@@ -1,12 +1,12 @@
 {
-    "id": "21664034",
-    "path": "~/GitHub/FIP606/index.qmd",
-    "project_path": "index.qmd",
+    "id": "9D9F63AE",
+    "path": "~/GitHub/FIP606/R_codes/Aula_1.qmd",
+    "project_path": "R_codes/Aula_1.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "787009777",
     "contents": "",
     "dirty": false,
-    "created": 1717596478939.0,
+    "created": 1717681616770.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
@@ -16,16 +16,17 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0",
-        "cursorPosition": "10,0",
-        "scrollLine": "0"
+        "cursorPosition": "10,16",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "115:178.6666717529297",
+        "chunk_output_type": "console"
     },
     "folds": "",
-    "lastKnownWriteTime": 1717679206,
+    "lastKnownWriteTime": 1717681673,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1717679206516,
+    "last_content_update": 1717681673939,
     "read_only": false,
     "read_only_alternatives": []
 }
