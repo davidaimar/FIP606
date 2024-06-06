@@ -12,5 +12,33 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "R_codes/Aula_2.html",
+    "href": "R_codes/Aula_2.html",
+    "title": "Aula_2",
+    "section": "",
+    "text": "A instalação de pacotes pode ser feita através do menu: Tools &gt; Install packages…, ou ainda:\n\n#install.packages(nome do pacote de interesse)"
+  },
+  {
+    "objectID": "R_codes/Aula_2.html#instalação-de-pacotes",
+    "href": "R_codes/Aula_2.html#instalação-de-pacotes",
+    "title": "Aula_2",
+    "section": "",
+    "text": "A instalação de pacotes pode ser feita através do menu: Tools &gt; Install packages…, ou ainda:\n\n#install.packages(nome do pacote de interesse)"
+  },
+  {
+    "objectID": "R_codes/Aula_1.html",
+    "href": "R_codes/Aula_1.html",
+    "title": "Aula_1",
+    "section": "",
+    "text": "A &lt;- 1\nB &lt;- 2\nC &lt;- 3\n\n#valores adiconados aqui, irão aparecer como objetos com dados \n\n#uso de dois ** para deixar em negrito exemplo #uso de um * deixa ele em itálico exemplo\n#Para criar um data.frame\nIMPORTANTE #tem que ser o mesmo número de linhas e vetores\n\ndf &lt;- data.frame(A, B)\n\n#Como pedir ajuda\n\nhelp(data.frame)\n\nstarting httpd help server ... done\n\n#Aparece a resposta do que a função faz na aba de ajuda \"help\"\n\n#Também podemos fazer operações\n\n1 + 1\n\n[1] 2\n\n2/3\n\n[1] 0.6666667\n\n3*4\n\n[1] 12\n\nA + B\n\n[1] 3\n\nC * A\n\n[1] 3\n\nB / C\n\n[1] 0.6666667\n\n#Pode fazer operações com os número e também com os vetores com valores atribuidos \n\nYou can add options to executable code like this\n#Usado para confirmar a informação colocada\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "R_codes/Aula_1.html#aprendendo-a-atribuir-valores",
+    "href": "R_codes/Aula_1.html#aprendendo-a-atribuir-valores",
+    "title": "Aula_1",
+    "section": "",
+    "text": "A &lt;- 1\nB &lt;- 2\nC &lt;- 3\n\n#valores adiconados aqui, irão aparecer como objetos com dados \n\n#uso de dois ** para deixar em negrito exemplo #uso de um * deixa ele em itálico exemplo\n#Para criar um data.frame\nIMPORTANTE #tem que ser o mesmo número de linhas e vetores\n\ndf &lt;- data.frame(A, B)\n\n#Como pedir ajuda\n\nhelp(data.frame)\n\nstarting httpd help server ... done\n\n#Aparece a resposta do que a função faz na aba de ajuda \"help\"\n\n#Também podemos fazer operações\n\n1 + 1\n\n[1] 2\n\n2/3\n\n[1] 0.6666667\n\n3*4\n\n[1] 12\n\nA + B\n\n[1] 3\n\nC * A\n\n[1] 3\n\nB / C\n\n[1] 0.6666667\n\n#Pode fazer operações com os número e também com os vetores com valores atribuidos \n\nYou can add options to executable code like this\n#Usado para confirmar a informação colocada\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
   }
 ]

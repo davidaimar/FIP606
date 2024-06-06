@@ -1,0 +1,18 @@
+---
+title: "introdução"
+formart: html
+---
+
+## Conhecendo o R
+
+O R é um software amplamente utilizado por estatísticos, analistas de dados, cientistas de dados e pesquisadores para realizar análises estatística, visualização gráfica, modelagem estatística, computação científica e que também pode ser utilizado como uma linguagem de programação. Esta ferramenta está sob livre acesso mediante os termos da [Licença Pública Geral GNU](https://www.r-project.org/COPYING) da [Free Software Foundation](http://www.gnu.org/.
+
+
+## O que é RStudio?
+
+RStudio é um ambiente de desenvolvimento integrado para programação em R. 
+ 
+
+## Download e instalação do R e RStudio
+
+Você pode realizar o download do R e do RStudio para **Windows**, **Linux** e **MacOS através** do link: (https://posit.co/download/rstudio-desktop/). Para mais detalhes sobre a instalação desses programas acessse: (https://intro2r.com/chap1.html)

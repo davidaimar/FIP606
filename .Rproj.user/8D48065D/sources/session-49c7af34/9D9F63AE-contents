@@ -1,12 +1,14 @@
 ---
 title: "Aula_1"
 format: html
-editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
 
-# Running Code
+## Conhecendo a interface do RStudio
+
+## O que um **Quarto Document**?
+
+## Caracaterização de dados
+
 
 ## Aprendendo a atribuir valores
 

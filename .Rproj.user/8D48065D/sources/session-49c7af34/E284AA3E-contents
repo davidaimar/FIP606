@@ -11,4 +11,3 @@ A instalação de pacotes pode ser feita através do menu: Tools \> Install pack
 ```{r}
 #install.packages(nome do pacote de interesse)
 ```
-

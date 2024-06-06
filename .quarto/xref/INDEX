@@ -4,5 +4,38 @@
   },
   "index.qmd": {
     "index.html": "d3c215b4"
+  },
+  "R_codes/Aula_2.qmd": {
+    "Aula_2.html": "5c44ff10"
+  },
+  "R_codes/Aula_1.qmd": {
+    "Aula_1.html": "d4b804b6"
+  },
+  "R_codes/Aula_10.qmd": {
+    "Aula_10.html": "2eda2e4a"
+  },
+  "R_codes/Aula_11.qmd": {
+    "Aula_11.html": "a1c1a6ca"
+  },
+  "R_codes/Aula_3.qmd": {
+    "Aula_3.html": "51d5e097"
+  },
+  "R_codes/Aula_4.qmd": {
+    "Aula_4.html": "e5336f04"
+  },
+  "R_codes/Aula_5.qmd": {
+    "Aula_5.html": "c2896b65"
+  },
+  "R_codes/Aula_6.qmd": {
+    "Aula_6.html": "ebeede06"
+  },
+  "R_codes/Aula_7.qmd": {
+    "Aula_7.html": "85136c40"
+  },
+  "R_codes/Aula_8.qmd": {
+    "Aula_8.html": "f7f94a1d"
+  },
+  "R_codes/Aula_9.qmd": {
+    "Aula_9.html": "663947d5"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "hash": "5a50d6fa8aa8bb7605f506a8a7340e55",
+  "result": {
+    "markdown": "---\ntitle: \"Aula_2\"\nformat: html\n---\n\n\n\n## Instalação de Pacotes\n\nA instalação de pacotes pode ser feita através do menu: Tools \\> Install packages..., ou ainda:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#install.packages(nome do pacote de interesse)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
