@@ -5,7 +5,7 @@
     "type": "yaml",
     "hash": "1213719323",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1717596479873.0,
     "source_on_save": false,
     "relative_order": 2,
@@ -16,11 +16,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1717678248,
+    "lastKnownWriteTime": 1717679330,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1717678603920,
+    "last_content_update": 1717679330856,
     "read_only": false,
     "read_only_alternatives": []
 }
