@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "FIP606.site",
+    "title": "Bem-vindo",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Este é o Quarto website para disponibilizar as aulas em [RStudio] sobre Análise e Visualização de Dados em Fitopatologia da disciplina FIP 606, oferecida no Programa de Pós-graduação em Fitopatologia da Universidade Federal de Viçosa pelo professor Emerson M Del Ponte. As aulas são códigos comentados e estão organizadas em “Fundamentos”, “Análise Exploratória” e “Análise de Dados”. O objetivo do website é compartilhar o conhecimento aprendido com outros colegas da área e despertar o interesse daqueles que ainda não conhecem o tema.\n\nEspero que aproveite!"
   },
   {
     "objectID": "about.html",
