@@ -1,9 +1,10 @@
 project:
   type: website
   output-dir: docs
+  
 
 website:
-  title: "FIP606.site"
+  title: "FIP606"
   navbar:
     left:
       - href: index.qmd

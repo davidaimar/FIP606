@@ -1,29 +1,31 @@
 {
     "id": "21664034",
-    "path": "~/GitHub/FIP606_2024/index.qmd",
+    "path": "~/GitHub/FIP606/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3628662361",
     "contents": "",
     "dirty": false,
     "created": 1717596478939.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
-        "rmdVisualMode": "true",
+        "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
         "source_window_id": "",
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "2:0",
+        "cursorPosition": "12,27",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1717596467,
+    "lastKnownWriteTime": 1717678798,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1717596467,
+    "last_content_update": 1717678798200,
     "read_only": false,
     "read_only_alternatives": []
 }
