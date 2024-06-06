@@ -1,6 +1,7 @@
 ---
-title: "introdução"
+title: "Introdução"
 formart: html
+author: "David Aimar"
 ---
 
 ## Conhecendo o R
@@ -10,8 +11,26 @@ O R é um software amplamente utilizado por estatísticos, analistas de dados, c
 
 ## O que é RStudio?
 
-RStudio é um ambiente de desenvolvimento integrado para programação em R. 
- 
+RStudio é um ambiente de desenvolvimento integrado para programação em R. Ele oferece uma interface intuitiva e poderosa que simplifica a escrita de código, a execução de análises, a criação de gráficos e a gestão de projetos. O RStudio está disponível em duas versões principais: uma gratuita (RStudio Desktop) e uma paga (RStudio Server Pro), que oferece funcionalidades adicionais e suporte profissional.
+
+### Conhecendo a interface do RStudio
+
+A interface do RStudio oferece recursos como:
+
+**Editor de script:** Um editor de texto avançado para escrever e editar scripts em R.
+
+**Console:** Onde os comandos em R podem ser executados interativamente.
+
+**Ambiente de trabalho:** Uma visualização das variáveis, dados e objetos atualmente carregados na sessão de R.
+
+**Painel de arquivos:** Para navegação e gestão de arquivos do projeto.
+
+**Visualização de gráficos:** Uma área dedicada para exibir gráficos gerados pelo código em R.
+
+**Ferramentas de depuração**: Para ajudar a encontrar e corrigir erros no código.
+
+O RStudio facilita o trabalho com R, tornando-o mais eficiente e acessível, especialmente para iniciantes na linguagem.
+
 
 ## Download e instalação do R e RStudio
 

@@ -1,1 +1,285 @@
+---
+title: "Aula 3"
+format: html
+author: "David Aimar"
+---
+
+Pacotes Utilizados
+
+```{r}
+library(tidyverse)
+library(ggthemes)
+library(patchwork)
+
+```
+
+
+Importando os Dados no formato CSV
+```{r}
+cr <- read_csv("https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv")
+
+```
+
+
+Analisando a estrutura dos dados importados
+```{r}
+glimpse(cr)
+
+```
+
+
+Sumarizando informação para a variável incidência
+```{r}
+summary(cr$inc)
+
+```
+
+
+
+```{r}
+#Gráficos de histograma avaliando a incidência geral e por região
+cr |>
+  ggplot(aes(x = inc)) +
+  geom_histogram()
+
+cr |>
+  ggplot(aes(x = inc)) +
+  geom_histogram() +
+  facet_wrap(~region)
+```
+
+```{r}
+#Medidas de tendência central para incidência
+cr |> 
+  group_by(cultivar) |> 
+  summarize(inc_med = median(inc),
+            inc_mean = mean(inc),
+            sd_mean = sd(inc))
+```
+
+#Fazendo boxplot para as mesma variável
+
+```{r}
+
+cr |> 
+  ggplot(aes(x = inc)) +
+  geom_boxplot()
+
+cr |> 
+  ggplot(aes(x = inc)) +
+  geom_boxplot() +
+  facet_wrap(~region)
+
+#Duas variáveis: propriedade e incidência
+cr |>
+  ggplot(aes(x = farm, inc)) +
+  geom_boxplot()
+
+```
+
+```{r}
+#Gráficos para severidade
+cr |> 
+  ggplot(aes(inc, sev2))+
+  geom_point()
+
+cr |> 
+  ggplot(aes(x = sev2)) +
+  geom_histogram() +
+  facet_wrap(~region)
+```
+
+```{r}
+#Medidas de tendência central para severidade
+cr |> 
+  group_by(cultivar) |> 
+  summarize(inc_med = median(sev2),
+            inc_mean = mean(sev2),
+            sd_mean = sd(sev2))
+```
+
+```{r}
+#Medidas de tendência central para severidade
+cr |> 
+  group_by(cultivar) |> 
+  summarize(inc_med = median(sev2),
+            inc_mean = mean(sev2),
+            sd_mean = sd(sev2))
+```
+
+```{r}
+#Histogramas para a severidade por região e cultivar 
+cr |> 
+  ggplot(aes(x = sev2, fill = region)) +
+  geom_histogram() +
+  facet_wrap(~region~cultivar, ncol = 6)+
+  theme_classic(base_size = 12)+
+  scale_fill_colorblind()
+
+```
+
+```{r}
+#Gráfico histograma com cores
+
+#Gráfico1
+cr |> 
+  ggplot(aes(x = sev2, fill = region))+
+  geom_histogram()+
+  facet_grid(region~cultivar)+
+  scale_fill_colorblind()
+
+#Gráfico2
+cr |> 
+  ggplot(aes(x = sev2, fill = region))+
+  geom_histogram(color = 'black')+
+  facet_grid(region~cultivar)+
+  scale_fill_manual(values = c("red", "blue")) +
+  theme_minimal(base_size = 12)+
+  theme(legend.position = "bottom")+
+  labs(y = "Frequency",
+       x = "Severity (%)", fill = "Region")
+
+```
+
+#Salvar o último gráfico
+
+```{r}
+ggsave("cr.png", bg = 'white')
+```
+
+
+# Criar subconjuntos
+
+Utilizando as funções 'select()' e 'filter()' do pacote **dplyr** para selecionar colunas e linhas respectivamente.
+```{r}
+#Filtrar Oromia
+cr_oromia <- cr |>
+  select(farm, region, cultivar, sev2) |> 
+  filter( region == "Oromia")
+
+cr2
+
+#Filtrar SNNPR
+cr_pr <- cr |>
+  select(farm, region, cultivar, sev2) |> 
+  filter( region == "SNNPR")
+
+cr_pr
+
+```
+
+
+## Criar gráficos para vizualizar os subconjuntos
+
+Gráficos ggplot para cada subconjunto
+
+```{r}
+p1 <- cr_oromia |> 
+  ggplot(aes(x = cultivar, y = sev2, fill = cultivar)) +
+  geom_boxplot()+
+  labs(title = "Oromia",
+        x = "Cultivar",
+       y = "Severity (%)")+
+  theme_classic()
+
+p1
+
+p2 <- cr_pr |> 
+  ggplot(aes(x = cultivar, y = sev2, fill = cultivar)) +
+  geom_boxplot()+
+  labs(title = "SNNPR",
+       x = "Cultivar",
+       y = "Severity (%)")+
+  theme_classic()
+
+p2
+
+#Combinando os dois gráficos
+p1 + p2
+
+#Deixar somente uma legenda
+(p1 | p2) +
+  plot_layout(guides = 'collect')
+
+
+#Remover título e colocar letra
+  p3 <- cr_oromia |> 
+  ggplot(aes(x = cultivar, y = sev2,
+             fill = cultivar)) +
+  geom_boxplot()+
+  labs(x = "Cultivar",
+       y = "Severity (%)")+
+  theme_classic()
+
+p3
+
+p4 <- cr_pr |> 
+  ggplot(aes(x = cultivar, y = sev2,
+             fill = cultivar)) +
+  geom_boxplot()+
+  labs(x = "Cultivar",
+       y = "Severity (%)")+
+  theme_classic()
+
+p4
+
+(p3 | p4) +
+  plot_layout(guides = 'collect')+
+  plot_annotation(tag_levels = 'A')
+
+```
+
+
+```{r}
+
+#Rotacionando as coordenadas com 'coord_flip()'
+
+p5 <- cr_oromia |> 
+  ggplot(aes(x = cultivar, y = sev2, fill = cultivar)) +
+  geom_boxplot()+
+  labs(x = "", #removendo o nome do eixo x por questão de estética
+       y = "Severity (%)")+
+  theme_classic()+
+  scale_fill_canva()+
+  coord_flip()
+
+p5
+
+p6 <- cr_pr |> 
+  ggplot(aes(x = cultivar, y = sev2, fill = cultivar)) +
+  geom_boxplot()+
+  labs(x = "",
+       y = "Severity (%)")+
+  theme_classic()+
+ scale_fill_canva()+
+  coord_flip()
+
+p6
+
+#Combinando os dois gráficos mais uma vez
+ pacht <- (p5 / p6) +
+  plot_layout(guides = 'collect', axis_titles = 'collect')+
+  plot_annotation(tag_levels = 'A', title = "Coffe rust in Ethiopia") #Colocando o título no gráfico e separando as regiões em A e B
+ 
+   
+ 
+ pacht
+
+ggsave("patch.png", width = 10, height = 8)
+```
+
+```{r}
+#E se eu quiser inserir?
+p7 <- cr_oromia |> 
+  ggplot(aes(x = sev2, fill = cultivar)) +
+  geom_histogram()+
+  labs(title = "Oromia",
+        x = "Cultivar",
+       y = "Severity (%)")+
+  theme_classic()+
+  scale_fill_canva()
+p7
+
+p5 + inset_element(p7, left = 0.6, bottom = 0.6, right = 1, top = 1)
+```
 
