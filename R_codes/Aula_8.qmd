@@ -323,4 +323,3 @@ Anova(mofo3)
 confint(mofo3, method = "Wald")
 
 ```
-

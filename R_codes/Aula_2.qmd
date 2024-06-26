@@ -4,7 +4,7 @@ format: html
 author: "David Aimar"
 ---
 
-## Instalação de Pacotes
+## Pacotes no RStudio
 
 A instalação de pacotes pode ser feita através do menu: Tools \> Install packages..., ou ainda:
 

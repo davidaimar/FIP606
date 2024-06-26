@@ -5,11 +5,72 @@ project:
 
 website:
   title: "FIP606"
+  favicon: imgs/icon.png
+  image: imgs/perfil.jpg
+
   navbar:
+  pinned: true
+  logo: imgs/icon.png
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+
+ - text: Conhecendo o R
+        menu:
+         - href: R_codes/Introdução.qmd
+           text: Introdução ao R
+         - href: R_codes/Aula1.qmd
+           text: Conhecendos arquivos R
+         - href: R_codes/Aula_2.qmd
+           text: Instalando pacotes
+            
+      - text: Análise visual
+        menu: 
+        - href: R_codes/Aula_3.qmd
+          text: Importação, vizualização e sumarização de dados 
+        - href: Aula4.qmd
+          text: Outros meios de importação
+        
+      - text: Análises estatísticas
+        menu:  
+        - href: R_codes/Aula_5.qmd
+          text: Analisando um conjunto de dados particular
+        - href: R_codes/Aula_6.qmd
+          text: Testes estatísticos
+        - href: R_codes/Aula_7.qmd
+          text: ANOVA (DBC) 
+        - href: R_codes/Aula_8.qmd
+          text: Experimentos em parcelas subdividas e regressão linear
+        - href: R_codes/Aula_9.qmd
+          text: Apredendo mais sobre modelos lineares
+      
+      - text: Mapas em R
+        menu: 
+        - href: R_codes/Aula_10.qmd
+          text: Elaboração de Mapas
+  
+          
+        
+   tools:
+       - icon: linkedin
+         href: https://www.linkedin.com/in/david-aimar-sousa-silva-32b30022a/
+       - icon: instagram
+         menu: 
+            - text: David Aimar
+              url: https://www.instagram.com/aimar_davi/
+            - text: Emerson M. Del Ponte
+              url: https://www.instagram.com/emdelponte/
+            - text: Fitopatolofia UFV
+              url: https://www.instagram.com/fitopatologiaufv/
+       - icon: youtube
+         href: https://www.youtube.com/edelponte
+       - icon: github
+         menu: 
+            - text: David Aimar
+              url: https://github.com/davidaimar
+            - text: Emerson M. Del Ponte
+              url: https://github.com/emdelponte
 
 format:
   html:
