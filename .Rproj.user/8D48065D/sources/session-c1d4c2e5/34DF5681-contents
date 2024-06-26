@@ -2,77 +2,123 @@ project:
   type: website
   output-dir: docs
   
+execute: 
+  cache: true
+  freeze: auto
 
 website:
-  title: "FIP606"
   favicon: imgs/icon.png
-  image: imgs/perfil.jpg
-
+  reader-mode: true
+  page-navigation: true
+  title: "FIP606"
   navbar:
-   pinned: true
-   logo: imgs/icon.png
-   left:
-    - text: Conhecendo o R
-      menu:
-         - href: R_codes/Introdução.qmd
-           text: Introdução ao R
-         - href: R_codes/Aula1.qmd
-           text: Conhecendos arquivos R
-         - href: R_codes/Aula_2.qmd
-           text: Instalando pacotes
-            
-    - text: Análise visual
-      menu: 
+    pinned: true
+    logo: imgs/icon.png
+    border: false
+    background: "White"
+    search: true
+    left:
+     - text: "Home"
+       file: index.qmd
+     - text: "Fundamentos Básicos"
+       menu:
+       - text: "Arquivos R"
+         file: R_codes/Aula1.qmd
+       - text: "Pacotes no RStudio"
+         file: R_codes/Aula_2.qmd
+     - text: "Análise Exploratória"
+       menu:
+       - text: "Importação, vizualização e sumarização de dados "
+         file: R_codes/Aula_3.qmd
+       - text: "Outros meios de importação"
+         file: R_codes/Aula_4.qmd
+     - text: "Análises Estatísticas"
+       menu:
+       - text: "Analisando um conjunto de dados particular"
+         file: R_codes/Aula_5.qmd
+       - text: "Testes estatísticos"
+         file: R_codes/Aula_6.qmd
+       - text: "ANOVA (DBC)"
+         file: R_codes/Aula_7.qmd
+       - text: "Experimentos em parcelas subdividas e regressão linear"
+         file: R_codes/Aula_8.qmd
+       - text: "Apredendo mais sobre modelos lineares"
+         file: R_codes/Aula_9.qmd
+     - text: "Mapas em R"
+       file: R_codes/Aula_10.qmd
+    right:
+     - icon: linkedin
+       href: https://www.linkedin.com/in/david-aimar-sousa-silva-32b30022a/
+     - icon: instagram
+       menu:
+         - text: David Aimar
+           url: https://www.instagram.com/aimar_davi/
+         - text: Emerson M. Del Ponte
+           url: https://www.instagram.com/emdelponte/
+         - text: Fitopatolofia UFV
+           url: https://www.instagram.com/fitopatologiaufv/
+     - icon: github
+       menu: 
+         - text: David Aimar
+           url: https://github.com/davidaimar
+         - text: Emerson M. Del Ponte
+           url: https://github.com/emdelponte
+         - text: Reportar erro
+           url:  mailto:david.aimar@ufv.br
+  sidebar: 
+    - title: "Home"
+      contents:
+        - href: index.qmd
+          text: Boas vindas
+        - href: R_codes/Introdução.qmd
+          text: Início
+        - href: R_codes/apresentação.qmd
+          text: Sobre o autor
+    - title: "Fundamentos Básicos"
+      contents:
+        - href: R_codes/Aula_1.qmd
+          text: Arquivos R
+        - href: R_codes/Aula_2.qmd
+          text: Pacotes no RStudio
+    - title: "Análise Exploratória" 
+      contents:
         - href: R_codes/Aula_3.qmd
-          text: Importação, vizualização e sumarização de dados 
-        - href: Aula4.qmd
-          text: Outros meios de importação
-      
-    - text: Análises estatísticas
-      menu:  
+          text: Aprendendo a importar dados
+        - href: R_codes/Aula_4.qmd
+          text: Conhecendo outros pacotes
+    - title: ""
+      contents:
+        - text: 
+          file: 
+        - text: "---"    
         - href: R_codes/Aula_5.qmd
-          text: Analisando um conjunto de dados particular
+          text: 
         - href: R_codes/Aula_6.qmd
-          text: Testes estatísticos
+          text:  
+    - title: "Anova"   
+      contents:
+        - text: 
+          file:
+        - text: "---"  
         - href: R_codes/Aula_7.qmd
-          text: ANOVA (DBC) 
+          text: 1 Fator
         - href: R_codes/Aula_8.qmd
-          text: Experimentos em parcelas subdividas e regressão linear
+          text: 2 ou mais fatores
         - href: R_codes/Aula_9.qmd
-          text: Apredendo mais sobre modelos lineares
-      
-    - text: Mapas em R
-      menu: 
+          text: DBC
+    - title: "Anova"   
+      contents:
         - href: R_codes/Aula_10.qmd
-          text: Elaboração de Mapas
-  
-          
-        
-   tools:
-       - icon: linkedin
-         href: https://www.linkedin.com/in/david-aimar-sousa-silva-32b30022a/
-       - icon: instagram
-         menu: 
-            - text: David Aimar
-              url: https://www.instagram.com/aimar_davi/
-            - text: Emerson M. Del Ponte
-              url: https://www.instagram.com/emdelponte/
-            - text: Fitopatolofia UFV
-              url: https://www.instagram.com/fitopatologiaufv/
-       - icon: youtube
-         href: https://www.youtube.com/edelponte
-       - icon: github
-         menu: 
-            - text: David Aimar
-              url: https://github.com/davidaimar
-            - text: Emerson M. Del Ponte
-              url: https://github.com/emdelponte
 
+  page-footer:
+    border: true
+    left: "Copyright 2024, David Aimar"
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: default
+      dark: cyborg
+      
     css: styles.css
     toc: true
-
 editor: visual
-
