@@ -1,0 +1,7 @@
+"0","BRA <- ne_states (country = ""Brazil"","
+"0","                  returnclass = ""sf"")"
+"0",""
+"0","world <- ne_countries()"
+"0",""
+"0","ggplot(BRA) + geom_sf(fill = ""white"")"
+"0",""

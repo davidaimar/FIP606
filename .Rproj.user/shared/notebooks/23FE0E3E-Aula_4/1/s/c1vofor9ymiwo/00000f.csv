@@ -1,0 +1,37 @@
+"0","install.packages(""datapasta"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/david/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+"
+"2","tentando a URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/datapasta_3.1.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 698237 bytes (681 KB)
+"
+"2","downloaded 681 KB
+
+"
+"1","package ‘datapasta’ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\david\AppData\Local\Temp\RtmpW4GVVA\downloaded_packages"
+"1",""
+"1","
+"
+"0","install.packages(""pak"")"
+"1","Error in "
+"1",""
+"1","install.packages"
+"1",""
+"1"," : "
+"1",""
+"1","Updating loaded packages"
+"1",""
+"1","
+"

@@ -58,12 +58,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./imgs/icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,6 +105,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./imgs/icon.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">FIP606</span>
     </a>
@@ -115,16 +118,117 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-conhecendo-o-r" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Conhecendo o R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-conhecendo-o-r">    
+        <li>
+    <a class="dropdown-item" href="./R_codes/Introdução.html" rel="" target="">
+ <span class="dropdown-text">Introdução ao R</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
- <span class="menu-text">About</span></a>
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula1.qmd" rel="" target="">
+ <span class="dropdown-text">Conhecendos arquivos R</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_2.html" rel="" target="">
+ <span class="dropdown-text">Instalando pacotes</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-visual" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Análise visual</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-visual">    
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_3.html" rel="" target="">
+ <span class="dropdown-text">Importação, vizualização e sumarização de dados</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula4.qmd" rel="" target="">
+ <span class="dropdown-text">Outros meios de importação</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análises-estatísticas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Análises estatísticas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análises-estatísticas">    
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_5.html" rel="" target="">
+ <span class="dropdown-text">Analisando um conjunto de dados particular</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_6.html" rel="" target="">
+ <span class="dropdown-text">Testes estatísticos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_7.html" rel="" target="">
+ <span class="dropdown-text">ANOVA (DBC)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_8.html" rel="" target="">
+ <span class="dropdown-text">Experimentos em parcelas subdividas e regressão linear</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_9.html" rel="" target="">
+ <span class="dropdown-text">Apredendo mais sobre modelos lineares</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mapas-em-r" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Mapas em R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mapas-em-r">    
+        <li>
+    <a class="dropdown-item" href="./R_codes/Aula_10.html" rel="" target="">
+ <span class="dropdown-text">Elaboração de Mapas</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://www.linkedin.com/in/david-aimar-sousa-silva-32b30022a/" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-instagram"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://www.instagram.com/aimar_davi/">
+            David Aimar
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://www.instagram.com/emdelponte/">
+            Emerson M. Del Ponte
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://www.instagram.com/fitopatologiaufv/">
+            Fitopatolofia UFV
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://www.youtube.com/edelponte" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com/davidaimar">
+            David Aimar
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com/emdelponte">
+            Emerson M. Del Ponte
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
