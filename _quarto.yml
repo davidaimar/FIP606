@@ -11,10 +11,14 @@ website:
   navbar:
   pinned: true
   logo: imgs/icon.png
+  border: false
+  background: "White"
+  search: true
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+        text: O autor
 
  - text: Conhecendo o R
         menu:

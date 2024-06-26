@@ -3,14 +3,15 @@ title: "Aula 4"
 format: html
 ---
 
-
 # Pacotes
+
 ```{r}
 install.packages("datapasta")
 install.packages("pak")
 ```
 
 #Usando o pak para instalar pacotes de outros repositórios
+
 ```{r}
 library(pak)
 pak::pkg_install("Icens")
@@ -20,9 +21,8 @@ library(remotes)
 remotes::install_github("emdelponte/r4pde") #prof ignorou isso e seguiu em frente
 ```
 
-
-
 # Importar dados
+
 ```{r}
 
 comp <- c( "9", "12.5", "10", "8", "13.2", "11", "10.8", "9.5", "10.8", "10.4", "13.72", "15.91", "15.7", "14.2", "15.9", "16.54", "18", "14.4", "16.41", "16")
@@ -123,8 +123,8 @@ artilharia_cp24 <- tibble::tribble(
 
 ```
 
-
 #Importando dados do R4PDE
+
 ```{r}
 library(tidyverse)
 pepper <- 
@@ -141,7 +141,6 @@ pepper <-
   ) 
 
 ```
-
 
 ```{r}
 pepper |>
@@ -197,7 +196,6 @@ cr |>
 
 ```
 
-
 #geom_bar
 
 ```{r}
@@ -225,5 +223,3 @@ mg |>
 
 
 ```
-
-

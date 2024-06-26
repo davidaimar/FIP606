@@ -3,9 +3,9 @@
     "path": "~/GitHub/FIP606/R_codes/Aula_7.qmd",
     "project_path": "R_codes/Aula_7.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "954711759",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1719410961255.0,
     "source_on_save": false,
     "relative_order": 7,
@@ -22,11 +22,11 @@
         "chunk_output_type": "console"
     },
     "folds": "",
-    "lastKnownWriteTime": 1719406254,
+    "lastKnownWriteTime": 1719422217,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1719410964129,
+    "last_content_update": 1719422217691,
     "read_only": false,
     "read_only_alternatives": []
 }

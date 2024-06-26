@@ -167,4 +167,3 @@ drc1 <- drm(mean_germination ~ dose, data = FGT05,
             fct = LL.3())
 
 ```
-

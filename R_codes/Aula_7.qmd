@@ -7,8 +7,8 @@ editor_options:
 
 #Aula: 08/05
 
-##Anova com blocos ao acaso
-### Pacotes
+##Anova com blocos ao acaso \### Pacotes
+
 ```{r}
 library(tidyverse)
 library(gsheet)
@@ -28,6 +28,7 @@ library(epifitter)
 ```
 
 ### Importar dados
+
 ```{r}
 soja <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=866852711")
 
@@ -37,6 +38,7 @@ soja <- soja |>
 ```
 
 ### Vizualizar
+
 ```{r}
 dfc <- soja |> 
   ggplot(aes(TRAT, DFC))+
@@ -62,6 +64,7 @@ dfc + fer + prod
 ```
 
 ### ANOVA (DBC)
+
 ```{r}
 aov_dfc <- lm (DFC ~ TRAT + BLOCO, data = soja)
 
@@ -154,6 +157,7 @@ cld(medias_prod, Letters = letters)
 ```
 
 ### Como vizualizar?
+
 ```{r}
 df_prod <- data.frame(medias_prod)
 df_prod|>
@@ -184,6 +188,7 @@ df_prod|>
 ```
 
 ### Criando tabela, fds
+
 ```{r}
 df_prod <- cld(medias_prod, Letters = LETTERS)
 df_prod <- as.data.frame(df_prod)
@@ -198,7 +203,9 @@ write_xlsx(df_prod, "df.xlsx")
 ```
 
 ## Pós intervalo
+
 ### Importar e vizualizar novos dados
+
 ```{r}
 curve <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=1807247585")
 
@@ -219,6 +226,7 @@ curve |>
 ```
 
 ### Área abaixo da curva de progresso da doença
+
 ```{r}
 curve2 <- curve |> 
   group_by(Irrigation, rep) |> 
@@ -244,5 +252,3 @@ cv.model(m_curve)
 ```{r}
 
 ```
-
-
