@@ -1,9 +1,9 @@
-## **É um prazer conhecê-lo!**
+# É um prazer conhecê-lo!
 
-![](imgs/perfil.png){style="border-radius:50%" width="115"}
+![](perfil2.jpg){style="border-radius:50%" width="200"}
 
-Eu sou David Aimar, criador deste site, formado em Agronomia e mestrando em Fitopatologia pela Universidade Federal de Viçosa. Trabalho no Laboratório de [Biologia de Populações de Fitopatógenos](http://www.dfp.ufv.br/departamento/laboratorios/biopop/) (BioPop), orientado pelo professor [Eduardo S G Mizubuti](http://www.dfp.ufv.br/departamento/docentes/mizubuti/).
+Meu nome é David Aimar e eu sou o criador deste site. Sou formado em Engenharia Agronômica pelo Instituto Federal de Educação Ciências e Tecnologia do Tocantins, [*Campus* Araguatins](https://www.ifto.edu.br/araguatins) (2022), atualmente sou estudante de mestrado do [Programa de Pós-Graduação em Fitopatologia](https://www.dfp.ufv.br/) da [Universidade Federal de Viçosa](https://www.ufv.br/campus-vicosa/) e integro o [Laboratório de Manejo Integrado de Doenças de Plantas](https://www.instagram.com/lab_manejo/) sob supervisão do professor [Dr. Franklin Jackson Machado]().
 
-Espero que as informações do site sejam úteis em suas análises.
+É ótimo tê-lo aqui! Espero que faça um bom uso do conteúdo disponibilizado.
 
-Obrigado!
+Muito obrigado!

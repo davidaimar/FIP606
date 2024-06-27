@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="David Aimar">
 
-<title>FIP606 - Aula_1</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../R_codes/Aula_2.html" rel="next">
 <link href="../imgs/icon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -126,39 +126,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../R_codes/Introdução.html" rel="" target="">
- <span class="menu-text">Conhecendo o R</span></a>
+    <a class="nav-link active" href="../R_codes/Aula_1.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Fundamentos Básicos</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentos-básicos" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentos Básicos</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentos-básicos">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula1.qmd" rel="" target="">
- <span class="dropdown-text">Arquivos R</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../R_codes/Aula_3.html" rel="" target="">
+ <span class="menu-text">Análise Exploratória</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_2.html" rel="" target="">
- <span class="dropdown-text">Pacotes no RStudio</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-exploratória" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Análise Exploratória</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-exploratória">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_3.html" rel="" target="">
- <span class="dropdown-text">Importação, vizualização e sumarização de dados</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_4.html" rel="" target="">
- <span class="dropdown-text">Outros meios de importação</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análises-estatísticas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Análises Estatísticas</span>
@@ -256,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aula_1</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R_codes/Aula_1.html">Arquivos R</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -269,19 +243,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
- <span class="menu-text">Teste t</span>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Para dois grupos</span></a>
+  <a href="../R_codes/Aula_1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Arquivos R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Amostras dependentes</span></a>
+  <a href="../R_codes/Aula_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pacotes no RStudio</span></a>
   </div>
 </li>
     </ul>
@@ -296,107 +266,139 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#projetos-e-diretórios" id="toc-projetos-e-diretórios" class="nav-link active" data-scroll-target="#projetos-e-diretórios">Projetos e Diretórios</a></li>
   <li><a href="#o-que-um-quarto-document" id="toc-o-que-um-quarto-document" class="nav-link" data-scroll-target="#o-que-um-quarto-document">O que um <strong>Quarto Document</strong>?</a></li>
-  <li><a href="#caracaterização-de-dados" id="toc-caracaterização-de-dados" class="nav-link" data-scroll-target="#caracaterização-de-dados">Caracaterização de dados</a></li>
+  <li><a href="#mais-uma-ferramenta-importante-o-chunk" id="toc-mais-uma-ferramenta-importante-o-chunk" class="nav-link" data-scroll-target="#mais-uma-ferramenta-importante-o-chunk">Mais uma ferramenta importante, o Chunk!</a>
+  <ul class="collapse">
+  <li><a href="#estrutura-de-um-chunk" id="toc-estrutura-de-um-chunk" class="nav-link" data-scroll-target="#estrutura-de-um-chunk">Estrutura de um Chunk</a></li>
+  </ul></li>
+  <li><a href="#operações-básicas" id="toc-operações-básicas" class="nav-link" data-scroll-target="#operações-básicas">Operações Básicas</a>
+  <ul class="collapse">
   <li><a href="#aprendendo-a-atribuir-valores" id="toc-aprendendo-a-atribuir-valores" class="nav-link" data-scroll-target="#aprendendo-a-atribuir-valores">Aprendendo a atribuir valores</a></li>
+  <li><a href="#fazendo-operações" id="toc-fazendo-operações" class="nav-link" data-scroll-target="#fazendo-operações">Fazendo operações</a></li>
+  <li><a href="#criando-um-dataframe" id="toc-criando-um-dataframe" class="nav-link" data-scroll-target="#criando-um-dataframe">Criando um dataframe</a></li>
+  <li><a href="#como-pedir-ajuda" id="toc-como-pedir-ajuda" class="nav-link" data-scroll-target="#como-pedir-ajuda">Como pedir ajuda</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Aula_1</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>David Aimar </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="projetos-e-diretórios" class="level2">
-<h2 class="anchored" data-anchor-id="projetos-e-diretórios">Projetos e Diretórios</h2>
+<section id="projetos-e-diretórios" class="level1">
+<h1>Projetos e Diretórios</h1>
+<p>Criar um projeto no RStudio para análise de dados oferece diversas vantagens, como melhor organização e gerenciamento de arquivos, ambiente de trabalho isolado e reprodutível, e integração com sistemas de controle de versão como Git. Facilita a colaboração e partilha de projetos, permitindo que todas as dependências e estrutura de diretórios sejam consistentes. A automatização de tarefas através de scripts, a facilidade de navegação e a manutenção de um diretório de trabalho consistente melhoram a eficiência. Além disso, as configurações específicas do projeto são salvas e podem ser facilmente restauradas, proporcionando um ambiente de análise de dados organizado e eficaz.</p>
+<p>Para criar um projeto no RStudio, abra o programa e clique em Project: (None) no canto superior direito, selecionando <code>New Project...</code> Escolha <code>New Directory</code> para criar um projeto em um novo diretório ou <code>Existing Directory</code> para usar uma pasta existente. Para a maioria dos casos, selecione New Project, insira o nome do diretório e escolha o local onde o diretório será criado. Clique em <code>Create Project</code> e o RStudio configurará e abrirá automaticamente o novo projeto, permitindo que você adicione arquivos e scripts conforme necessário para sua análise de dados.</p>
 </section>
-<section id="o-que-um-quarto-document" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-um-quarto-document">O que um <strong>Quarto Document</strong>?</h2>
+<section id="o-que-um-quarto-document" class="level1">
+<h1>O que um <strong>Quarto Document</strong>?</h1>
+<p>Um Quarto document é um documento dinâmico criado com Quarto, uma plataforma que facilita a criação de documentos, apresentações e sites a partir de código R, Python e outras linguagens de programação. Quarto é uma evolução do RMarkdown, projetada para ser mais extensível e suportar múltiplas linguagens.</p>
+<p>Nas análises realizadas aqui utilizaremos quarto documents. Nossos scripts terão a estensão <strong>‘qmd’</strong>.</p>
+<p>Para criar um novo Documento Quarto vá até o menu <code>File &gt;</code> <code>New File &gt;</code> <code>Quarto Document....</code>, selecione o tipo de documento que deseja criar (por exemplo, HTML, PDF, Word) e clique em OK.</p>
 </section>
-<section id="caracaterização-de-dados" class="level2">
-<h2 class="anchored" data-anchor-id="caracaterização-de-dados">Caracaterização de dados</h2>
-</section>
-<section id="aprendendo-a-atribuir-valores" class="level2">
-<h2 class="anchored" data-anchor-id="aprendendo-a-atribuir-valores">Aprendendo a atribuir valores</h2>
-<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-1_cfd9b22b0957787866cd4ce54c2ee039">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>C <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#valores adiconados aqui, irão aparecer como objetos com dados </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>#uso de dois ** para deixar em negrito <strong>exemplo</strong> #uso de um * deixa ele em itálico <em>exemplo</em></p>
-<p>#Para criar um data.frame</p>
-<p><strong>IMPORTANTE</strong> #tem que ser o mesmo número de linhas e vetores</p>
-<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-2_d86bcd648986abad95dfb3de88d37303">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(A, B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>#Como pedir ajuda</p>
-<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-3_81cc4025211dff990840edaa75a2c466">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(data.frame)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>starting httpd help server ... done</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Aparece a resposta do que a função faz na aba de ajuda "help"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>#Também podemos fazer operações</p>
-<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-4_68e5917aa0a28ca6f9b5cf05f08ce814">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="mais-uma-ferramenta-importante-o-chunk" class="level1">
+<h1>Mais uma ferramenta importante, o Chunk!</h1>
+<p>Um chunk (ou “bloco de código”) é uma seção de um documento Quarto que contém código a ser executado. Chunks são delimitados por marcadores especiais que indicam onde o código começa e termina. Eles são usados para inserir e executar código dentro de documentos dinâmicos, permitindo a integração de análise de dados e texto explicativo em um único documento.</p>
+<section id="estrutura-de-um-chunk" class="level2">
+<h2 class="anchored" data-anchor-id="estrutura-de-um-chunk">Estrutura de um Chunk</h2>
+<p>Bom, para resumir…</p>
+<p>Isso: ‘<strong>```{r …}</strong>’; inicia um chunk de código R.</p>
+<p>E isso: ‘<strong>```</strong>’; termina o chunk.</p>
+<p>Você pode criar um chunk utilizando o atalho de teclado <code>Ctrl + Alt + I</code> (Windows/Linux) ou <code>Cmd + Option + I</code> (Mac) para inserir um chunk de código. Para executar o código dentro desse chunk, com o mesmo selecionado, pressione <code>Ctrl + Enter</code>. Para deixar comentários dentro do chunk adicone <strong>#</strong> antes da frase.</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-1_41977e9c25da3bbbb71e0872021dbb6a">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Este é um exemplo de chunk</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Você pode executar diversos códigos e obter respostas:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6666667</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">*</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>A <span class="sc">+</span> B</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="operações-básicas" class="level1">
+<h1>Operações Básicas</h1>
+<p>Agora que você já conhece os arquivos Quarto Document, vamos iniciar com operações básicas. Vale lembrar que os comandos devem ser executados dentro dos chunks.</p>
+<section id="aprendendo-a-atribuir-valores" class="level2">
+<h2 class="anchored" data-anchor-id="aprendendo-a-atribuir-valores">Aprendendo a atribuir valores</h2>
+<p>Você pode criar objetos atribuindo valores à eles. Os valores adiconados irão aparecer na aba <code>Enviroment</code>.</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-2_00d68bd97e4c79b3e6d22dfd77b27822">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>C <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Para vizualizar o valor do objeto selecione-o e execute o código.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>C <span class="sc">*</span> A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Você pode ir além seguindo os próximos chunks:</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-3_e20a2d09748a1002365ad0650c823297">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando objetos com mais de um valor; utilizando 'c' para combinação.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando objetos com um outro tipo de dado.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"une"</span>, <span class="st">"dune"</span>, <span class="st">"tê"</span>, <span class="st">"salamê"</span>, <span class="st">"minguê"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora, é só vizualizar:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>D</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  2  4  6  8 10</code></pre>
+</div>
+</div>
+</section>
+<section id="fazendo-operações" class="level2">
+<h2 class="anchored" data-anchor-id="fazendo-operações">Fazendo operações</h2>
+<p>Você pode fazer operações com números e também com os objetos criados que assumem os valores atribuidos</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-4_f48f1808e8d7ad2bb215bab1f2a4d215">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>A <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>B <span class="sc">/</span> C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="criando-um-dataframe" class="level2">
+<h2 class="anchored" data-anchor-id="criando-um-dataframe">Criando um dataframe</h2>
+<p>Um dataframe é uma estrutura de dados bidimensional, semelhante a uma tabela, amplamente utilizada na linguagem R. Ele permite armazenar e manipular diferentes tipos de dados tabulares de forma eficiente.</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-5_e4cc2d75d16ba27dd6297e9dadb2b511">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(A, B) <span class="co"># Exemplo de dataframe simples</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-6_0df831a647ff430d549c509b5e685a66">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de dataframe mais complexo</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>dataf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">palavras =</span> S, números <span class="ot">=</span> D)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>dataf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6666667</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pode fazer operações com os número e também com os vetores com valores atribuidos </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You can add options to executable code like this</p>
-<p>#Usado para confirmar a informação colocada</p>
-<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-5_1011c91375d3541b766fb75bf9f80716">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<pre><code>  palavras números
+1      une       2
+2     dune       4
+3       tê       6
+4   salamê       8
+5   minguê      10</code></pre>
 </div>
 </div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</section>
+<section id="como-pedir-ajuda" class="level2">
+<h2 class="anchored" data-anchor-id="como-pedir-ajuda">Como pedir ajuda</h2>
+<p>Você percebeu que utilizou um comando chamado <code>data.frame</code> para criar o seu dataframe, certo? Pois bem, este comando é uma função base do software R. Ao longo das nossas aulas vamos nos deparar com diversas funções diferentes.</p>
+<p>Ficou com dúvida sobre o uso de alguma função? Tem uma função que pode te ajudar! Basta digitar <code>help()</code>, entre parênteses você digita o nome da função sobre a qual você tem duvida. Veja o exemplo:</p>
+<div class="cell" data-hash="Aula_1_cache/html/unnamed-chunk-7_fcf9f3a1e362ef14d6060b16ba42d779">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(data.frame)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>starting httpd help server ... done</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Isso faz com que apareça informações sobre a função na aba de ajuda "help".</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -748,6 +750,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../R_codes/Aula_2.html" class="pagination-link">
+        <span class="nav-page-text">Pacotes no RStudio</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

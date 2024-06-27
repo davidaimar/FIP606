@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="David Aimar">
 
-<title>FIP606 - Introdução</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../R_codes/apresentação.html" rel="prev">
 <link href="../imgs/icon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -88,39 +88,17 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentos-básicos" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentos Básicos</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentos-básicos">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula1.qmd" rel="" target="">
- <span class="dropdown-text">Arquivos R</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../R_codes/Aula_1.html" rel="" target="">
+ <span class="menu-text">Fundamentos Básicos</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_2.html" rel="" target="">
- <span class="dropdown-text">Pacotes no RStudio</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../R_codes/Aula_3.html" rel="" target="">
+ <span class="menu-text">Análise Exploratória</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-exploratória" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Análise Exploratória</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-exploratória">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_3.html" rel="" target="">
- <span class="dropdown-text">Importação, vizualização e sumarização de dados</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_4.html" rel="" target="">
- <span class="dropdown-text">Outros meios de importação</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análises-estatísticas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Análises Estatísticas</span>
@@ -218,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introdução</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R_codes/Introdução.html">Início</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -230,17 +208,22 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aula 5: Análise de Notas (FIP606)</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boas vindas</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aula 6</span></a>
+  <a href="../R_codes/apresentação.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sobre o autor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Introdução.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Início</span></a>
   </div>
 </li>
     </ul>
@@ -254,49 +237,28 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#conhecendo-o-r" id="toc-conhecendo-o-r" class="nav-link active" data-scroll-target="#conhecendo-o-r">Conhecendo o R</a></li>
-  <li><a href="#o-que-é-rstudio" id="toc-o-que-é-rstudio" class="nav-link" data-scroll-target="#o-que-é-rstudio">O que é RStudio?</a>
+  <li><a href="#o-que-é-o-rstudio" id="toc-o-que-é-o-rstudio" class="nav-link" data-scroll-target="#o-que-é-o-rstudio">O que é o RStudio?</a>
   <ul class="collapse">
-  <li><a href="#conhecendo-a-interface-do-rstudio" id="toc-conhecendo-a-interface-do-rstudio" class="nav-link" data-scroll-target="#conhecendo-a-interface-do-rstudio">Conhecendo a interface do RStudio</a></li>
+  <li><a href="#a-interface-do-rstudio" id="toc-a-interface-do-rstudio" class="nav-link" data-scroll-target="#a-interface-do-rstudio">A interface do RStudio</a></li>
   </ul></li>
-  <li><a href="#download-e-instalação-do-r-e-rstudio" id="toc-download-e-instalação-do-r-e-rstudio" class="nav-link" data-scroll-target="#download-e-instalação-do-r-e-rstudio">Download e instalação do R e RStudio</a></li>
+  <li><a href="#download-e-instalação-dos-programas" id="toc-download-e-instalação-dos-programas" class="nav-link" data-scroll-target="#download-e-instalação-dos-programas">Download e instalação dos programas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introdução</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>David Aimar </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="conhecendo-o-r" class="level2">
-<h2 class="anchored" data-anchor-id="conhecendo-o-r">Conhecendo o R</h2>
+<section id="conhecendo-o-r" class="level1">
+<h1>Conhecendo o R</h1>
 <p>O R é um software amplamente utilizado por estatísticos, analistas de dados, cientistas de dados e pesquisadores para realizar análises estatística, visualização gráfica, modelagem estatística, computação científica e que também pode ser utilizado como uma linguagem de programação. Esta ferramenta está sob livre acesso mediante os termos da <a href="https://www.r-project.org/COPYING">Licença Pública Geral GNU</a> da <a href="http://www.gnu.org/">Free Software Foundation</a>.</p>
 </section>
-<section id="o-que-é-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-rstudio">O que é RStudio?</h2>
+<section id="o-que-é-o-rstudio" class="level1">
+<h1>O que é o RStudio?</h1>
 <p>RStudio é um ambiente de desenvolvimento integrado para programação em R. Ele oferece uma interface intuitiva e poderosa que simplifica a escrita de código, a execução de análises, a criação de gráficos e a gestão de projetos. O RStudio está disponível em duas versões principais: uma gratuita (RStudio Desktop) e uma paga (RStudio Server Pro), que oferece funcionalidades adicionais e suporte profissional.</p>
-<section id="conhecendo-a-interface-do-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="conhecendo-a-interface-do-rstudio">Conhecendo a interface do RStudio</h3>
+<section id="a-interface-do-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="a-interface-do-rstudio">A interface do RStudio</h2>
 <p>A interface do RStudio oferece recursos como:</p>
 <p><strong>Editor de script:</strong> Um editor de texto avançado para escrever e editar scripts em R.</p>
 <p><strong>Console:</strong> Onde os comandos em R podem ser executados interativamente.</p>
@@ -307,9 +269,9 @@ ul.task-list li input[type="checkbox"] {
 <p>O RStudio facilita o trabalho com R, tornando-o mais eficiente e acessível, especialmente para iniciantes na linguagem.</p>
 </section>
 </section>
-<section id="download-e-instalação-do-r-e-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="download-e-instalação-do-r-e-rstudio">Download e instalação do R e RStudio</h2>
-<p>Você pode realizar o download do R e do RStudio para <strong>Windows</strong>, <strong>Linux</strong> e <strong>MacOS através</strong> do link: (https://posit.co/download/rstudio-desktop/). Para mais detalhes sobre a instalação desses programas acessse: (https://intro2r.com/chap1.html)</p>
+<section id="download-e-instalação-dos-programas" class="level1">
+<h1>Download e instalação dos programas</h1>
+<p>Você pode realizar o download do R e do RStudio para <strong>Windows</strong>, <strong>Linux</strong> e <strong>MacOS</strong> clicando <a href="https://posit.co/download/rstudio-desktop/">aqui</a>. Para mais detalhes sobre a instalação desses programas acessse: <a href="https://intro2r.com/install_r.html">Uma introdução ao R</a>.</p>
 
 
 </section>
@@ -663,6 +625,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../R_codes/apresentação.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sobre o autor</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

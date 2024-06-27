@@ -2,23 +2,23 @@
   {
     "objectID": "R_codes/Introdução.html",
     "href": "R_codes/Introdução.html",
-    "title": "Introdução",
+    "title": "Conhecendo o R",
     "section": "",
     "text": "O R é um software amplamente utilizado por estatísticos, analistas de dados, cientistas de dados e pesquisadores para realizar análises estatística, visualização gráfica, modelagem estatística, computação científica e que também pode ser utilizado como uma linguagem de programação. Esta ferramenta está sob livre acesso mediante os termos da Licença Pública Geral GNU da Free Software Foundation."
   },
   {
     "objectID": "R_codes/Introdução.html#conhecendo-o-r",
     "href": "R_codes/Introdução.html#conhecendo-o-r",
-    "title": "Introdução",
+    "title": "FIP606",
     "section": "",
     "text": "O R é um software amplamente utilizado por estatísticos, analistas de dados, cientistas de dados e pesquisadores para realizar análises estatística, visualização gráfica, modelagem estatística, computação científica e que também pode ser utilizado como uma linguagem de programação. Esta ferramenta está sob livre acesso mediante os termos da Licença Pública Geral GNU da Free Software Foundation."
   },
   {
     "objectID": "R_codes/Introdução.html#o-que-é-rstudio",
     "href": "R_codes/Introdução.html#o-que-é-rstudio",
-    "title": "Introdução",
+    "title": "FIP606",
     "section": "O que é RStudio?",
-    "text": "O que é RStudio?\nRStudio é um ambiente de desenvolvimento integrado para programação em R. Ele oferece uma interface intuitiva e poderosa que simplifica a escrita de código, a execução de análises, a criação de gráficos e a gestão de projetos. O RStudio está disponível em duas versões principais: uma gratuita (RStudio Desktop) e uma paga (RStudio Server Pro), que oferece funcionalidades adicionais e suporte profissional.\n\nConhecendo a interface do RStudio\nA interface do RStudio oferece recursos como:\nEditor de script: Um editor de texto avançado para escrever e editar scripts em R.\nConsole: Onde os comandos em R podem ser executados interativamente.\nAmbiente de trabalho: Uma visualização das variáveis, dados e objetos atualmente carregados na sessão de R.\nPainel de arquivos: Para navegação e gestão de arquivos do projeto.\nVisualização de gráficos: Uma área dedicada para exibir gráficos gerados pelo código em R.\nFerramentas de depuração: Para ajudar a encontrar e corrigir erros no código.\nO RStudio facilita o trabalho com R, tornando-o mais eficiente e acessível, especialmente para iniciantes na linguagem."
+    "text": "O que é RStudio?\nRStudio é um ambiente de desenvolvimento integrado para programação em R. Ele oferece uma interface intuitiva e poderosa que simplifica a escrita de código, a execução de análises, a criação de gráficos e a gestão de projetos. O RStudio está disponível em duas versões principais: uma gratuita (RStudio Desktop) e uma paga (RStudio Server Pro), que oferece funcionalidades adicionais e suporte profissional.\n\nA interface do RStudio\nA interface do RStudio oferece recursos como:\nEditor de script: Um editor de texto avançado para escrever e editar scripts em R.\nConsole: Onde os comandos em R podem ser executados interativamente.\nAmbiente de trabalho: Uma visualização das variáveis, dados e objetos atualmente carregados na sessão de R.\nPainel de arquivos: Para navegação e gestão de arquivos do projeto.\nVisualização de gráficos: Uma área dedicada para exibir gráficos gerados pelo código em R.\nFerramentas de depuração: Para ajudar a encontrar e corrigir erros no código.\nO RStudio facilita o trabalho com R, tornando-o mais eficiente e acessível, especialmente para iniciantes na linguagem."
   },
   {
     "objectID": "R_codes/Introdução.html#download-e-instalação-do-r-e-rstudio",
@@ -247,16 +247,16 @@
   {
     "objectID": "R_codes/Aula_1.html#aprendendo-a-atribuir-valores",
     "href": "R_codes/Aula_1.html#aprendendo-a-atribuir-valores",
-    "title": "Aula_1",
+    "title": "Projetos e Diretórios",
     "section": "Aprendendo a atribuir valores",
-    "text": "Aprendendo a atribuir valores\n\nA &lt;- 1\nB &lt;- 2\nC &lt;- 3\n\n#valores adiconados aqui, irão aparecer como objetos com dados \n\n#uso de dois ** para deixar em negrito exemplo #uso de um * deixa ele em itálico exemplo\n#Para criar um data.frame\nIMPORTANTE #tem que ser o mesmo número de linhas e vetores\n\ndf &lt;- data.frame(A, B)\n\n#Como pedir ajuda\n\nhelp(data.frame)\n\nstarting httpd help server ... done\n\n#Aparece a resposta do que a função faz na aba de ajuda \"help\"\n\n#Também podemos fazer operações\n\n1 + 1\n\n[1] 2\n\n2/3\n\n[1] 0.6666667\n\n3*4\n\n[1] 12\n\nA + B\n\n[1] 3\n\nC * A\n\n[1] 3\n\nB / C\n\n[1] 0.6666667\n\n#Pode fazer operações com os número e também com os vetores com valores atribuidos \n\nYou can add options to executable code like this\n#Usado para confirmar a informação colocada\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+    "text": "Aprendendo a atribuir valores\nVocê pode criar objetos atribuindo valores à eles. Os valores adiconados irão aparecer na aba Enviroment.\n\nA &lt;- 1\nB &lt;- 2\nC &lt;- 3\n\n# Para vizualizar o valor do objeto selecione-o e execute o código.\n\nC\n\n[1] 3\n\n\nVocê pode ir além seguindo os próximos chunks:\n\n# Criando objetos com mais de um valor; utilizando 'c' para combinação.\n\nD &lt;- c(2, 4, 6, 8, 10)\n\n# Criando objetos com um outro tipo de dado.\n\nS &lt;- c(\"une\", \"dune\", \"tê\", \"salamê\", \"minguê\")\n\n# Agora, é só vizualizar:\n\nD\n\n[1]  2  4  6  8 10"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Olá!",
     "section": "",
-    "text": "Seja muito bem vindo! Espero que esteja ansioso para mergulhar no mundo da análise e vizualização de dados provenientes da ciência que estuda as Doenças de Plantas. Este é o Quarto website para disponibilizar as aulas em [RStudio]da disciplina FIP 606, oferecida no Programa de Pós-graduação em Fitopatologia da Universidade Federal de Viçosa pelo professor Emerson M Del Ponte. As aulas são códigos comentados e estão organizadas em “Fundamentos”, “Análise Exploratória” e “Análise de Dados”. O objetivo do website é compartilhar o conhecimento aprendido com outros colegas da área e despertar o interesse daqueles que ainda não conhecem o tema.\n\nVem comigo!"
+    "text": "Seja muito bem vindo! Espero que esteja ansioso para mergulhar no mundo da análise e vizualização de dados provenientes da ciência que estuda as Doenças de Plantas. Este é o Quarto website para disponibilizar as aulas em RStudio da disciplina FIP 606, oferecida no Programa de Pós-graduação em Fitopatologia da Universidade Federal de Viçosa pelo professor Emerson M Del Ponte. As aulas são códigos comentados e estão organizadas em “Fundamentos”, “Análise Exploratória” e “Análise de Dados”. O objetivo do website é compartilhar o conhecimento aprendido com outros colegas da área e despertar o interesse daqueles que ainda não conhecem o tema.\n\nVem comigo!"
   },
   {
     "objectID": "about.html",
@@ -268,16 +268,16 @@
   {
     "objectID": "R_codes/apresentação.html",
     "href": "R_codes/apresentação.html",
-    "title": "FIP606",
+    "title": "É um prazer conhecê-lo!",
     "section": "",
-    "text": "Eu sou David Aimar, criador deste site, formado em Agronomia e mestrando em Fitopatologia pela Universidade Federal de Viçosa. Trabalho no Laboratório de Biologia de Populações de Fitopatógenos (BioPop), orientado pelo professor Eduardo S G Mizubuti.\nEspero que as informações do site sejam úteis em suas análises.\nObrigado!"
+    "text": "É um prazer conhecê-lo!\n\nMeu nome é David Aimar e eu sou o criador deste site. Sou formado em Engenharia Agronômica pelo Instituto Federal de Educação Ciências e Tecnologia do Tocantins, Campus Araguatins (2022), atualmente sou estudante de mestrado do Programa de Pós-Graduação em Fitopatologia da Universidade Federal de Viçosa e integro o Laboratório de Manejo Integrado de Doenças de Plantas sob supervisão do professor Dr. Franklin Jackson Machado.\nÉ ótimo tê-lo aqui! Espero que faça um bom uso do conteúdo disponibilizado.\nMuito obrigado!"
   },
   {
     "objectID": "R_codes/apresentação.html#é-um-prazer-conhecê-lo",
     "href": "R_codes/apresentação.html#é-um-prazer-conhecê-lo",
     "title": "FIP606",
     "section": "",
-    "text": "Eu sou David Aimar, criador deste site, formado em Agronomia e mestrando em Fitopatologia pela Universidade Federal de Viçosa. Trabalho no Laboratório de Biologia de Populações de Fitopatógenos (BioPop), orientado pelo professor Eduardo S G Mizubuti.\nEspero que as informações do site sejam úteis em suas análises.\nObrigado!"
+    "text": "Meu nome é David Aimar e eu sou o criador deste site. Sou formado em Engenharia Agronômica pelo Instituto Federal de Educação Ciências e Tecnologia do Tocantins, Campus Araguatins (2022), atualmente sou estudante de mestrado do Programa de Pós-Graduação em Fitopatologia da Universidade Federal de Viçosa e integro o Laboratório de Manejo Integrado de Doenças de Plantas sob supervisão do professor Dr. Franklin Jackson Machado.\nÉ ótimo tê-lo aqui! Espero que faça um bom uso do conteúdo disponibilizado.\nMuito obrigado!"
   },
   {
     "objectID": "R_codes/Aula_10.html",
@@ -390,5 +390,54 @@
     "title": "aula9",
     "section": "Modelo não linear",
     "text": "Modelo não linear\n\nsensi &lt;- gsheet2tbl(\"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=465348652\")\n\nsensi$dose &lt;- as.factor(sensi$dose)\n\nis.factor(sensi$dose)\n\n[1] TRUE\n\nsensi|&gt; \n  group_by(code, dose) |&gt; \n  summarise(mean_germination = mean(germination)) |&gt;  \n  ggplot(aes(dose, mean_germination))+\n  geom_point()+\n  facet_wrap(~code)\n\n`summarise()` has grouped output by 'code'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\nsensi2 &lt;- sensi|&gt; \n  group_by(code, dose) |&gt; \n  summarise(mean_germination = mean(germination))\n\n`summarise()` has grouped output by 'code'. You can override using the\n`.groups` argument.\n\nFGT05 &lt;- sensi2 |&gt; \n  filter(code == \"FGT05\")\n \n\nlibrary(drc)\n\n#drc1 &lt;- drm(mean_germination ~ dose, data = FGT05, fct = LL.3())"
+  },
+  {
+    "objectID": "R_codes/Introdução.html#download-e-instalação-dos-programas",
+    "href": "R_codes/Introdução.html#download-e-instalação-dos-programas",
+    "title": "Conhecendo o R",
+    "section": "Download e instalação dos programas",
+    "text": "Download e instalação dos programas\nVocê pode realizar o download do R e do RStudio para Windows, Linux e MacOS através do link: (https://posit.co/download/rstudio-desktop/). Para mais detalhes sobre a instalação desses programas acessse: (https://intro2r.com/chap1.html)"
+  },
+  {
+    "objectID": "R_codes/Aula_1.html",
+    "href": "R_codes/Aula_1.html",
+    "title": "Projetos e Diretórios",
+    "section": "",
+    "text": "Criar um projeto no RStudio para análise de dados oferece diversas vantagens, como melhor organização e gerenciamento de arquivos, ambiente de trabalho isolado e reprodutível, e integração com sistemas de controle de versão como Git. Facilita a colaboração e partilha de projetos, permitindo que todas as dependências e estrutura de diretórios sejam consistentes. A automatização de tarefas através de scripts, a facilidade de navegação e a manutenção de um diretório de trabalho consistente melhoram a eficiência. Além disso, as configurações específicas do projeto são salvas e podem ser facilmente restauradas, proporcionando um ambiente de análise de dados organizado e eficaz.\nPara criar um projeto no RStudio, abra o programa e clique em Project: (None) no canto superior direito, selecionando New Project... Escolha New Directory para criar um projeto em um novo diretório ou Existing Directory para usar uma pasta existente. Para a maioria dos casos, selecione New Project, insira o nome do diretório e escolha o local onde o diretório será criado. Clique em Create Project e o RStudio configurará e abrirá automaticamente o novo projeto, permitindo que você adicione arquivos e scripts conforme necessário para sua análise de dados."
+  },
+  {
+    "objectID": "R_codes/Introdução.html#a-interface-do-rstudio",
+    "href": "R_codes/Introdução.html#a-interface-do-rstudio",
+    "title": "Conhecendo o R",
+    "section": "A interface do RStudio",
+    "text": "A interface do RStudio\nA interface do RStudio oferece recursos como:\nEditor de script: Um editor de texto avançado para escrever e editar scripts em R.\nConsole: Onde os comandos em R podem ser executados interativamente.\nAmbiente de trabalho: Uma visualização das variáveis, dados e objetos atualmente carregados na sessão de R.\nPainel de arquivos: Para navegação e gestão de arquivos do projeto.\nVisualização de gráficos: Uma área dedicada para exibir gráficos gerados pelo código em R.\nFerramentas de depuração: Para ajudar a encontrar e corrigir erros no código.\nO RStudio facilita o trabalho com R, tornando-o mais eficiente e acessível, especialmente para iniciantes na linguagem."
+  },
+  {
+    "objectID": "R_codes/Aula_1.html#estrutura-de-um-chunk",
+    "href": "R_codes/Aula_1.html#estrutura-de-um-chunk",
+    "title": "Projetos e Diretórios",
+    "section": "Estrutura de um Chunk",
+    "text": "Estrutura de um Chunk\nBom, para resumir…\nIsso: ‘```{r …}’; inicia um chunk de código R.\nE isso: ‘```’; termina o chunk.\nVocê pode criar um chunk utilizando o atalho de teclado Ctrl + Alt + I (Windows/Linux) ou Cmd + Option + I (Mac) para inserir um chunk de código. Para executar o código dentro desse chunk, com o mesmo selecionado, pressione Ctrl + Enter. Para deixar comentários dentro do chunk adicone # antes da frase.\n\n# Este é um exemplo de chunk\n\n# Você pode executar diversos códigos e obter respostas:\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "R_codes/Aula_1.html#fazendo-operações",
+    "href": "R_codes/Aula_1.html#fazendo-operações",
+    "title": "Projetos e Diretórios",
+    "section": "Fazendo operações",
+    "text": "Fazendo operações\nVocê pode fazer operações com números e também com os objetos criados que assumem os valores atribuidos\n\nA + 2\n\n[1] 3"
+  },
+  {
+    "objectID": "R_codes/Aula_1.html#criando-um-dataframe",
+    "href": "R_codes/Aula_1.html#criando-um-dataframe",
+    "title": "Projetos e Diretórios",
+    "section": "Criando um dataframe",
+    "text": "Criando um dataframe\nUm dataframe é uma estrutura de dados bidimensional, semelhante a uma tabela, amplamente utilizada na linguagem R. Ele permite armazenar e manipular diferentes tipos de dados tabulares de forma eficiente.\n\ndf &lt;- data.frame(A, B) # Exemplo de dataframe simples\n\n\n# Exemplo de dataframe mais complexo\n\ndataf &lt;- data.frame(palavras = S, números = D)\n\n\ndataf\n\n  palavras números\n1      une       2\n2     dune       4\n3       tê       6\n4   salamê       8\n5   minguê      10"
+  },
+  {
+    "objectID": "R_codes/Aula_1.html#como-pedir-ajuda",
+    "href": "R_codes/Aula_1.html#como-pedir-ajuda",
+    "title": "Projetos e Diretórios",
+    "section": "Como pedir ajuda",
+    "text": "Como pedir ajuda\nVocê percebeu que utilizou um comando chamado data.frame para criar o seu dataframe, certo? Pois bem, este comando é uma função base do software R. Ao longo das nossas aulas vamos nos deparar com diversas funções diferentes.\nFicou com dúvida sobre o uso de alguma função? Tem uma função que pode te ajudar! Basta digitar help(), entre parênteses você digita o nome da função sobre a qual você tem duvida. Veja o exemplo:\n\nhelp(data.frame)\n\nstarting httpd help server ... done\n\n# Isso faz com que apareça informações sobre a função na aba de ajuda \"help\"."
   }
 ]
