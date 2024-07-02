@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="David Aimar">
 
-<title>FIP606 - Aula_2</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,33 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../R_codes/Aula_3.html" rel="" target="">
  <span class="menu-text">Análise Exploratória</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análises-estatísticas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Análises Estatísticas</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análises-estatísticas">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_5.html" rel="" target="">
- <span class="dropdown-text">Analisando um conjunto de dados particular</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../R_codes/Aula_5.html" rel="" target="">
+ <span class="menu-text">Análises Estatísticas</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_6.html" rel="" target="">
- <span class="dropdown-text">Testes estatísticos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_7.html" rel="" target="">
- <span class="dropdown-text">ANOVA (DBC)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_8.html" rel="" target="">
- <span class="dropdown-text">Experimentos em parcelas subdividas e regressão linear</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_9.html" rel="" target="">
- <span class="dropdown-text">Apredendo mais sobre modelos lineares</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../R_codes/Aula_10.html" rel="" target="">
  <span class="menu-text">Mapas em R</span></a>
@@ -265,44 +241,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pacotes-no-rstudio" id="toc-pacotes-no-rstudio" class="nav-link active" data-scroll-target="#pacotes-no-rstudio">Pacotes no RStudio</a></li>
+  <li><a href="#características-dos-pacotes-em-r" id="toc-características-dos-pacotes-em-r" class="nav-link active" data-scroll-target="#características-dos-pacotes-em-r">Características dos Pacotes em R</a>
+  <ul class="collapse">
+  <li><a href="#instalando-um-pacote" id="toc-instalando-um-pacote" class="nav-link" data-scroll-target="#instalando-um-pacote">Instalando um Pacote:</a></li>
+  <li><a href="#carregando-um-pacote" id="toc-carregando-um-pacote" class="nav-link" data-scroll-target="#carregando-um-pacote">Carregando um pacote</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Aula_2</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>David Aimar </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="pacotes-no-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="pacotes-no-rstudio">Pacotes no RStudio</h2>
-<p>A instalação de pacotes pode ser feita através do menu: Tools &gt; Install packages…, ou ainda:</p>
-<div class="cell" data-hash="Aula_2_cache/html/unnamed-chunk-1_05844c1ee957670a14270cad3ec9e26c">
+<section id="características-dos-pacotes-em-r" class="level1">
+<h1>Características dos Pacotes em R</h1>
+<p>Um pacote é uma coleção de funções, dados, e documentação organizada em uma estrutura padronizada, que estende as capacidades básicas da linguagem R.</p>
+<p>Os pacotes no RStudio podem ser estalados de diversos repositórios online. Eles possuem funções, conjunto de dados que podem ser usados para exemplos ou testes e documentos com tutoriais para explicar o uso das funções e os dados que estão incluídos no pacote.</p>
+<p>Exemplos de Pacotes Populares:</p>
+<p><strong>ggplot</strong>: Para visualização de dados.</p>
+<p><strong>dplyr</strong>: Para manipulação de dados.</p>
+<p><strong>tidyr</strong>: Para organização de dados.</p>
+<p>Todos estes pacotes serão utilizados nas análises realizadas aqui. Existe um pacote que abriga todos estes e mais outros, o <strong>tydiverse</strong>. Um universo de ferramentas bastante utilizadas em análise de dados.</p>
+<section id="instalando-um-pacote" class="level2">
+<h2 class="anchored" data-anchor-id="instalando-um-pacote">Instalando um Pacote:</h2>
+<p>A instalação de pacotes pode ser feita através do menu: <code>Tools \&gt;</code> <code>Install packages...</code>, ou ainda:</p>
+<div class="cell" data-hash="Aula_2_cache/html/unnamed-chunk-1_33fe9dbaba6b33adf2a5911645460db4">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(nome do pacote de interesse)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Vale ressaltar que é necessário ter uma conexão estável com a internet para instalar um pacote.</p>
+<p>Para instalar o tydiverse:</p>
+<div class="cell" data-hash="Aula_2_cache/html/unnamed-chunk-2_dbed3bae34f74b2431a2aa87898e5e77">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org"</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#'repos =' indica o repositório online de onde o pacote está sendo baixado, não necessariamente precisa ser utilizado</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="carregando-um-pacote" class="level2">
+<h2 class="anchored" data-anchor-id="carregando-um-pacote">Carregando um pacote</h2>
+<p>Antes de usar qualquer função de um pacote, é necessário carregá-lo.</p>
+<p>Para carregar um pacote instalado e usá-lo na sessão atual do R, utiliza-se a função <code>library()</code>. Por exemplo, para carregar o tidyverse:</p>
+<div class="cell" data-hash="Aula_2_cache/html/unnamed-chunk-3_040c6ff3b67ddab2a51beadce165d15d">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

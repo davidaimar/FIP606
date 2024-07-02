@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FIP606 - aula9</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,6 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../R_codes/Aula_8.1.html" rel="prev">
 <link href="../imgs/icon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -100,7 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -132,33 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../R_codes/Aula_3.html" rel="" target="">
  <span class="menu-text">Análise Exploratória</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análises-estatísticas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Análises Estatísticas</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análises-estatísticas">    
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_5.html" rel="" target="">
- <span class="dropdown-text">Analisando um conjunto de dados particular</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="../R_codes/Aula_5.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Análises Estatísticas</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_6.html" rel="" target="">
- <span class="dropdown-text">Testes estatísticos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_7.html" rel="" target="">
- <span class="dropdown-text">ANOVA (DBC)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_8.html" rel="" target="">
- <span class="dropdown-text">Experimentos em parcelas subdividas e regressão linear</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../R_codes/Aula_9.html" rel="" target="">
- <span class="dropdown-text">Apredendo mais sobre modelos lineares</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../R_codes/Aula_10.html" rel="" target="">
  <span class="menu-text">Mapas em R</span></a>
@@ -224,154 +202,186 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R_codes/Aula_9.html">Aula_9.html</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analisando um conjunto de dados particular</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testes de Hipóteses</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_6.1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Análise de Variância (ANOVA)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ANOVA (DBC)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_8" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimentos em esquema fatorial e parcelas subdividas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_8.1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regressão Linear</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_9.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Aula_9.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">Correlação de Variáveis</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#aula---29052024" id="toc-aula---29052024" class="nav-link active" data-scroll-target="#aula---29052024">Aula - 29/05/2024</a></li>
-  <li><a href="#pós-intervalo" id="toc-pós-intervalo" class="nav-link" data-scroll-target="#pós-intervalo">Pós-intervalo</a></li>
-  <li><a href="#modelo-não-linear" id="toc-modelo-não-linear" class="nav-link" data-scroll-target="#modelo-não-linear">Modelo não linear</a></li>
+  <li><a href="#aula-10---290524" id="toc-aula-10---290524" class="nav-link active" data-scroll-target="#aula-10---290524">AULA 10 - 29/05/24</a></li>
+  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes">Pacotes</a></li>
+  <li><a href="#dados" id="toc-dados" class="nav-link" data-scroll-target="#dados">Dados</a></li>
+  <li><a href="#gráficos" id="toc-gráficos" class="nav-link" data-scroll-target="#gráficos">Gráficos</a></li>
+  <li><a href="#utilizando-o-agror" id="toc-utilizando-o-agror" class="nav-link" data-scroll-target="#utilizando-o-agror">Utilizando o AgroR</a></li>
+  <li><a href="#usando-corrplot" id="toc-usando-corrplot" class="nav-link" data-scroll-target="#usando-corrplot">Usando Corrplot</a></li>
+  <li><a href="#outro-conjunto-de-dados" id="toc-outro-conjunto-de-dados" class="nav-link" data-scroll-target="#outro-conjunto-de-dados">Outro conjunto de dados</a></li>
+  <li><a href="#conjunto-estande" id="toc-conjunto-estande" class="nav-link" data-scroll-target="#conjunto-estande">Conjunto Estande</a></li>
+  <li><a href="#fazendo-o-mesmo-no-agror" id="toc-fazendo-o-mesmo-no-agror" class="nav-link" data-scroll-target="#fazendo-o-mesmo-no-agror">Fazendo o mesmo no AgroR</a></li>
+  <li><a href="#conjunto-de-dados---sensibilidade-de-fungicidas" id="toc-conjunto-de-dados---sensibilidade-de-fungicidas" class="nav-link" data-scroll-target="#conjunto-de-dados---sensibilidade-de-fungicidas">Conjunto de dados - Sensibilidade de fungicidas</a>
+  <ul class="collapse">
+  <li><a href="#usando-o-pacote-ec50estimator" id="toc-usando-o-pacote-ec50estimator" class="nav-link" data-scroll-target="#usando-o-pacote-ec50estimator">Usando o pacote ec50estimator</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">aula9</h1>
+
+
+<section id="aula-10---290524" class="level2">
+<h2 class="anchored" data-anchor-id="aula-10---290524">AULA 10 - 29/05/24</h2>
+<p>Correlação: associação entre as variáveis, que pode ser forte ou fraca.</p>
+<p>O incremento de uma variável e outra pode ser positiva ou negativa. A força da associação está em função da dispersão dos dados. Quanto menos dispersos os dados no gráfico, mais forte é a associação. O coeficiente de correlação de Pearson é um valor entre -1 e 1.</p>
+<p>Teste de significância do P-valor.</p>
+<p>Na correlação existe uma relação entre causa e efeito.</p>
+<p>Correlações espúrias: não existe relação de causa e efeito.</p>
+<p>o R² (é o quanto da variação de Y é explicada pelo X) é sempre menor que o R (É a força da correlação entre X e Y).</p>
+</section>
+<section id="pacotes" class="level2">
+<h2 class="anchored" data-anchor-id="pacotes">Pacotes</h2>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-1_534a48cf7ea64d3a4bc69031357bd2bb">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AgroR)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(drc)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ec50estimator)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="aula---29052024" class="level2">
-<h2 class="anchored" data-anchor-id="aula---29052024">Aula - 29/05/2024</h2>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-1_85132716dc7a1d181ceda4b0ba9991ab">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dados" class="level2">
+<h2 class="anchored" data-anchor-id="dados">Dados</h2>
+<p>Foram obtidos de culturas diferentes para diferentes softwares. A intenção é saber se existe correlação entre eles.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-2_b186c2890e9e36858c98a3f39f1fe0e7">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=373270992"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="gráficos" class="level2">
+<h2 class="anchored" data-anchor-id="gráficos">Gráficos</h2>
+<p>Análise preeliminar dos dados.</p>
+<p>Eixo X: Assess (que é o ponto de referência), Eixo Y: os outros dois softwares.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-3_7d6991d4a7d74cc7bbc12eea7a8e99bb">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">&lt;-</span> dados <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Assess, <span class="at">y =</span> LeafDoctor))<span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plot1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AgroR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'AgroR'
-
-The following object is masked from 'package:dplyr':
-
-    desc</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ec50estimator)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(drc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: MASS
-
-Attaching package: 'MASS'
-
-The following object is masked from 'package:dplyr':
-
-    select
-
-
-'drc' has been loaded.
-
-Please cite R and 'drc' if used for a publication,
-for references type 'citation()' and 'citation('drc')'.
-
-
-Attaching package: 'drc'
-
-The following object is masked from 'package:AgroR':
-
-    logistic
-
-The following objects are masked from 'package:stats':
-
-    gaussian, getInitial</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'patchwork'
-
-The following object is masked from 'package:MASS':
-
-    area</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>corrplot 0.92 loaded</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-2_dbb7f6990b599cdb227788a259109434">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>imgs <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=373270992"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-3_fb8db6ba75094167f30bffcf3450daf7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>imgs <span class="sc">|&gt;</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">names_to =</span> <span class="st">"method"</span>,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(method, value))<span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Aula_9_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>img1 <span class="ot">&lt;-</span> imgs <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Assess, LeafDoctor))<span class="sc">+</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a> img2 <span class="ot">&lt;-</span> imgs <span class="sc">|&gt;</span> </span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(Assess, ImageJ))<span class="sc">+</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  img3 <span class="ot">&lt;-</span> imgs <span class="sc">|&gt;</span> </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(ImageJ, LeafDoctor))<span class="sc">+</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a> img1 <span class="sc">+</span> img2 <span class="sc">+</span> img3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> dados <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Assess, <span class="at">y =</span> ImageJ))<span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plot2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="Aula_9_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot3 &lt;- dados |&gt; </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#ggplot(aes(x = LeafDoctor, y = ImageJ))+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> <span class="co">#geom_point()+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#theme_classic()+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_smooth(method = "lm")</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#plot3</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plot1 <span class="sc">+</span> plot2 <span class="co">#+ plot3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-4_40d82035c1351e198613bde130053385">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>imgs2 <span class="ot">&lt;-</span> imgs <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">corgraph</span>(imgs2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Em uma análise exploratória, observa-se que ambas apresentam correção positiva. Entretanto, a correlação entre Assess e ImageJ é mais forte.</p>
+</section>
+<section id="utilizando-o-agror" class="level2">
+<h2 class="anchored" data-anchor-id="utilizando-o-agror">Utilizando o AgroR</h2>
+<p>Quanto maior a correlação, menor o P-valor. QUanto mais próxima de 0, não há associação entre os dados.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-4_25146b96fa86697f95b67ed80e448a8e">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>imgs <span class="ot">&lt;-</span> dados <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">corgraph</span>(imgs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        Var1       Var2       cor            p
 2 LeafDoctor     Assess 0.9666367 5.972544e-42
@@ -381,7 +391,11 @@ The following object is masked from 'package:MASS':
 <div class="cell-output-display">
 <p><img src="Aula_9_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor.test</span>(imgs<span class="sc">$</span>Assess, imgs<span class="sc">$</span>LeafDoctor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># O corgraph é uma matriz de correlação que pode ser usada até em um artigo para demonstrar a correlação entre os dados.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O gráfic nos mostra que pode-se usar outro programa (em relação ao Assess), pois mostra que existe uma correlação muito boa entre os programas, ou seja, são confiáveis.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-5_dd0d10856c2149248e767ac5f83e15fb">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imgs<span class="sc">$</span>Assess, imgs<span class="sc">$</span>LeafDoctor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
@@ -395,25 +409,47 @@ sample estimates:
       cor 
 0.9666367 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(imgs<span class="sc">$</span>Assess, imgs<span class="sc">$</span>LeafDoctor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imgs<span class="sc">$</span>Assess, imgs<span class="sc">$</span>ImageJ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9666367</code></pre>
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  imgs$Assess and imgs$ImageJ
+t = 38.383, df = 68, p-value &lt; 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.9642331 0.9861219
+sample estimates:
+      cor 
+0.9776918 </code></pre>
 </div>
 </div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-5_feb2ab84177ad086677e16477170e0e9">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>cor_imgs2 <span class="ot">&lt;-</span> <span class="fu">cor</span>(imgs2)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(cor_imgs2, <span class="at">method =</span> <span class="st">"number"</span>, <span class="at">type =</span> <span class="st">"lower"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="usando-corrplot" class="level2">
+<h2 class="anchored" data-anchor-id="usando-corrplot">Usando Corrplot</h2>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-6_f6bdf6d96a9ee8a95d7df97794b7d227">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>cor_img <span class="ot">&lt;-</span> <span class="fu">cor</span>(imgs)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(cor_img, <span class="at">method =</span> <span class="st">'number'</span>, <span class="at">type =</span> <span class="st">'upper'</span>, <span class="at">diag =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>cor_img2 <span class="ot">&lt;-</span> <span class="fu">cor</span>(imgs)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(cor_img, <span class="at">method =</span> <span class="st">"square"</span>, <span class="at">type =</span> <span class="st">"lower"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-6_9db117fb912e9f79565c993180df7891">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>campo <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=866852711"</span>)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>campo2 <span class="ot">&lt;-</span> campo <span class="sc">|&gt;</span> </span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(DFC, FER, PROD)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">corgraph</span>(campo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="outro-conjunto-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="outro-conjunto-de-dados">Outro conjunto de dados</h2>
+<p>Usando agora o conjunto de dados Campo.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-7_ab78fd87f33dd69e058eb31d4a176f00">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>campo <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=866852711"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>campo2 <span class="ot">&lt;-</span> campo <span class="sc">|&gt;</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(DFC, FER, PROD)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">corgraph</span>(campo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Var1 Var2        cor            p
 2  FER  DFC  0.9316978 9.864101e-15
@@ -421,45 +457,78 @@ sample estimates:
 6 PROD  FER -0.6258321 1.277444e-04</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(campo2<span class="sc">$</span>PROD, campo2<span class="sc">$</span>DFC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  campo2$PROD and campo2$DFC
+t = -5.2623, df = 30, p-value = 1.111e-05
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.8388581 -0.4537361
+sample estimates:
+       cor 
+-0.6928161 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(campo2<span class="sc">$</span>PROD, campo2<span class="sc">$</span>FER)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  campo2$PROD and campo2$FER
+t = -4.3949, df = 30, p-value = 0.0001277
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.7999565 -0.3544981
+sample estimates:
+       cor 
+-0.6258321 </code></pre>
+</div>
+</div>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-8_3403bf28fe969c7aed5b7ff9ed7286af">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>campo <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(DFC, PROD))<span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
-<section id="pós-intervalo" class="level2">
-<h2 class="anchored" data-anchor-id="pós-intervalo">Pós-intervalo</h2>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-7_e11361ffbad74c0ad4c1ea739e06ce7b">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>campo <span class="sc">|&gt;</span> </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(DFC, PROD))<span class="sc">+</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+<section id="conjunto-estande" class="level2">
+<h2 class="anchored" data-anchor-id="conjunto-estande">Conjunto Estande</h2>
+<p>Testar o modelo quadrático - é um modelo linear de segunda ordem. Ajustando ao modelo nos dados do tratamento.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-9_440ce58b75b5c788b67a6a3966b7eb85">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>estande <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=401662555"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-8_70543ae5bae7f3a98b84fdc7c2368587">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>estande <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=401662555"</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>exp2 <span class="ot">&lt;-</span> estande <span class="sc">|&gt;</span> <span class="fu">filter</span>(exp <span class="sc">==</span> <span class="dv">2</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>exp2 <span class="sc">|&gt;</span> </span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(trat, nplants))<span class="sc">+</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>)<span class="sc">+</span></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">se =</span> F,</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y<span class="sc">~</span><span class="fu">poly</span>(x,<span class="dv">2</span>),</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"red"</span>)<span class="sc">+</span></span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-10_a916815476f67754abc15e62284228f5">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>estande <span class="sc">|&gt;</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(exp <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(trat, nplants))<span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>)<span class="sc">+</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">se =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span><span class="fu">poly</span>(x,<span class="dv">2</span>),</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Modelo de primeira ordem</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>lm2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(nplants<span class="sc">~</span>trat,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> exp2)</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+</div>
+<p>A equação da curva preta seria: Y = 66,3 - 1,77 x trat + 0,02 x trat².</p>
+<p>Essa equação é encontrada nos valores do summary(lm3). Intercept, trat, e trat2.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-11_961d1d812cecc29dbafb84461d2bf765">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>exp2 <span class="ot">&lt;-</span> estande <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(exp <span class="sc">==</span> <span class="dv">2</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>lm2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(nplants <span class="sc">~</span>trat, <span class="at">data =</span> exp2)</span>
 <span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -483,15 +552,35 @@ F-statistic: 19.05 on 1 and 22 DF,  p-value: 0.0002473</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(lm2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo de segunda ordem ou modelo quadrático (ainda é um modelo liner, é um modelo curvelinear)</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>exp2<span class="sc">$</span>trat2 <span class="ot">&lt;-</span> exp2<span class="sc">$</span>trat<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>lm3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(nplants<span class="sc">~</span>trat <span class="sc">+</span> trat2,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> exp2)</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>exp2<span class="sc">$</span>trat2 <span class="ot">&lt;-</span> exp2<span class="sc">$</span>trat<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>lm3 <span class="ot">&lt;-</span><span class="fu">lm</span>(nplants <span class="sc">~</span>trat <span class="sc">+</span> trat2,</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">data =</span> exp2)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = nplants ~ trat, data = exp2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-25.7816  -7.7150   0.5653   8.1929  19.2184 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  60.9857     3.6304  16.798 4.93e-14 ***
+trat         -0.7007     0.1605  -4.365 0.000247 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.95 on 22 degrees of freedom
+Multiple R-squared:  0.4641,    Adjusted R-squared:  0.4398 
+F-statistic: 19.05 on 1 and 22 DF,  p-value: 0.0002473</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -513,19 +602,50 @@ Residual standard error: 12.24 on 21 degrees of freedom
 Multiple R-squared:  0.5432,    Adjusted R-squared:  0.4997 
 F-statistic: 12.49 on 2 and 21 DF,  p-value: 0.0002675</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(lm3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-8-3.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(lm2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(lm2)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 194.9597</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(lm3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(lm3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 193.1284</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(exp2, <span class="fu">polynomial</span>(trat, nplants, <span class="at">grau =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(lm3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># modelo de primeira ordem</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="fazendo-o-mesmo-no-agror" class="level2">
+<h2 class="anchored" data-anchor-id="fazendo-o-mesmo-no-agror">Fazendo o mesmo no AgroR</h2>
+<p>É observado que o R² vai melhorando conforme o aumento do grau. Entretanto, não podemos aceitar no grau 3 pois o estande não aumenta a concentração de inóculo. O melhor é o grau 2, neste caso.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-12_bf6c6a5371ca1e28986187588e989493">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(exp2, <span class="fu">polynomial</span>(trat, nplants, <span class="at">grau =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+----------------------------------------------------
+Regression Models
+----------------------------------------------------
+              Estimate Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 60.9857143  3.6304377 16.798447 4.929311e-14
+trat        -0.7006912  0.1605226 -4.365063 2.473272e-04
+
+----------------------------------------------------
+Deviations from regression
+----------------------------------------------------
+          Df      SSq       MSQ        F      p-value
+Linear     1 3196.203 3196.2031 21.82329 0.0001899378
+Deviation  4 1054.172  263.5430  1.79944 0.1729687460
+Residual  18 2636.250  146.4583                      </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(exp2, <span class="fu">polynomial</span>(trat, nplants, <span class="at">grau =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 ----------------------------------------------------
@@ -549,54 +669,184 @@ Residual  18 2636.2500  146.4583                       </code></pre>
 <pre><code>[[1]]</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-8-4.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-12-2.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#AgroR::polynomial(trat, nplants, grau = 1, data = exp2) # Não deu certo, não sei o pq</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="modelo-não-linear" class="level2">
-<h2 class="anchored" data-anchor-id="modelo-não-linear">Modelo não linear</h2>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-9_c43ba1bf1c19b8d087d0c24e63f2adf5">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>sensi <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=465348652"</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>sensi<span class="sc">$</span>dose <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(sensi<span class="sc">$</span>dose)</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(sensi<span class="sc">$</span>dose)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(exp2, <span class="fu">polynomial</span>(trat, nplants, <span class="at">grau =</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
+<pre><code>
+----------------------------------------------------
+Regression Models
+----------------------------------------------------
+                Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 70.265143802 5.300440019 13.256474 2.295186e-11
+trat        -3.609380523 1.514625525 -2.383018 2.720299e-02
+I(trat^2)    0.140522077 0.091192577  1.540938 1.390058e-01
+I(trat^3)   -0.001712445 0.001309648 -1.307561 2.058546e-01
+
+----------------------------------------------------
+Deviations from regression
+----------------------------------------------------
+          Df       SSq       MSQ          F      p-value
+Linear     1 3196.2031 3196.2031 21.8232929 0.0001899378
+Quadratic  1  544.5029  544.5029  3.7178008 0.0697619482
+Cubic      1  247.7520  247.7520  1.6916208 0.2097934169
+Deviation  2  261.9170  130.9585  0.8941691 0.4263523326
+Residual  18 2636.2500  146.4583                        </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>sensi<span class="sc">|&gt;</span> </span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code, dose) <span class="sc">|&gt;</span> </span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_germination =</span> <span class="fu">mean</span>(germination)) <span class="sc">|&gt;</span>  </span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dose, mean_germination))<span class="sc">+</span></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>code)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'code'. You can override using the
-`.groups` argument.</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="Aula_9_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-12-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-10_7e1f212d433a8db56e12701477d2aa45">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>sensi2 <span class="ot">&lt;-</span> sensi<span class="sc">|&gt;</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code, dose) <span class="sc">|&gt;</span> </span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_germination =</span> <span class="fu">mean</span>(germination))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="conjunto-de-dados---sensibilidade-de-fungicidas" class="level2">
+<h2 class="anchored" data-anchor-id="conjunto-de-dados---sensibilidade-de-fungicidas">Conjunto de dados - Sensibilidade de fungicidas</h2>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-13_9e7c300da0b812f5fd6e01242c7552a6">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>sens <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=465348652"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Agrupar e sumarizar (médias) dos dois tratamentos para observar os dois isolados.</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>sens2 <span class="ot">&lt;-</span> sens <span class="sc">|&gt;</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code, dose) <span class="sc">|&gt;</span> </span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_germination =</span> <span class="fu">mean</span>(germination))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'code'. You can override using the
 `.groups` argument.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>FGT05 <span class="ot">&lt;-</span> sensi2 <span class="sc">|&gt;</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code <span class="sc">==</span> <span class="st">"FGT05"</span>)</span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(drc)</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co">#drc1 &lt;- drm(mean_germination ~ dose, data = FGT05, fct = LL.3())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>sens2 <span class="sc">|&gt;</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dose2=</span>dose)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 120 × 4
+# Groups:   code [20]
+   code   dose mean_germination dose2
+   &lt;chr&gt; &lt;dbl&gt;            &lt;dbl&gt; &lt;dbl&gt;
+ 1 152    0                48.5  0   
+ 2 152    0.05             42    0.05
+ 3 152    0.5              15.5  0.5 
+ 4 152    1                 0.5  1   
+ 5 152    5                 0    5   
+ 6 152   10                 0   10   
+ 7 153    0                49.5  0   
+ 8 153    0.05             44.5  0.05
+ 9 153    0.5               9    0.5 
+10 153    1                 8.5  1   
+# ℹ 110 more rows</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#sens2$dose2 &lt;- as.factor(sens2$dose2)</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co">#sens2</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>germ <span class="ot">&lt;-</span> sens2 <span class="sc">|&gt;</span> </span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dose, mean_germination))<span class="sc">+</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>code)<span class="sc">+</span></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">se =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span><span class="fu">poly</span>(x,<span class="dv">2</span>),</span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"blue"</span>)</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a>germ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-14_e4e71f211341e2b8f9ab2b6d40db888e">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>isolado152 <span class="ot">&lt;-</span> sens2 <span class="sc">|&gt;</span> </span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code <span class="sc">==</span> <span class="st">"152"</span>)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>drc1 <span class="ot">&lt;-</span>  <span class="fu">drm</span>(mean_germination <span class="sc">~</span> dose, <span class="at">data =</span> isolado152, </span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">fct =</span> <span class="fu">LL.3</span>())</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(drc1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32.57898</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(drc1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ED</span>(drc1, <span class="dv">50</span>, <span class="at">interval =</span> <span class="st">"delta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Estimated effective doses
+
+       Estimate Std. Error    Lower    Upper
+e:1:50 0.444356   0.077789 0.196796 0.691916</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(drc1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Model fitted: Log-logistic (ED50 as parameter) with lower limit at 0 (3 parms)
+
+Parameter estimates:
+
+               Estimate Std. Error t-value   p-value    
+b:(Intercept)  5.526512   7.765348  0.7117 0.5280076    
+d:(Intercept) 45.250173   1.876343 24.1162 0.0001563 ***
+e:(Intercept)  0.444356   0.077789  5.7123 0.0106434 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error:
+
+ 2.65351 (3 degrees of freedom)</code></pre>
+</div>
+</div>
+<section id="usando-o-pacote-ec50estimator" class="level3">
+<h3 class="anchored" data-anchor-id="usando-o-pacote-ec50estimator">Usando o pacote ec50estimator</h3>
+<p>Faz tudo isso que foi feito anteriormente para todos os códigos.</p>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-15_f7dd83d0de45d07037f46ba1d09abede">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>df_ec50 <span class="ot">&lt;-</span> <span class="fu">estimate_EC50</span>(mean_germination <span class="sc">~</span> dose,</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">data =</span> sens2,</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">isolate_col =</span> <span class="st">"code"</span>,</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>                         <span class="at">interval =</span> <span class="st">"delta"</span>,</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fct =</span> drc <span class="sc">::</span> <span class="fu">LL.3</span>())</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>df_ec50</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      ID strata   Estimate  Std..Error        Lower     Upper
+1    152        0.44435629 0.077789240  0.196796213 0.6919164
+2    153        0.20379664 0.042373512  0.068945217 0.3386481
+3    164        0.50775844 0.047248266  0.357393370 0.6581235
+4    165        0.55839613 0.114195113  0.194976315 0.9218159
+5    169        0.14722311 0.009555688  0.116812646 0.1776336
+6    170        0.37503889 0.043207328  0.237533889 0.5125439
+7    186        0.57975744 0.013332268  0.537328208 0.6221867
+8    187        0.21563338 0.036639446  0.099030315 0.3322365
+9    188        0.15297172 0.004284691  0.139335920 0.1666075
+10   189        0.53106193 0.023130936  0.457448972 0.6046749
+11 FGT05        0.04483862 0.019290890 -0.016553601 0.1062308
+12 FGT06        0.54497946 0.034834602  0.434120211 0.6558387
+13 FGT07        0.88770053 0.079917704  0.633366725 1.1420343
+14 FGT28        0.22608141 0.033600742  0.119148854 0.3330140
+15 FGT29        0.23601652 0.034933881  0.124841318 0.3471917
+16 FGT33        0.10481627 0.013065221  0.063236910 0.1463956
+17 FGT34        0.14773114 0.047003373 -0.001854568 0.2973169
+18 FGT35        0.20315392 0.038984604  0.079087515 0.3272203
+19 FGT42        0.45000559 0.059685890  0.260058448 0.6399527
+20 FGT43        0.49589549 0.060850771  0.302241178 0.6895498</code></pre>
+</div>
+</div>
+<div class="cell" data-hash="Aula_9_cache/html/unnamed-chunk-16_ed40fc0ad21c5643eaff966ffb63a871">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>df_ec50 <span class="sc">|&gt;</span> </span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">reorder</span>(ID, Estimate), Estimate))<span class="sc">+</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> Lower, <span class="at">ymax =</span> Upper))<span class="sc">+</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_9_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Estudado na aula de hoje:</strong></p>
+<ul>
+<li><p>Correlação;</p></li>
+<li><p>Modelo linear quadrático;</p></li>
+<li><p>Modelo não linear usando o pacote <strong>ec50estimator</strong>.</p></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -948,6 +1198,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../R_codes/Aula_8.1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Regressão Linear</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

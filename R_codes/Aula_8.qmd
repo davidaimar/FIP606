@@ -25,6 +25,41 @@ library(patchwork)
 
 ```
 
+## Anova fatorial
+
+```{r}
+library(gsheet)
+fungicida <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=2023059672")
+
+
+fungicida$dose <- as.factor(fungicida$dose)
+
+fungicida |> 
+  ggplot(aes(treat,severity, color = dose))+
+  #geom_boxplot()+
+  geom_jitter(width = 0.2, size = 2.5)+
+  #facet_wrap(~dose)+
+  theme_few()+
+  scale_fill_few()+
+  theme(legend.title = element_blank(), legend.position = "none")
+  
+mf <- lm(severity ~ treat*dose, data = fungicida)
+
+mf
+anova(mf)
+
+plot(simulateResiduals(mf))
+
+mf_medias <- emmeans(mf, ~ treat | dose)
+mf_medias
+cld(mf_medias)
+
+mf_medias_linha <- emmeans(mf, ~ dose | treat)
+mf_medias_linha
+cld(mf_medias_linha,Letters = letters)
+
+```
+
 ## importa dados
 
 ```{r}
@@ -144,182 +179,5 @@ cld(medias_milho_prod, Letters = letters)
 
 ```{r}
 cld(medias_milho_prod2, Letters = letters)
-
-```
-
-## Regressão linear
-
-```{r}
-estande <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=401662555")
-
-```
-
-## Vizualizando
-
-```{r}
- estande |> 
-  ggplot(aes(trat, nplants))+
-  geom_jitter(width = 0.1, alpha = 0.2)+
-  #facet_wrap(~ exp)+
-  stat_summary(fun.data = "mean_cl_boot", color = 'black', alpha = 0.5)+
-  theme_few()+
-  geom_smooth(method = "lm", se = F)
-
-```
-
-```{r}
-exp1 = estande |> 
-  filter(exp == 1)
-
-exp1 |> 
-  ggplot(aes(trat, nplants))+
-  geom_point()+
-  theme_few()+
-  ylim(0,100)+
-  geom_smooth(method = "lm", se = F)
-
-# Modelo linear
-
-lm1 <- lm(nplants ~ trat, data = exp1)
-
-summary(lm1)
-
-```
-
-```{r}
-exp2 = estande |> 
-  filter(exp == 2)
-
-exp2 |> 
-  ggplot(aes(trat, nplants))+
-  geom_point()+
-  theme_few()+
-  ylim(0,100)+
-  geom_smooth(method = "lm", se = F)
-
-# Modelo linear
-
-lm2 <- lm(nplants ~ trat, data = exp2)
-
-summary(lm2)
-
-```
-
-```{r}
-exp3 = estande |> 
-  filter(exp == 3)
-
-exp3 |> 
-  ggplot(aes(trat, nplants))+
-  geom_point()+
-  theme_few()+
-  ylim(0,100)+
-  geom_smooth(method = "lm", se = F)
-
-# Modelo linear
-
-lm3 <- lm(nplants ~ trat, data = exp3)
-
-summary(lm3)
-
-residuals(lm3)
-hist(residuals(lm3))
-
-```
-
-```{r}
-# Modelo linear generalizado
-glm3 <- glm(nplants ~ trat,
-            family = gaussian,
-            data = exp3)
-
-summary(glm3)
-AIC(glm3)
-
-glm3b <- glm(nplants ~ trat,
-             family = poisson(link = "log"),
-             data = exp3)
-
-summary(glm3b)
-AIC(glm3b) # 	Akaike's An Information Criterion (O Critério de Informação de Akaike": quanto menor, melhor)
-
-
-# Modelos Lineares Generalizados de Efeitos Mistos
-
-glmer3 <- glmer(nplants ~ trat + (trat | exp), family = gaussian, data = estande)
-
-summary(glmer3)
-AIC(glmer3)
-
-
-glmer3b <- glmer(nplants ~ trat + (trat|exp), family = poisson(link = "log"),
-                                                              data = estande) 
-
-summary(glmer3b)
-AIC(glmer3b) 
-
-```
-
-```{r}
-
-wm <- WhiteMoldSoybean
-
-wm |> 
-  ggplot(aes(inc, yld, group = factor(study)))+
-  geom_point()+
-  #facet_wrap(~ study)+
-  geom_smooth(method = "lm", se= F)
-  theme_minimal()
-
-```
-
-```{r}
-
-mofo1 <- lm(yld ~ inc,
-            data = wm)
-
-summary(mofo1)
-
-```
-
-```{r}
-fit_all <- wm |> 
-  group_by(study) |> 
-  do(tidy(lm(.$yld ~ .$inc), conf.int = TRUE))
-
-fit_all
-
-g_inter <- fit_all |> 
-  filter(term == "(Intercept)") |> 
-  ggplot(aes(x = estimate))+
-  theme_r4pde()+
-  geom_histogram(bins = 8, color = "white", fill = "gray50")+
-  labs(x = "Intercept", y = "frequency")
-
-g_slop <- fit_all |> 
-  filter(term == ".$inc") |> 
-  ggplot(aes(x = estimate))+
-  theme_r4pde()+
-  geom_histogram(bins = 8, color = "white", fill = "gray50")+
-  labs(x = "Slopes", y = "Frequency")
-
-
-g_inter + g_slop
-
-df <- fit_all |>
-  filter(term == ".$inc")
-
-mean(df$estimate)
-
-
-```
-
-```{r}
-mofo2 <- lmer(yld ~ inc + (inc | study), data = wm,
-              REML = F)
-
-summary(mofo2)
-Anova(mofo2)
-confint(mofo2, method = "Wald")
 
 ```

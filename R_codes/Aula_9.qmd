@@ -1,74 +1,112 @@
 ---
-title: "aula9"
+title: " "
 format: html
-editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
 
-## Aula - 29/05/2024
+## AULA 10 - 29/05/24
+
+Correlação: associação entre as variáveis, que pode ser forte ou fraca.
+
+O incremento de uma variável e outra pode ser positiva ou negativa. A força da associação está em função da dispersão dos dados. Quanto menos dispersos os dados no gráfico, mais forte é a associação. O coeficiente de correlação de Pearson é um valor entre -1 e 1.
+
+Teste de significância do P-valor.
+
+Na correlação existe uma relação entre causa e efeito.
+
+Correlações espúrias: não existe relação de causa e efeito.
+
+o R² (é o quanto da variação de Y é explicada pelo X) é sempre menor que o R (É a força da correlação entre X e Y).
+
+## Pacotes
 
 ```{r}
-library(tidyverse)
-library(AgroR)
-library(ec50estimator)
 library(gsheet)
-library(drc)
+library(tidyverse)
 library(patchwork)
+library(AgroR)
 library(corrplot)
-library(ggthemes)
-
+library(drc)
+library(dplyr)
+library(ec50estimator)
 ```
 
-```{r}
-imgs <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=373270992")
+## Dados
 
+Foram obtidos de culturas diferentes para diferentes softwares. A intenção é saber se existe correlação entre eles.
+
+```{r}
+dados <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=373270992")
 ```
 
-```{r}
-imgs |> 
-  pivot_longer(3:5, names_to = "method",
-               values_to = "value") |> 
-  ggplot(aes(method, value))+
-  geom_boxplot()
+## Gráficos
 
-img1 <- imgs |> 
-  ggplot(aes(Assess, LeafDoctor))+
+Análise preeliminar dos dados.
+
+Eixo X: Assess (que é o ponto de referência), Eixo Y: os outros dois softwares.
+
+```{r}
+plot1 <- dados |> 
+  ggplot(aes(x = Assess, y = LeafDoctor))+
   geom_point()+
+  theme_classic()+
   geom_smooth(method = "lm")
 
-    
- img2 <- imgs |> 
-   ggplot(aes(Assess, ImageJ))+
-   geom_point()+
-   geom_smooth(method = "lm")
- 
-  img3 <- imgs |> 
-   ggplot(aes(ImageJ, LeafDoctor))+
-   geom_point()+
-   geom_smooth(method = "lm")
+plot1
 
- img1 + img2 + img3
+plot2 <- dados |> 
+  ggplot(aes(x = Assess, y = ImageJ))+
+  geom_point()+
+  theme_classic()+
+  geom_smooth(method = "lm")
 
+plot2
+
+#plot3 <- dados |> 
+  #ggplot(aes(x = LeafDoctor, y = ImageJ))+
+ #geom_point()+
+  #theme_classic()+
+  #geom_smooth(method = "lm")
+
+#plot3
+
+plot1 + plot2 #+ plot3
 ```
 
+Em uma análise exploratória, observa-se que ambas apresentam correção positiva. Entretanto, a correlação entre Assess e ImageJ é mais forte.
+
+## Utilizando o AgroR
+
+Quanto maior a correlação, menor o P-valor. QUanto mais próxima de 0, não há associação entre os dados.
+
 ```{r}
-imgs2 <- imgs |> 
+imgs <- dados |> 
   dplyr::select(3:5)
 
-  corgraph(imgs2)
-  
-  cor.test(imgs$Assess, imgs$LeafDoctor)
-  cor(imgs$Assess, imgs$LeafDoctor)
+corgraph(imgs)
 
+# O corgraph é uma matriz de correlação que pode ser usada até em um artigo para demonstrar a correlação entre os dados.
 ```
+
+O gráfic nos mostra que pode-se usar outro programa (em relação ao Assess), pois mostra que existe uma correlação muito boa entre os programas, ou seja, são confiáveis.
 
 ```{r}
-cor_imgs2 <- cor(imgs2)
-corrplot(cor_imgs2, method = "number", type = "lower")
-
-
+cor.test(imgs$Assess, imgs$LeafDoctor)
+cor.test(imgs$Assess, imgs$ImageJ)
 ```
+
+## Usando Corrplot
+
+```{r}
+cor_img <- cor(imgs)
+corrplot(cor_img, method = 'number', type = 'upper', diag = FALSE)
+
+cor_img2 <- cor(imgs)
+corrplot(cor_img, method = "square", type = "lower")
+```
+
+## Outro conjunto de dados
+
+Usando agora o conjunto de dados Campo.
 
 ```{r}
 campo <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=866852711")
@@ -78,91 +116,144 @@ campo2 <- campo |>
 
 corgraph(campo2)
 
-
+cor.test(campo2$PROD, campo2$DFC)
+cor.test(campo2$PROD, campo2$FER)
 ```
-
-## Pós-intervalo
 
 ```{r}
 campo |> 
   ggplot(aes(DFC, PROD))+
   geom_jitter()
-
 ```
+
+## Conjunto Estande
+
+Testar o modelo quadrático - é um modelo linear de segunda ordem. Ajustando ao modelo nos dados do tratamento.
 
 ```{r}
 estande <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=401662555")
+```
 
-exp2 <- estande |> filter(exp == 2)
-
-exp2 |> 
+```{r}
+estande |> 
+  filter(exp == 2) |> 
   ggplot(aes(trat, nplants))+
   geom_point()+
-  theme_few()+
   ylim(0, 100)+
   geom_smooth(method = "lm",
-              se = F,
-              formula = y~poly(x,2),
-              color = "red")+
-  geom_smooth(method = "lm", se = FALSE)
+              se = FALSE,
+              formula = y ~poly(x,2),
+              color = "black")+
+  geom_smooth(method = "lm", se = FALSE)+
+  theme_classic()
+```
 
-#Modelo de primeira ordem
-lm2 <- lm(nplants~trat,
-          data = exp2)
+A equação da curva preta seria: Y = 66,3 - 1,77 x trat + 0,02 x trat².
 
+Essa equação é encontrada nos valores do summary(lm3). Intercept, trat, e trat2.
+
+```{r}
+exp2 <- estande |> 
+  filter(exp == 2)
+
+lm2 <- lm(nplants ~trat, data = exp2)
 summary(lm2)
 hist(residuals(lm2))
 
-# Modelo de segunda ordem ou modelo quadrático (ainda é um modelo liner, é um modelo curvelinear)
 exp2$trat2 <- exp2$trat^2
 
-lm3 <- lm(nplants~trat + trat2,
-          data = exp2)
+lm3 <-lm(nplants ~trat + trat2,
+         data = exp2)
 
+summary(lm2)
 summary(lm3)
-hist(residuals(lm3))
 
-
-AIC(lm2)
+AIC(lm2)  
 AIC(lm3)
 
+hist(residuals(lm3))
+# modelo de primeira ordem
+```
 
+## Fazendo o mesmo no AgroR
+
+É observado que o R² vai melhorando conforme o aumento do grau. Entretanto, não podemos aceitar no grau 3 pois o estande não aumenta a concentração de inóculo. O melhor é o grau 2, neste caso.
+
+```{r}
+with(exp2, polynomial(trat, nplants, grau = 1))
 with(exp2, polynomial(trat, nplants, grau = 2))
-
-
-#AgroR::polynomial(trat, nplants, grau = 1, data = exp2) # Não deu certo, não sei o pq
-
+with(exp2, polynomial(trat, nplants, grau = 3))
 ```
 
-## Modelo não linear
+## Conjunto de dados - Sensibilidade de fungicidas
 
 ```{r}
-sensi <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=465348652")
+sens <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=465348652")
 
-sensi$dose <- as.factor(sensi$dose)
+#Agrupar e sumarizar (médias) dos dois tratamentos para observar os dois isolados.
 
-is.factor(sensi$dose)
-
-sensi|> 
-  group_by(code, dose) |> 
-  summarise(mean_germination = mean(germination)) |>  
-  ggplot(aes(dose, mean_germination))+
-  geom_point()+
-  facet_wrap(~code)
-
-```
-
-```{r}
-sensi2 <- sensi|> 
+sens2 <- sens |>
   group_by(code, dose) |> 
   summarise(mean_germination = mean(germination))
+  
+sens2 |> 
+  mutate(dose2=dose)
+  
+#sens2$dose2 <- as.factor(sens2$dose2)
 
-FGT05 <- sensi2 |> 
-  filter(code == "FGT05")
- 
 
-library(drc)
+#sens2
 
-#drc1 <- drm(mean_germination ~ dose, data = FGT05, fct = LL.3())
-
+germ <- sens2 |> 
+  ggplot(aes(dose, mean_germination))+
+  geom_point()+
+  facet_wrap(~code)+
+  geom_smooth(method = "lm",
+              se = FALSE,
+              formula = y ~poly(x,2),
+              color = "blue")
+germ
 ```
+
+```{r}
+isolado152 <- sens2 |> 
+  filter(code == "152")
+
+drc1 <-  drm(mean_germination ~ dose, data = isolado152, 
+             fct = LL.3())
+
+AIC(drc1)
+plot(drc1)
+ED(drc1, 50, interval = "delta")
+
+summary(drc1)
+```
+
+### Usando o pacote ec50estimator
+
+Faz tudo isso que foi feito anteriormente para todos os códigos.
+
+```{r}
+df_ec50 <- estimate_EC50(mean_germination ~ dose,
+                         data = sens2,
+                         isolate_col = "code",
+                         interval = "delta",
+                         fct = drc :: LL.3())
+df_ec50
+```
+
+```{r}
+df_ec50 |> 
+  ggplot(aes(reorder(ID, Estimate), Estimate))+
+  geom_point()+
+  geom_errorbar(aes(ymin = Lower, ymax = Upper))+
+  coord_flip()
+```
+
+**Estudado na aula de hoje:**
+
+-   Correlação;
+
+-   Modelo linear quadrático;
+
+-   Modelo não linear usando o pacote **ec50estimator**.

@@ -1,0 +1,4 @@
+"0","library(readxl)"
+"0",""
+"0","dados <- read_excel(""dados-diversos.xlsx"", sheet = ""magnesio"")"
+"0",""
