@@ -24,7 +24,7 @@ website:
        file: R_codes/Aula_1.qmd
      - text: "Análise Exploratória"
        file: R_codes/Aula_3.qmd
-     - text: "Análises Estatísticas"
+     - text: "Análise Estatística"
        file: R_codes/Aula_5.qmd
      - text: "Mapas em R"
        file: R_codes/Aula_10.qmd
@@ -68,7 +68,7 @@ website:
           text: Importação, vizualização e sumarização de dados
         - href: R_codes/Aula_4.qmd
           text: Diferentes meios de importação e tipos de gráficos
-    - title: "Análises Estatísticas"
+    - title: "Análise Estatística"
       contents: 
         - href: R_codes/Aula_5.qmd
           text: Analisando um conjunto de dados particular
@@ -83,7 +83,7 @@ website:
         - href: R_codes/Aula_8.1.qmd
           text: Regressão Linear
         - href: R_codes/Aula_9.qmd
-        - text: Correlação de Variáveis
+          text: Correlação de Variáveis
 
 
   page-footer:
