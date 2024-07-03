@@ -7,7 +7,7 @@ format: html
 
 Criar um projeto no RStudio para análise de dados oferece diversas vantagens, como melhor organização e gerenciamento de arquivos, ambiente de trabalho isolado e reprodutível, e integração com sistemas de controle de versão como Git. Facilita a colaboração e partilha de projetos, permitindo que todas as dependências e estrutura de diretórios sejam consistentes. A automatização de tarefas através de scripts, a facilidade de navegação e a manutenção de um diretório de trabalho consistente melhoram a eficiência. Além disso, as configurações específicas do projeto são salvas e podem ser facilmente restauradas, proporcionando um ambiente de análise de dados organizado e eficaz.
 
-Para criar um projeto no RStudio, abra o programa e clique em Project: (None) no canto superior direito, selecionando `New Project...` Escolha `New Directory` para criar um projeto em um novo diretório ou `Existing Directory` para usar uma pasta existente. Para a maioria dos casos, selecione New Project, insira o nome do diretório e escolha o local onde o diretório será criado. Clique em `Create Project` e o RStudio configurará e abrirá automaticamente o novo projeto, permitindo que você adicione arquivos e scripts conforme necessário para sua análise de dados.
+Para criar um projeto no RStudio, abra o programa e clique em Project: (None) no canto superior direito, selecionando `New Project...` escolha `New Directory` para criar um projeto em um novo diretório ou `Existing Directory` para usar uma pasta existente. Para a maioria dos casos, selecione New Project, insira o nome do diretório e escolha o local onde o diretório será criado. Clique em `Create Project` e o RStudio configurará e abrirá automaticamente o novo projeto, permitindo que você adicione arquivos e scripts conforme necessário para sua análise de dados.
 
 # O que um **Quarto Document**?
 
@@ -58,21 +58,6 @@ C
 
 ```
 
-Você pode ir além seguindo os próximos chunks:
-```{r}
-# Criando objetos com mais de um valor; utilizando 'c' para combinação.
-
-D <- c(2, 4, 6, 8, 10)
-
-# Criando objetos com um outro tipo de dado.
-
-S <- c("une", "dune", "tê", "salamê", "minguê")
-
-# Agora, é só vizualizar:
-
-D
-
-```
 
 ## Fazendo operações
 
@@ -82,18 +67,38 @@ A + 2
 
 ```
 
-## Criando um dataframe
+## Criando vetores
 
-Um dataframe é uma estrutura de dados bidimensional, semelhante a uma tabela, amplamente utilizada na linguagem R. Ele permite armazenar e manipular diferentes tipos de dados tabulares de forma eficiente.
+Vetores são objetos com vários valores. Você pode utilizar `c()` para indicar a combinação.
 
+Exemplo de vetores:
 ```{r}
-df <- data.frame(A, B) # Exemplo de dataframe simples
+# Para dados numéricos
+
+D <- c(2, 4, 6, 8, 10)
+
+# Para dados do tipo caracteres.
+
+S <- c("une", "dune", "tê", "salamê", "minguê")
+
+# Adicionar aspas faz com o que os elementes de um vetor de dados sejam lidos como caracteres mesmo que se tratem de números.
+
+comp <- c( "9", "12.5", "10", "8", "13.2", "11", "10.8", "9.5", "10.8", "10.4", "13.72", "15.91", "15.7", "14.2", "15.9", "16.54", "18", "14.4", "16.41", "16")
+
+# É ideal que um vetor agrupe o mesmo tipo de dado!
+
+# Agora, é só vizualizar:
+
+comp
 
 ```
 
-```{r}
-# Exemplo de dataframe mais complexo
+## Criando um data frame
 
+Um dataframe é uma estrutura de dados bidimensional, semelhante a uma tabela, amplamente utilizada na linguagem R. Ele permite armazenar e manipular diferentes tipos de dados tabulares de forma eficiente.
+
+Exemplo de um dataframe:
+```{r}
 dataf <- data.frame(palavras = S, números = D)
 
 

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="David Aimar Sousa Silva, 114906">
 
-<title>FIP606 - Aula 5: Análise de Notas (FIP606)</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -246,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_8" class="sidebar-item-text sidebar-link">
+  <a href="../R_codes/Aula_8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experimentos em esquema fatorial e parcelas subdividas</span></a>
   </div>
 </li>
@@ -290,31 +289,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Aula 5: Análise de Notas (FIP606)</h1>
-</div>
 
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>David Aimar Sousa Silva, 114906 </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
 
 <section id="analisando-o-conjunto-de-notas-da-turma-de-fip606" class="level1">
 <h1>Analisando o conjunto de notas da turma de FIP606</h1>
+<p>Aqui será apresentada uma análise das notas dos alunos da turma de FIP606 em duas provas semanais, as famosas “sabatinas”, que são corriqueiramente aplicadas nas disciplinas do nosso PPG. Acompanhe…</p>
 <section id="pacotes-necessários" class="level2">
 <h2 class="anchored" data-anchor-id="pacotes-necessários">Pacotes necessários</h2>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-1_d7d65dcfdad4fc8e191a268054855f6b">
@@ -334,7 +313,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Algumas funções do rstudio base também serão utilizadas</p>
 </section>
 <section id="importando-os-dados" class="level2">
 <h2 class="anchored" data-anchor-id="importando-os-dados">Importando os dados</h2>
@@ -346,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="analisando-e-modificação-da-estrutura-dos-dados-importados" class="level2">
 <h2 class="anchored" data-anchor-id="analisando-e-modificação-da-estrutura-dos-dados-importados">Analisando e modificação da estrutura dos dados importados</h2>
-<p>Através da a função ‘glimpsel’ do pacote <strong>dplyr</strong> obtemos um um resumo compacto e informativo dos dados.</p>
+<p>Através da a função <code>glimpsel()</code> do pacote <strong>dplyr</strong> obtemos um um resumo compacto e informativo dos dados.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-3_c2fb4cf6b98fdf18a4ddfaf7b24ea9a8">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(notas)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -357,11 +335,11 @@ $ pontos &lt;dbl&gt; 10, 13, 12, 6, 14, 12, 14, 8, 14, 10, 10, 13, 9, 14, 9, 14,
 $ nota   &lt;dbl&gt; 71.40, 92.90, 85.70, 42.90, 100.00, 85.70, 100.00, 57.10, 100.0…</code></pre>
 </div>
 </div>
-<p>Para as posteriores análise é interessante que a coluna ‘prova’ da planilha seja interpretada como um fator categórico. Modificamos utilizando ‘as.factor’.</p>
+<p>Para as posteriores análise é interessante que a coluna ‘prova’ da planilha seja interpretada como um fator categórico. Modificamos utilizando <code>as.factor()</code>.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-4_0bf518870bd306ac9cbdc86aa5f731b4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>notas<span class="sc">$</span>prova <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(notas<span class="sc">$</span>prova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Comprovando a alteração no conjunto com ‘is.factor’</p>
+<p>Comprovando a alteração no conjunto com <code>is.factor()</code>.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-5_b6583f13ffebd797671680234ea9e702">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(notas<span class="sc">$</span>prova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -390,7 +368,7 @@ $ nota   &lt;dbl&gt; 71.40, 92.90, 85.70, 42.90, 100.00, 85.70, 100.00, 57.10, 1
   42.90   68.75   85.70   79.40  100.00  100.00 </code></pre>
 </div>
 </div>
-<p>Utilizando as funções ‘group_by’ e ‘summarize’ do pacote <strong>dplyr</strong> para obter valores correspondentes às medidas de tendência central para as notas em ambas as provas aplicadas.</p>
+<p>Utilizando as funções <code>group_by()</code> e <code>summarize()</code> do pacote <strong>dplyr</strong> para obter valores correspondentes às medidas de tendência central para as notas em ambas as provas aplicadas.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-8_3128a9d3ca52058755c415d14028f312">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>notas <span class="sc">|&gt;</span> </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(prova) <span class="sc">|&gt;</span> </span>
@@ -409,7 +387,7 @@ $ nota   &lt;dbl&gt; 71.40, 92.90, 85.70, 42.90, 100.00, 85.70, 100.00, 57.10, 1
 </section>
 <section id="produção-de-gráficos" class="level2">
 <h2 class="anchored" data-anchor-id="produção-de-gráficos">Produção de Gráficos</h2>
-<p>Através das diversas funções do ggplot é possível criar uma série de gráficos com o conjunto de dados importado. Com as funções ‘geom_boxplot’ e ‘geom_jitter’ criamos um gráfico boxplot e adicionamos os pontos correspondentes às notas, respectivamente. Isso nos permite obter uma visualização rapida da dispersão dos dados, áreas de concentração e variabilidade de valores, além da mediana e dos valores extremos.</p>
+<p>Através das diversas funções do <strong>ggplot</strong> é possível criar uma série de gráficos com o conjunto de dados importado. Com as funções <code>geom_boxplot()</code> e <code>geom_jitter()</code> criamos um gráfico boxplot e adicionamos os pontos correspondentes às notas, respectivamente. Isso nos permite obter uma visualização rapida da dispersão dos dados, áreas de concentração e variabilidade de valores, além da mediana e dos valores extremos.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-9_2f3d9688607845093337c1bf5f6017c9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a> notas <span class="sc">|&gt;</span> </span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> nota, <span class="at">x =</span> prova))<span class="sc">+</span></span>
@@ -453,7 +431,7 @@ $ nota   &lt;dbl&gt; 71.40, 92.90, 85.70, 42.90, 100.00, 85.70, 100.00, 57.10, 1
 </div>
 </div>
 <p>Com os gráficos produzidos observa-se uma leve tendência de melhora da turma na segunda prova, com maior frequência de notas acima da média da turma.</p>
-<p>Produzindo um gráfico com a função ‘geom_jitter’ e ‘geom_hline’ para vizualizar a distribuição dos valores em relação a média.</p>
+<p>Produzindo um gráfico com a função <code>geom_jitter()</code> e <code>geom_hline()</code> para vizualizar a distribuição dos valores em relação a média.</p>
 <div class="cell" data-hash="Aula_5_cache/html/unnamed-chunk-11_ffdc78bfce49649c6a8543b3d6651428">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>notas <span class="sc">|&gt;</span> </span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> nota, <span class="at">x =</span> prova))<span class="sc">+</span></span>
@@ -513,7 +491,7 @@ $ nota   &lt;dbl&gt; 71.40, 92.90, 85.70, 42.90, 100.00, 85.70, 100.00, 57.10, 1
 </div>
 </div>
 <p>Notamos que houve um incremento de aproximadamente 4,54% de notas acima da média na segunda prova.</p>
-<p>##Conclusão Demonstramos aqui algumas maneiras de exploração de um conjunto de dados específico para diferentes finalidades. Através das análises realizadas observamos que não houve incremento expressivo de notas acima ou abaixo da média da turma nas duas notas</p>
+<p>Conclusão: Demonstramos aqui algumas maneiras de exploração de um conjunto de dados específico para diferentes finalidades. Através das análises realizadas observamos que não houve incremento expressivo de notas acima ou abaixo da média da turma nas duas notas</p>
 
 
 </section>

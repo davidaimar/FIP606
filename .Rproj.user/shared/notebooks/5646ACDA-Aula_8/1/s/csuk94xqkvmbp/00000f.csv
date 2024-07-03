@@ -1,0 +1,3 @@
+"0","mf_medias <- emmeans(mf, ~ treat | dose)"
+"2","Erro: objeto 'mf' não encontrado
+"

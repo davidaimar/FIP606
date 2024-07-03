@@ -22,6 +22,7 @@ Todos estes pacotes serão utilizados nas análises realizadas aqui. Existe um p
 ## Instalando um Pacote:
 
 A instalação de pacotes pode ser feita através do menu: `Tools \>` `Install packages...`, ou ainda:
+
 ```{r}
 #install.packages(nome do pacote de interesse)
 
@@ -30,6 +31,7 @@ A instalação de pacotes pode ser feita através do menu: `Tools \>` `Install p
 Vale ressaltar que é necessário ter uma conexão estável com a internet para instalar um pacote.
 
 Para instalar o tydiverse:
+
 ```{r warning=FALSE}
 install.packages("tidyverse", repos = "https://cran.r-project.org") 
 
@@ -42,7 +44,23 @@ install.packages("tidyverse", repos = "https://cran.r-project.org")
 Antes de usar qualquer função de um pacote, é necessário carregá-lo.
 
 Para carregar um pacote instalado e usá-lo na sessão atual do R, utiliza-se a função `library()`. Por exemplo, para carregar o tidyverse:
+
 ```{r}
 library(tidyverse)
+
+```
+
+## Pacotes R em outros repositórios
+
+Como já mencionamos, os pacotes R estão disponíveis em repositórios online. O repositório mais conhecido e utilizado é o CRAN (Comprehensive R Archive Network). No entanto, existem vários repositórios importantes que oferecem uma vasta gama de pacotes R.
+
+Veja como utilizar dois pacotes CRAN para para instalar pacotes de outros repositórios:
+```{r}
+library(pak)
+#pak::pkg_install("Icens")
+#pak::pkg_install("emdelponte/r4pde")
+
+library(remotes)
+#remotes::install_github("emdelponte/r4pde")
 
 ```

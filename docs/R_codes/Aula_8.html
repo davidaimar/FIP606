@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FIP606 - aula8</title>
+<title>FIP606 -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,6 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../R_codes/Aula_8.1.html" rel="next">
+<link href="../R_codes/Aula_7.html" rel="prev">
 <link href="../imgs/icon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -100,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -133,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Análise Exploratória</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../R_codes/Aula_5.html" rel="" target="">
+    <a class="nav-link active" href="../R_codes/Aula_5.html" rel="" target="" aria-current="page">
  <span class="menu-text">Análises Estatísticas</span></a>
   </li>  
   <li class="nav-item">
@@ -201,35 +203,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R_codes/Aula_8.html">Experimentos em esquema fatorial e parcelas subdividas</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analisando um conjunto de dados particular</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testes de Hipóteses</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_6.1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Análise de Variância (ANOVA)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ANOVA (DBC)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Experimentos em esquema fatorial e parcelas subdividas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_8.1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regressão Linear</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../R_codes/Aula_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula_9.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">Correlação de Variáveis</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">15/05/2024</a>
+  <li><a href="#anova-fatorial" id="toc-anova-fatorial" class="nav-link active" data-scroll-target="#anova-fatorial">ANOVA Fatorial</a></li>
+  <li><a href="#anova-em-experimentos-com-parcelas-subdivididas" id="toc-anova-em-experimentos-com-parcelas-subdivididas" class="nav-link" data-scroll-target="#anova-em-experimentos-com-parcelas-subdivididas">ANOVA em Experimentos com Parcelas Subdivididas</a>
   <ul class="collapse">
-  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes">Pacotes</a></li>
-  <li><a href="#anova-fatorial" id="toc-anova-fatorial" class="nav-link" data-scroll-target="#anova-fatorial">Anova fatorial</a></li>
-  <li><a href="#importa-dados" id="toc-importa-dados" class="nav-link" data-scroll-target="#importa-dados">importa dados</a></li>
-  <li><a href="#vizualizar" id="toc-vizualizar" class="nav-link" data-scroll-target="#vizualizar">Vizualizar</a></li>
-  <li><a href="#modelo-para-análise-estatística-em-parcelas-subdivididas" id="toc-modelo-para-análise-estatística-em-parcelas-subdivididas" class="nav-link" data-scroll-target="#modelo-para-análise-estatística-em-parcelas-subdivididas">Modelo para análise estatística em parcelas subdivididas</a>
-  <ul class="collapse">
-  <li><a href="#variável-1" id="toc-variável-1" class="nav-link" data-scroll-target="#variável-1">Variável 1</a></li>
-  <li><a href="#testando-a-premissas" id="toc-testando-a-premissas" class="nav-link" data-scroll-target="#testando-a-premissas">Testando a premissas</a></li>
-  <li><a href="#teste-de-médias" id="toc-teste-de-médias" class="nav-link" data-scroll-target="#teste-de-médias">Teste de médias</a></li>
-  <li><a href="#vizualizando" id="toc-vizualizando" class="nav-link" data-scroll-target="#vizualizando">Vizualizando</a></li>
-  </ul></li>
-  <li><a href="#variável-2" id="toc-variável-2" class="nav-link" data-scroll-target="#variável-2">Variável 2</a></li>
-  <li><a href="#testando-a-premissas-1" id="toc-testando-a-premissas-1" class="nav-link" data-scroll-target="#testando-a-premissas-1">Testando a premissas</a></li>
-  <li><a href="#teste-de-médias-1" id="toc-teste-de-médias-1" class="nav-link" data-scroll-target="#teste-de-médias-1">Teste de médias</a>
-  <ul class="collapse">
-  <li><a href="#vizualizando-1" id="toc-vizualizando-1" class="nav-link" data-scroll-target="#vizualizando-1">Vizualizando</a></li>
-  </ul></li>
+  <li><a href="#modelo-para-anova-em-parcelas-subdivididas" id="toc-modelo-para-anova-em-parcelas-subdivididas" class="nav-link" data-scroll-target="#modelo-para-anova-em-parcelas-subdivididas">Modelo para Anova em parcelas subdivididas</a></li>
+  <li><a href="#transformando-os-dados" id="toc-transformando-os-dados" class="nav-link" data-scroll-target="#transformando-os-dados">Transformando os dados</a></li>
+  <li><a href="#segunda-variável" id="toc-segunda-variável" class="nav-link" data-scroll-target="#segunda-variável">Segunda variável</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -237,146 +288,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">aula8</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="section" class="level1">
-<h1>15/05/2024</h1>
-<section id="pacotes" class="level2">
-<h2 class="anchored" data-anchor-id="pacotes">Pacotes</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-1_2c4a109f2f38ca0a8313d9792f353a2b">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: Matrix
-
-Attaching package: 'Matrix'
-
-The following objects are masked from 'package:tidyr':
-
-    expand, pack, unpack</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: carData
-
-Attaching package: 'car'
-
-The following object is masked from 'package:dplyr':
-
-    recode
-
-The following object is masked from 'package:purrr':
-
-    some</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Welcome to emmeans.
-Caution: You lose important information if you filter this package's results.
-See '? untidy'</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: mvtnorm
-Carregando pacotes exigidos: survival
-Carregando pacotes exigidos: TH.data
-Carregando pacotes exigidos: MASS
-
-Attaching package: 'MASS'
-
-The following object is masked from 'package:dplyr':
-
-    select
-
-
-Attaching package: 'TH.data'
-
-The following object is masked from 'package:MASS':
-
-    geyser</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(r4pde)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'patchwork'
-
-The following object is masked from 'package:MASS':
-
-    area</code></pre>
-</div>
-</div>
-</section>
 <section id="anova-fatorial" class="level2">
-<h2 class="anchored" data-anchor-id="anova-fatorial">Anova fatorial</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-2_391c246baaa7e7309de58a8ef0a3000a">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>fungicida <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=2023059672"</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>fungicida<span class="sc">$</span>dose <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(fungicida<span class="sc">$</span>dose)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>fungicida <span class="sc">|&gt;</span> </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(treat,severity, <span class="at">color =</span> dose))<span class="sc">+</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_boxplot()+</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">size =</span> <span class="fl">2.5</span>)<span class="sc">+</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_wrap(~dose)+</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_few</span>()<span class="sc">+</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h2 class="anchored" data-anchor-id="anova-fatorial">ANOVA Fatorial</h2>
+<p>Experimentos fatoriais são aqueles em que se estudam simultaneamente dois ou mais fatores, cada um deles com dois ou mais níveis.</p>
+<p>O fatorial é um tipo de esquema, ou seja, uma das maneiras de organizar os tratamentos e não um tipo de delineamento, que representa a maneira pela qual os tratamentos são distribuídos às unidades experimentais.</p>
+<p>Aqui você aprenderá a realizar uma ANOVA fatorial no R.</p>
+<p>Pacotes necessários</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-1_1f9663e8887c80d571b7aa4c348e9df9">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Realizando a Importação, Vizualização Gráfica, Anova Fatorial, Checagem de Pressuposições e Tukey</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-2_392a4248c212aba1e560921f703c6e65">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fungicida <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=2023059672"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fungicida<span class="sc">$</span>dose <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(fungicida<span class="sc">$</span>dose)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fungicida <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(treat,severity, <span class="at">color =</span> dose))<span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">size =</span> <span class="fl">2.5</span>)<span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_few</span>()<span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Aula_8_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mf <span class="ot">&lt;-</span> <span class="fu">lm</span>(severity <span class="sc">~</span> treat<span class="sc">*</span>dose, <span class="at">data =</span> fungicida)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>mf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = severity ~ treat * dose, data = fungicida)
-
-Coefficients:
-            (Intercept)        treatTebuconazole                    dose2  
-                 0.2921                  -0.2711                  -0.2420  
-treatTebuconazole:dose2  
-                 0.2412  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-3_5ed08ea4de770627894132225bd4afce">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mf <span class="ot">&lt;-</span> <span class="fu">lm</span>(severity <span class="sc">~</span> treat<span class="sc">*</span>dose, <span class="at">data =</span> fungicida)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -389,36 +336,28 @@ Residuals  16 0.059678 0.003730
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(mf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-4_1c755a991ce62a1d1704f76a28ce917c">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(mf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_8_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mf_medias <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mf, <span class="sc">~</span> treat <span class="sc">|</span> dose)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mf_medias</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>dose = 0.5:
- treat        emmean     SE df lower.CL upper.CL
- Ionic liquid 0.2921 0.0273 16  0.23420   0.3500
- Tebuconazole 0.0210 0.0273 16 -0.03690   0.0789
-
-dose = 2:
- treat        emmean     SE df lower.CL upper.CL
- Ionic liquid 0.0501 0.0273 16 -0.00781   0.1080
- Tebuconazole 0.0202 0.0273 16 -0.03768   0.0781
-
-Confidence level used: 0.95 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(mf_medias)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O agrupamento de médias em experimentos fatoriais deve ser feito para cada fator em relação ao outro</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-5_4d6c7eb5d0517e070e9b2524d9f5f927">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mf_medias <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mf, <span class="sc">~</span> treat <span class="sc">|</span> dose)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(mf_medias, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>dose = 0.5:
  treat        emmean     SE df lower.CL upper.CL .group
- Tebuconazole 0.0210 0.0273 16 -0.03690   0.0789  1    
- Ionic liquid 0.2921 0.0273 16  0.23420   0.3500   2   
+ Tebuconazole 0.0210 0.0273 16 -0.03690   0.0789  a    
+ Ionic liquid 0.2921 0.0273 16  0.23420   0.3500   b   
 
 dose = 2:
  treat        emmean     SE df lower.CL upper.CL .group
- Tebuconazole 0.0202 0.0273 16 -0.03768   0.0781  1    
- Ionic liquid 0.0501 0.0273 16 -0.00781   0.1080  1    
+ Tebuconazole 0.0202 0.0273 16 -0.03768   0.0781  a    
+ Ionic liquid 0.0501 0.0273 16 -0.00781   0.1080  a    
 
 Confidence level used: 0.95 
 significance level used: alpha = 0.05 
@@ -426,22 +365,11 @@ NOTE: If two or more means share the same grouping symbol,
       then we cannot show them to be different.
       But we also did not show them to be the same. </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>mf_medias_linha <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mf, <span class="sc">~</span> dose <span class="sc">|</span> treat)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mf_medias_linha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>treat = Ionic liquid:
- dose emmean     SE df lower.CL upper.CL
- 0.5  0.2921 0.0273 16  0.23420   0.3500
- 2    0.0501 0.0273 16 -0.00781   0.1080
-
-treat = Tebuconazole:
- dose emmean     SE df lower.CL upper.CL
- 0.5  0.0210 0.0273 16 -0.03690   0.0789
- 2    0.0202 0.0273 16 -0.03768   0.0781
-
-Confidence level used: 0.95 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(mf_medias_linha,<span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-6_859d4dd02c3fa6c8191497c24d02081b">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mf_medias_linha <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mf, <span class="sc">~</span> dose <span class="sc">|</span> treat)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(mf_medias_linha,<span class="at">Letters =</span> letters) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>treat = Ionic liquid:
  dose emmean     SE df lower.CL upper.CL .group
@@ -461,39 +389,78 @@ NOTE: If two or more means share the same grouping symbol,
 </div>
 </div>
 </section>
-<section id="importa-dados" class="level2">
-<h2 class="anchored" data-anchor-id="importa-dados">importa dados</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-3_6d64972c6b5465c252a7689f3b77b960">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>milho <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=1345524759"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="anova-em-experimentos-com-parcelas-subdivididas" class="level2">
+<h2 class="anchored" data-anchor-id="anova-em-experimentos-com-parcelas-subdivididas">ANOVA em Experimentos com Parcelas Subdivididas</h2>
+<p>Tal como no caso de fatorial, o termo parcelas subdivididas se refere a um esquema do experimento, ou seja, a maneira pela qual os tratamentos são organizados. Havendo dois fatores, eles são designados como fator primário e secundário.</p>
+<p>Neste caso, as parcelas que recebem os níveis do fator primário são divididas em subparcelas que receberão os níveis do fator secundário.</p>
+<p>A ANOVA para esta condição será explorada a seguir</p>
+<p>Importando o conjunto de dados</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-7_2f19c6aab14e56acc3675f428d159469">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>milho <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=1345524759"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="vizualizar" class="level2">
-<h2 class="anchored" data-anchor-id="vizualizar">Vizualizar</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-4_cab8f6b23735527fe32fbfea527cace0">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>milho <span class="sc">|&gt;</span> </span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(method, index))<span class="sc">+</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>hybrid)<span class="sc">+</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data =</span> <span class="st">"mean_cl_boot"</span>, <span class="at">color =</span> <span class="st">'black'</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Method'</span>,</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">'Index'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Vizualização gráfica</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-8_cd51040db65fdb0b144f3ccfc4d02cf0">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>milho <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(method, index))<span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.01</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>hybrid)<span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data =</span> <span class="st">"mean_cl_boot"</span>, <span class="at">color =</span> <span class="st">'black'</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Method'</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">'Index'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_8_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="modelo-para-anova-em-parcelas-subdivididas" class="level3">
+<h3 class="anchored" data-anchor-id="modelo-para-anova-em-parcelas-subdivididas">Modelo para Anova em parcelas subdivididas</h3>
+<p>Utilizamos os Modelos de Efeitos Mistos através da função <code>lmer()</code> do pacote <strong>lme4</strong> e sumarizamos o resultado através da função <code>Anova()</code> do pacore <strong>car</strong>.</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-9_65a41ac1c354578a9b52b38bbe86f3f2">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>milho <span class="ot">&lt;-</span> milho <span class="sc">|&gt;</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">block =</span> <span class="fu">as.factor</span>(block))</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>mix <span class="ot">&lt;-</span> <span class="fu">lmer</span>(index <span class="sc">~</span> hybrid<span class="sc">*</span>method <span class="sc">+</span> block <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block<span class="sc">/</span>hybrid), <span class="at">data =</span> milho) <span class="co"># Modelos Lineares de Efeitos Mistos</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II Wald chisquare tests)
+
+Response: index
+                Chisq Df Pr(&gt;Chisq)   
+hybrid        15.5971  5   0.008094 **
+method         4.6963  1   0.030228 * 
+block          0.2157  3   0.975023   
+hybrid:method 15.8060  5   0.007420 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Testando as premissas</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-10_867a6f723acf6f044ca4a6cbf054753c">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(mix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>OK: residuals appear as normally distributed (p = 0.635).</code></pre>
+</div>
+</div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-11_4cd72c223a1d273ba93ddce9b263f407">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(mix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Warning: Heteroscedasticity (non-constant error variance) detected (p = 0.009).</code></pre>
 </div>
 </div>
 </section>
-<section id="modelo-para-análise-estatística-em-parcelas-subdivididas" class="level2">
-<h2 class="anchored" data-anchor-id="modelo-para-análise-estatística-em-parcelas-subdivididas">Modelo para análise estatística em parcelas subdivididas</h2>
-<section id="variável-1" class="level3">
-<h3 class="anchored" data-anchor-id="variável-1">Variável 1</h3>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-5_bebe07def23d9670c9b72361628d7b23">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>milho <span class="ot">&lt;-</span> milho <span class="sc">|&gt;</span> </span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">block =</span> <span class="fu">as.factor</span>(block))</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>mix2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(<span class="fu">sqrt</span>(index) <span class="sc">~</span> hybrid<span class="sc">*</span>method <span class="sc">+</span> block <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block<span class="sc">/</span>hybrid), <span class="at">data =</span> milho) <span class="co"># Modelos Lineares de Efeitos Mistos</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="transformando-os-dados" class="level3">
+<h3 class="anchored" data-anchor-id="transformando-os-dados">Transformando os dados</h3>
+<p>Homoscedasticidade não atendida, portanto procederemos com a transformação dos dados via raiz quadrada</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-12_5700bde3d390dc0e830e912eabd63c64">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mix2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(<span class="fu">sqrt</span>(index) <span class="sc">~</span> hybrid<span class="sc">*</span>method <span class="sc">+</span> block <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block<span class="sc">/</span>hybrid), <span class="at">data =</span> milho)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type II Wald chisquare tests)
 
@@ -507,53 +474,31 @@ hybrid:method 13.3812  5   0.020057 *
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-</section>
-<section id="testando-a-premissas" class="level3">
-<h3 class="anchored" data-anchor-id="testando-a-premissas">Testando a premissas</h3>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-6_98d4d15593263320d091e2950654cd0f">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-13_fa993bdc1f5e2504e9248298e14d3d03">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: residuals appear as normally distributed (p = 0.440).</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-14_e331cdb5ef57648a202fcfc6a36f9a41">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(mix2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.970).</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">residuals</span>(mix2))</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">residuals</span>(mix2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(mix2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
+<p>Presseguindo com o teste de médias</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-15_4f6fa0f8ad8fbd5cd4e64637ab3adb91">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>medias_milho <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix2,</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> hybrid <span class="sc">|</span> method,</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>medias_milho2 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix2,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> method <span class="sc">|</span> hybrid,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(mix2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Shapiro-Wilk normality test
-
-data:  residuals(mix2)
-W = 0.97643, p-value = 0.44</code></pre>
-</div>
-</div>
-</section>
-<section id="teste-de-médias" class="level3">
-<h3 class="anchored" data-anchor-id="teste-de-médias">Teste de médias</h3>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-7_5ffbee7db2c443e17c14e2f030f15fc4">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>medias_milho <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix2,</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> hybrid <span class="sc">|</span> method,</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>medias_milho2 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix2,</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> method <span class="sc">|</span> hybrid,</span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="vizualizando" class="level3">
-<h3 class="anchored" data-anchor-id="vizualizando">Vizualizando</h3>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-8_a489301ef14987c3a1efc904b58b0153">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Vizualizando o resultado</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-16_29c217ab5c9b9f32d0fd75837687bd7d">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>method = pin:
  hybrid   response   SE   df lower.CL upper.CL .group
@@ -585,8 +530,8 @@ NOTE: If two or more means share the same grouping symbol,
       But we also did not show them to be the same. </code></pre>
 </div>
 </div>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-9_1b661075aa95fe04581ddbfdfabad07f">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho2, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-17_ccd07658daab581cd7bd3b5f2ef0f91c">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho2, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>hybrid = 30F53 HX:
  method response   SE   df lower.CL upper.CL .group
@@ -630,13 +575,13 @@ NOTE: If two or more means share the same grouping symbol,
 </div>
 </div>
 </section>
-</section>
-<section id="variável-2" class="level2">
-<h2 class="anchored" data-anchor-id="variável-2">Variável 2</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-10_e30263356f7828bc45c7bba8bdb86029">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>mix3<span class="ot">&lt;-</span> <span class="fu">lmer</span>(<span class="fu">sqrt</span>(yield) <span class="sc">~</span> hybrid<span class="sc">*</span>method <span class="sc">+</span> block <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block<span class="sc">/</span>hybrid), <span class="at">data =</span> milho)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="segunda-variável" class="level3">
+<h3 class="anchored" data-anchor-id="segunda-variável">Segunda variável</h3>
+<p>Repetindo a análise para uma outra variável, já incluindo a tranformação por raiz quadrada</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-18_cb90c876a81580b471d94b517a215709">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>mix3<span class="ot">&lt;-</span> <span class="fu">lmer</span>(<span class="fu">sqrt</span>(yield) <span class="sc">~</span> hybrid<span class="sc">*</span>method <span class="sc">+</span> block <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block<span class="sc">/</span>hybrid), <span class="at">data =</span> milho)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table (Type II Wald chisquare tests)
 
@@ -650,44 +595,31 @@ hybrid:method 24.4985  5  0.0001741 ***
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-</section>
-<section id="testando-a-premissas-1" class="level2">
-<h2 class="anchored" data-anchor-id="testando-a-premissas-1">Testando a premissas</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-11_85ad7a431fb600404dd1960de56e1dbd">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Checando as pressuposições</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-19_64078fb54efe3f8f7f8bc26613b690a5">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: residuals appear as normally distributed (p = 0.214).</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-20_f9c97411623f2ed4d1cd6e81d26f54f9">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(mix3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.686).</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">residuals</span>(mix3))</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">residuals</span>(mix3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(mix3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_8_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid" width="672"></p>
+<p>Teste de médias</p>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-21_490e4dc4c3142ace73c8cc9dedce4862">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>medias_milho_prod <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix3,</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> hybrid <span class="sc">|</span> method,</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>medias_milho_prod2 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix3,</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> method <span class="sc">|</span> hybrid,</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</section>
-<section id="teste-de-médias-1" class="level2">
-<h2 class="anchored" data-anchor-id="teste-de-médias-1">Teste de médias</h2>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-12_3fc85668e2c57947c1e9f4a9223d7a1e">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>medias_milho_prod <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix3,</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> hybrid <span class="sc">|</span> method,</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>medias_milho_prod2 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mix3,</span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>                        <span class="sc">~</span> method <span class="sc">|</span> hybrid,</span>
-<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="vizualizando-1" class="level3">
-<h3 class="anchored" data-anchor-id="vizualizando-1">Vizualizando</h3>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-13_f7e4d7d760ab422478e34b1247c066ce">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho_prod, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-22_699142e9daf335c50aa1e5442093227f">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho_prod, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>method = pin:
  hybrid   response  SE   df lower.CL upper.CL .group
@@ -719,8 +651,8 @@ NOTE: If two or more means share the same grouping symbol,
       But we also did not show them to be the same. </code></pre>
 </div>
 </div>
-<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-14_79bee6def96e5f6feabf14b2ba5622ec">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho_prod2, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_8_cache/html/unnamed-chunk-23_6cfa2d7725389f04602a182d4143666b">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_milho_prod2, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>hybrid = 30F53 HX:
  method response  SE   df lower.CL upper.CL .group
@@ -765,7 +697,6 @@ NOTE: If two or more means share the same grouping symbol,
 </div>
 
 
-</section>
 </section>
 </section>
 
@@ -1118,6 +1049,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../R_codes/Aula_7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ANOVA (DBC)</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../R_codes/Aula_8.1.html" class="pagination-link">
+        <span class="nav-page-text">Regressão Linear</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

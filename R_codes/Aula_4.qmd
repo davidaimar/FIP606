@@ -1,35 +1,18 @@
 ---
-title: "Aula 4"
+title: " "
 format: html
 ---
 
-# Pacotes
+# Obtendo dados através do copiar e colar
 
+Para obter dados diretamente de tabelas em sites ou qualquer outro documento digital e criar data.frames no R você pode utilizar dois pacotes, o **tibble** e o **datapasta**. Ambos compilam os dados copiados e organizam mantendo o formato original dentro do chunk, uma maneira simples que otimiza o seu `Ctrl + C` & `Ctrl + V`.
+
+Usando o **datapasta**, após copiar três colunas de dados de uma planilha, basta clicar em `Addins...` e `Past as data.frame`.
 ```{r}
-#install.packages("datapasta")
-#install.packages("pak")
-```
-
-#Usando o pak para instalar pacotes de outros repositórios
-
-```{r}
-#library(pak)
-#pak::pkg_install("Icens")
-#pak::pkg_install("emdelponte/r4pde")
-
-#library(remotes)
-#remotes::install_github("emdelponte/r4pde") #prof ignorou isso e seguiu em frente
-```
-
-# Importar dados
-
-```{r}
-
-comp <- c( "9", "12.5", "10", "8", "13.2", "11", "10.8", "9.5", "10.8", "10.4", "13.72", "15.91", "15.7", "14.2", "15.9", "16.54", "18", "14.4", "16.41", "16")
-
+library(datapasta)
 
 dat <- data.frame(
-  stringsAsFactors = FALSE,
+  stringsAsFactors = FALSE, # 'stringsAsFactors' converte variáveis em um data frame para fatores
               trat = c("Mg2","Mg2","Mg2","Mg2",
                        "Mg2","Mg2","Mg2","Mg2","Mg2","Mg2","control",
                        "control","control","control","control","control","control",
@@ -42,8 +25,13 @@ dat <- data.frame(
 )
 dat
 
+```
 
-dat2 <- tibble::tribble(
+Agora, com o pacote **tibble**, basta clicar em `Addins...` e `Past as tribble`. 
+```{r}
+library(tibble)
+
+dat2 <- tribble(
       ~trat, ~rep, ~comp,
       "Mg2",   1L,     9,
       "Mg2",   2L,  12.5,
@@ -72,9 +60,9 @@ dat2
 
 ```
 
+Veja mais esse exemplo, com o **tribble**, de um conjunto de dados disponível [aqui](https://escritacientifica.sc.usp.br/estatisticas/estatisticas-por-paises/):
 ```{r}
-
-visitas <- tibble::tribble(
+visitas <- tribble(
         ~`codigo`,            ~país,    ~`n2`,
                1L,         "Brazil",    4303L,
                2L,     "Mozambique",      43L,
@@ -111,22 +99,15 @@ visitas <- tibble::tribble(
              )
 visitas
 
-
-artilharia_cp24 <- tibble::tribble(
-                     ~POS,           ~NOME,         ~TIME,  ~P,  ~G,
-                       1L,    "José López",   "Palmeiras", 12L, 10L,
-                       2L,    "Dellatorre",    "Mirassol", 11L,  7L,
-                       3L, "Raphael Veiga",   "Palmeiras",  9L,  6L,
-                       4L,  "Yuri Alberto", "Corinthians", 11L,  5L
-                     )
-
-
 ```
 
-#Importando dados do R4PDE
+# Outros tipos de gráficos 
 
-```{r}
+## Montando gráfico à partir de um data frame criado
+
+```{r warning=FALSE, message=FALSE}
 library(tidyverse)
+
 pepper <- 
   tribble(
    ~t,  ~`1`,  ~`2`,  ~`3`,
@@ -142,6 +123,7 @@ pepper <-
 
 ```
 
+Fazendo o uso da função `pivot_longer()` para modificar a aquitetura dos dados de uma maneira em  que cada observação ocupa uma linha separada em uma tabela, e diferentes medidas ou variáveis sejam armazenadas em colunas diferentes, o "formato longo", e criando um gráfico de linhas e pontos. 
 ```{r}
 pepper |>
   pivot_longer(2:4,
@@ -164,18 +146,20 @@ annotate(geom = "text",
            label = "3")+
   theme(legend.position = "none")
 
-
 ```
 
-# Tabela de Contigência
+## Tabela de Contigência
 
-```{r}
-library(tidyverse)
+Veja como criar uma tabela de contigência à partir de dados disponíveis em um documento online no formato CSV.
+
+O pacote **janitor** será usado para limpeza e organização de dados. A função `tabyl()` cria tabelas de frequência cruzada. Aqui, iremos criar uma tabela de contagem de combinações únicas das variáveis "cultivar" e "farm_management".
+
+```{r warning=FALSE, message=FALSE}
 library(ggthemes)
+
 cr <- read_csv("https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv")
 
 
-#install.packages("janitor")
 library(janitor)
 cr |> 
   tabyl(cultivar, farm_management)
@@ -193,10 +177,15 @@ cr |>
   geom_text(position = position_dodge(width = 0.9))+
   facet_wrap(~cultivar, scales = "free_x")
 
-
 ```
 
-#geom_bar
+Os dados são de uma pesquisa sobre ferrugem do café na Etiópia e contam as ocorrências de diferentes combinações de métodos de gestão agrícola (`farm_management`) e cultivares (`cultivar`), e visualiza essas contagens em um gráfico de barras facetado por cultivar, com barras coloridas por método de gestão agrícola.
+
+## Medidas de tendência central em gráficos
+
+Aqui veremos uma maneira de, à partir de dados importados, ralizar cálculos estatísticos (média e desvio padrão) agrupados por uma variável, e então visualiza os resultados em um gráfico.
+
+Vamos usar o `geom_errorbar()` para adicionar barras de erro ao gráfico, representando a variação de um desvio padrão acima e abaixo da média, com largura das barras definida como 0.1.
 
 ```{r}
 library(gsheet)
@@ -207,19 +196,23 @@ mg |>
   summarise(mean_comp = mean(comp), sd_comp = sd(comp))|> 
   ggplot(aes(trat, mean_comp))+
   geom_point(size = 3)+
-  ylim(5,20)+
-  #geom_col(fill = "steelblue", width = 0.5)+
+  ylim(5,20)+ # Define os limites do eixo y de 5 a 20
   geom_errorbar(aes(ymin = mean_comp - sd_comp,
                     ymax = mean_comp + sd_comp), width = 0.1)+
   annotate (geom = "text",
            x = 1, y = 17.5,
            label = '*')
 
+# 'group_by(trat)': Agrupa os dados pela coluna trat (tratamento).
+# 'summarise(mean_comp = mean(comp), sd_comp = sd(comp))': Calcula a média (mean()) e o desvio padrão (sd()) da coluna comp para cada grupo de trat.
+
+```
+ 
+ Com os mesmos dados, podemos ainda, criae um gráfico de dispersão (`jitter plot`), que mostra a distribuição dos valores de comp para diferentes níveis de tratatamento.
+```{r}
 mg |> 
   ggplot(aes(trat, comp))+
   geom_jitter(width = 0.1)
 
-
-
-
 ```
+ 

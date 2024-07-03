@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R_codes/Aula_8" class="sidebar-item-text sidebar-link">
+  <a href="../R_codes/Aula_8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experimentos em esquema fatorial e parcelas subdividas</span></a>
   </div>
 </li>
@@ -275,18 +275,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#análise-de-variância-anova" id="toc-análise-de-variância-anova" class="nav-link active" data-scroll-target="#análise-de-variância-anova">Análise de Variância (ANOVA)</a></li>
-  <li><a href="#anova-dic" id="toc-anova-dic" class="nav-link" data-scroll-target="#anova-dic">ANOVA (DIC)</a>
+  <li><a href="#análise-de-variância-anova" id="toc-análise-de-variância-anova" class="nav-link active" data-scroll-target="#análise-de-variância-anova">Análise de Variância (ANOVA)</a>
   <ul class="collapse">
-  <li><a href="#anova-dic-variância-significativa" id="toc-anova-dic-variância-significativa" class="nav-link" data-scroll-target="#anova-dic-variância-significativa">ANOVA (DIC) Variância significativa</a></li>
-  <li><a href="#testes-de-comparações-múltiplas" id="toc-testes-de-comparações-múltiplas" class="nav-link" data-scroll-target="#testes-de-comparações-múltiplas">Testes de comparações múltiplas</a></li>
-  <li><a href="#o-pacote-performance-também-roda-as-presuposições" id="toc-o-pacote-performance-também-roda-as-presuposições" class="nav-link" data-scroll-target="#o-pacote-performance-também-roda-as-presuposições">O pacote ‘performance’ também roda as presuposições</a></li>
-  <li><a href="#tranformação-de-dados-e-alternativas-não-paramétricas-da-anova" id="toc-tranformação-de-dados-e-alternativas-não-paramétricas-da-anova" class="nav-link" data-scroll-target="#tranformação-de-dados-e-alternativas-não-paramétricas-da-anova">Tranformação de dados e alternativas não-paramétricas da ANOVA</a></li>
-  <li><a href="#tranformando-os-dados" id="toc-tranformando-os-dados" class="nav-link" data-scroll-target="#tranformando-os-dados">Tranformando os dados</a></li>
-  <li><a href="#agrupamento" id="toc-agrupamento" class="nav-link" data-scroll-target="#agrupamento">Agrupamento</a></li>
-  <li><a href="#alternativa-2---não-paramétrico" id="toc-alternativa-2---não-paramétrico" class="nav-link" data-scroll-target="#alternativa-2---não-paramétrico">Alternativa 2 - não paramétrico</a></li>
-  <li><a href="#alternativa-3---glms" id="toc-alternativa-3---glms" class="nav-link" data-scroll-target="#alternativa-3---glms">Alternativa 3 - GLMs</a></li>
+  <li><a href="#anova-em-dic" id="toc-anova-em-dic" class="nav-link" data-scroll-target="#anova-em-dic">ANOVA em DIC</a></li>
+  <li><a href="#pressuposições-da-anova-e-testes-de-médias" id="toc-pressuposições-da-anova-e-testes-de-médias" class="nav-link" data-scroll-target="#pressuposições-da-anova-e-testes-de-médias">Pressuposições da ANOVA e Testes de Médias</a>
+  <ul class="collapse">
+  <li><a href="#normalidade-dos-resíduos" id="toc-normalidade-dos-resíduos" class="nav-link" data-scroll-target="#normalidade-dos-resíduos">Normalidade dos Resíduos</a></li>
+  <li><a href="#homogeneidade-das-variâncias-homoscedasticidade" id="toc-homogeneidade-das-variâncias-homoscedasticidade" class="nav-link" data-scroll-target="#homogeneidade-das-variâncias-homoscedasticidade">Homogeneidade das Variâncias (Homoscedasticidade)</a></li>
+  <li><a href="#otimizando-os-teste-de-pressuposições-para-anvoa" id="toc-otimizando-os-teste-de-pressuposições-para-anvoa" class="nav-link" data-scroll-target="#otimizando-os-teste-de-pressuposições-para-anvoa">Otimizando os teste de pressuposições para ANVOA</a></li>
+  </ul></li>
+  <li><a href="#testes-de-comparações-múltiplas" id="toc-testes-de-comparações-múltiplas" class="nav-link" data-scroll-target="#testes-de-comparações-múltiplas">Testes de Comparações Múltiplas</a></li>
+  <li><a href="#transformação-de-dados-e-alternativas-não-paramétricas-da-anova" id="toc-transformação-de-dados-e-alternativas-não-paramétricas-da-anova" class="nav-link" data-scroll-target="#transformação-de-dados-e-alternativas-não-paramétricas-da-anova">Transformação de dados e alternativas não-paramétricas da ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#tranformação-por-raiz-quadrada-e-logarítmica" id="toc-tranformação-por-raiz-quadrada-e-logarítmica" class="nav-link" data-scroll-target="#tranformação-por-raiz-quadrada-e-logarítmica">Tranformação por raiz quadrada e logarítmica</a></li>
   <li><a href="#transformação-boxcox" id="toc-transformação-boxcox" class="nav-link" data-scroll-target="#transformação-boxcox">Transformação BoxCox</a></li>
+  <li><a href="#teste-de-kruskal-walis" id="toc-teste-de-kruskal-walis" class="nav-link" data-scroll-target="#teste-de-kruskal-walis">Teste de Kruskal-Walis</a></li>
+  <li><a href="#modelos-lineares-não-generelaziados" id="toc-modelos-lineares-não-generelaziados" class="nav-link" data-scroll-target="#modelos-lineares-não-generelaziados">Modelos Lineares Não Generelaziados</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -298,39 +303,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="análise-de-variância-anova" class="level1">
 <h1>Análise de Variância (ANOVA)</h1>
-</section>
-<section id="anova-dic" class="level1">
-<h1>ANOVA (DIC)</h1>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-1_a67c13f665ece6c7a67a2e679db3f748">
+<section id="anova-em-dic" class="level2">
+<h2 class="anchored" data-anchor-id="anova-em-dic">ANOVA em DIC</h2>
+<p>A ANOVA é uma técnica estatística normalmente utilizada para comparar as médias de três ou mais grupos distintos e determinar se existem diferenças estatisticamente significativas entre essas médias. A ANOVA é particularmente útil quando se deseja testar a hipótese de que várias populações têm a mesma média.</p>
+<p>Aqui veremos como realizar a ANOVA para dados provenientes de experimentos conduzidos em DIC (Delineamento Inteiramente Casualizado) que é uma técnica estatística frequentemente utilizada em experimentos para comparar tratamentos onde a distribuição dos tratamentos às unidades experimentais é feita inteiramente ao acaso. Como não faz restrições na casualização, o uso do DIC pressupõe que as unidades experimentais estão sob condições homogêneas.</p>
+<p>Pacotes utilizados:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-1_858025e008a56f8d9e20a8d9ed466df2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>micelial <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=959387827"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Vizualizar</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>micelial <span class="sc">|&gt;</span> </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(especie, tcm))<span class="sc">+</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"gray"</span>)<span class="sc">+</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Importando os dados e vizualizando</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-2_da03f47297a2079a519b99db669dc8c6">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>micelial <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=959387827"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Vizualizar</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>micelial <span class="sc">|&gt;</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(especie, tcm))<span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"gray"</span>)<span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>anova_micelial <span class="ot">&lt;-</span> <span class="fu">aov</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>anova_micelial</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Realizando a ANOVA</p>
+<p>A anova pode ser raalizada através da função <code>aov()</code> ou <code>lm()</code> do R básico. A função <code>lm()</code>, além de realizar&lt; pode ser utilizada para ajustar modelos lineares ao conjunto de dados, portanto é mais completa que a <code>aov()</code>.</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-3_7ba6f807febcbd3d79aef462bb34c7e6">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>anova_micelial <span class="ot">&lt;-</span> <span class="fu">aov</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>anova_micelial</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
    aov(formula = tcm ~ especie, data = micelial)
@@ -343,7 +345,10 @@ Deg. of Freedom         4        25
 Residual standard error: 0.1368089
 Estimated effects may be unbalanced</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_micelial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Resumo dos resultados através da função <code>summary()</code>:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-4_cb3f28dc3d104284742278bfba1fdd5c">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_micelial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 especie      4 1.4696  0.3674   19.63 2.03e-07 ***
@@ -351,7 +356,10 @@ Residuals   25 0.4679  0.0187
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(anova_micelial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Obtendo o quadro da ANOVA com a função <code>anova()</code>:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-5_b7bfd64471080a7dcac2bc6cc2e6628f">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(anova_micelial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -362,9 +370,12 @@ Residuals 25 0.46792 0.01872
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>anova_micelial2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>anova_micelial2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>ANOVA feita com a função <code>lm()</code>:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-6_843ce5a23fce54ff9a64b9aa93e32518">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>anova_micelial2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>anova_micelial2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -374,7 +385,9 @@ Coefficients:
 (Intercept)  especieFaus  especieFcor  especieFgra  especieFmer  
       1.572       -0.335       -0.250       -0.660       -0.145  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-7_d92b4a41e351d4a0067b9cbe3cfa4cdd">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -398,106 +411,9 @@ Residual standard error: 0.1368 on 25 degrees of freedom
 Multiple R-squared:  0.7585,    Adjusted R-squared:  0.7199 
 F-statistic: 19.63 on 4 and 25 DF,  p-value: 2.028e-07</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: tcm
-          Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
-especie    4 1.46958 0.36739  19.629 2.028e-07 ***
-Residuals 25 0.46792 0.01872                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-</div>
-<section id="anova-dic-variância-significativa" class="level2">
-<h2 class="anchored" data-anchor-id="anova-dic-variância-significativa">ANOVA (DIC) Variância significativa</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-2_94335e3410feb91d0dbd4585317e87ce">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>micelial2 <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1bq2N19DcZdtax2fQW9OHSGMR0X2__Z9T/edit#gid=959387827"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Vizualizar</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>micelial2 <span class="sc">|&gt;</span> </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(especie, tcm))<span class="sc">+</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_boxplot()+</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">widh =</span> <span class="fl">0.05</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_jitter(widh = 0.05, size = 2): Ignoring unknown parameters:
-`widh`</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>aov_micelial2 <span class="ot">&lt;-</span> <span class="fu">aov</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial2)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>aov_micelial2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Call:
-   aov(formula = tcm ~ especie, data = micelial2)
-
-Terms:
-                  especie Residuals
-Sum of Squares  1.4695800 0.4679167
-Deg. of Freedom         4        25
-
-Residual standard error: 0.1368089
-Estimated effects may be unbalanced</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(aov_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)    
-especie      4 1.4696  0.3674   19.63 2.03e-07 ***
-Residuals   25 0.4679  0.0187                     
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(aov_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: tcm
-          Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
-especie    4 1.46958 0.36739  19.629 2.028e-07 ***
-Residuals 25 0.46792 0.01872                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lm_micelial2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial2)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>lm_micelial2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = tcm ~ especie, data = micelial2)
-
-Coefficients:
-(Intercept)  especieFaus  especieFcor  especieFgra  especieFmer  
-      1.572       -0.335       -0.250       -0.660       -0.145  </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = tcm ~ especie, data = micelial2)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.23667 -0.09667  0.01583  0.08833  0.28333 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  1.57167    0.05585  28.140  &lt; 2e-16 ***
-especieFaus -0.33500    0.07899  -4.241 0.000266 ***
-especieFcor -0.25000    0.07899  -3.165 0.004047 ** 
-especieFgra -0.66000    0.07899  -8.356 1.05e-08 ***
-especieFmer -0.14500    0.07899  -1.836 0.078317 .  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.1368 on 25 degrees of freedom
-Multiple R-squared:  0.7585,    Adjusted R-squared:  0.7199 
-F-statistic: 19.63 on 4 and 25 DF,  p-value: 2.028e-07</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(lm_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-8_6195f29792defb8019ae7ee29fa4b165">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -510,87 +426,99 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
+<section id="pressuposições-da-anova-e-testes-de-médias" class="level2">
+<h2 class="anchored" data-anchor-id="pressuposições-da-anova-e-testes-de-médias">Pressuposições da ANOVA e Testes de Médias</h2>
+<p>A ANOVA possui várias pressuposições fundamentais que devem ser atendidas para que os resultados sejam válidos. Aqui iremos demonstrar diferentes meios de verificar estas presusuposições.</p>
+<section id="normalidade-dos-resíduos" class="level3">
+<h3 class="anchored" data-anchor-id="normalidade-dos-resíduos">Normalidade dos Resíduos</h3>
+<p>Os resíduos (diferenças entre os valores observados e as médias dos grupos) devem seguir uma distribuição normal.</p>
+<p>Veja diferentes maneiras de como testar a normalidade dos resíduos do conjunto de dados submetido a ANOVA</p>
+<p>Opção 1: Teste de Shapiro</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-9_5de013347d4fbd24eb39b498e5a32c81">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(anova_micelial2<span class="sc">$</span>residuals) <span class="co"># H0 é de que os resíduos apresentam distribuição normal</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  anova_micelial2$residuals
+W = 0.9821, p-value = 0.8782</code></pre>
+</div>
+</div>
+<p>Opção 2: Gráfico de histograma para os resíduos</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-10_291c6ae042dd1ea40ddace23b31d98bd">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(anova_micelial2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Opção 3: Utilizando o pacote <strong>perfomance</strong></p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-11_9474d3c30cb9ee760620523bf5f3bac7">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>OK: residuals appear as normally distributed (p = 0.878).</code></pre>
+</div>
+</div>
+</section>
+<section id="homogeneidade-das-variâncias-homoscedasticidade" class="level3">
+<h3 class="anchored" data-anchor-id="homogeneidade-das-variâncias-homoscedasticidade">Homogeneidade das Variâncias (Homoscedasticidade)</h3>
+<p>As variâncias dos resíduos devem ser aproximadamente iguais entre os grupos. A violação dessa pressuposição pode levar a resultados incorretos, pois a ANOVA assume que a variabilidade dentro de cada grupo é similar.</p>
+<p>Veja maneiras diferentes de verificar esta premissa</p>
+<p>Opção 1: Teste de Bartlett</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-12_c08ed32e629d1c32ff81d97c2511f585">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial) <span class="co"># H0 é que a variâncias são homogêneas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Bartlett test of homogeneity of variances
+
+data:  tcm by especie
+Bartlett's K-squared = 4.4367, df = 4, p-value = 0.3501</code></pre>
+</div>
+</div>
+<p>Opção 2: Utilizando o pacote <strong>perfomance</strong></p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-13_4fdd0231260047a168fdf6f8c2daca09">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(anova_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>OK: Error variance appears to be homoscedastic (p = 0.880).</code></pre>
+</div>
+</div>
+</section>
+<section id="otimizando-os-teste-de-pressuposições-para-anvoa" class="level3">
+<h3 class="anchored" data-anchor-id="otimizando-os-teste-de-pressuposições-para-anvoa">Otimizando os teste de pressuposições para ANVOA</h3>
+<p>Você pode utilizar o pacote <strong>performance</strong> para checar mais pressuposições com a função <code>check_model()</code>:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-14_b9255ab7f9216dac0e471842f14c735b">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plot_presup <span class="ot">&lt;-</span> <span class="fu">check_model</span>(anova_micelial2)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plot_presup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>O pacote <strong>DHARMA</strong> também pode ser utilizado para checar normalidade e homoscedasticidade</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-15_f49395b72b57684e1cfa9bc9570b4fc0">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(anova_micelial2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
 <section id="testes-de-comparações-múltiplas" class="level2">
-<h2 class="anchored" data-anchor-id="testes-de-comparações-múltiplas">Testes de comparações múltiplas</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-3_4ca9e53f834721515b2bb231954c5c6f">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Demonstrando os agrupamentos de médias</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"emmeans"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installing package into 'C:/Users/david/AppData/Local/R/win-library/4.3'
-(as 'lib' is unspecified)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'emmeans' successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-    C:\Users\david\AppData\Local\Temp\RtmpaI6fsL\downloaded_packages</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"multcomp"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installing package into 'C:/Users/david/AppData/Local/R/win-library/4.3'
-(as 'lib' is unspecified)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'multcomp' successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-    C:\Users\david\AppData\Local\Temp\RtmpaI6fsL\downloaded_packages</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"multicompView"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installing package into 'C:/Users/david/AppData/Local/R/win-library/4.3'
-(as 'lib' is unspecified)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'multicompView' is not available for this version of R
-
-A version of this package for your version of R might be available elsewhere,
-see the ideas at
-https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Welcome to emmeans.
-Caution: You lose important information if you filter this package's results.
-See '? untidy'</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: mvtnorm</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: survival</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: TH.data</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: MASS</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'MASS'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:dplyr':
-
-    select</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'TH.data'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:MASS':
-
-    geyser</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcompView)</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>medias_lm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(lm_micelial2, <span class="sc">~</span> especie)</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>medias_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h2 class="anchored" data-anchor-id="testes-de-comparações-múltiplas">Testes de Comparações Múltiplas</h2>
+<p>Quando a ANOVA é significativa, isso indica que há pelo menos uma diferença significativa entre as médias dos grupos comparados. No entanto, a ANOVA não especifica quais grupos diferem entre si. Para identificar essas diferenças específicas, é necessário realizar testes de comparações múltiplas.</p>
+<p>Um teste amplamente utilizado é o Teste de Tukey, utilizado para comparações múltiplas entre todas as possíveis pares de médias.</p>
+<p>Veja como realizá-lo:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-16_a802c38c52539a4be77c272cc17dd5fa">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Demonstrando os agrupamentos de médias</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>medias_lm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(anova_micelial2, <span class="sc">~</span> especie) <span class="co"># Obtendo as médias do conjunto de dados</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>medias_lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> especie emmean     SE df lower.CL upper.CL
  Fasi     1.572 0.0559 25    1.457     1.69
@@ -601,14 +529,17 @@ Attaching package: 'TH.data'</code></pre>
 
 Confidence level used: 0.95 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A função <code>cld()</code> do pacote <strong>multcomp</strong> separa os grupos de média via Teste Tukey</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-17_649ccb5764890e431d14e5c64f369867">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias_lm, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> especie emmean     SE df lower.CL upper.CL .group
- Fgra     0.912 0.0559 25    0.797     1.03  1    
- Faus     1.237 0.0559 25    1.122     1.35   2   
- Fcor     1.322 0.0559 25    1.207     1.44   2   
- Fmer     1.427 0.0559 25    1.312     1.54   23  
- Fasi     1.572 0.0559 25    1.457     1.69    3  
+ Fgra     0.912 0.0559 25    0.797     1.03  a    
+ Faus     1.237 0.0559 25    1.122     1.35   b   
+ Fcor     1.322 0.0559 25    1.207     1.44   b   
+ Fmer     1.427 0.0559 25    1.312     1.54   bc  
+ Fasi     1.572 0.0559 25    1.457     1.69    c  
 
 Confidence level used: 0.95 
 P value adjustment: tukey method for comparing a family of 5 estimates 
@@ -617,197 +548,39 @@ NOTE: If two or more means share the same grouping symbol,
       then we cannot show them to be different.
       But we also did not show them to be the same. </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pressuposições para o novo conjunto de dados</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(lm_micelial2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(lm_micelial2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Shapiro-Wilk normality test
-
-data:  lm_micelial2$residuals
-W = 0.9821, p-value = 0.8782</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(tcm <span class="sc">~</span> especie, <span class="at">data =</span> micelial2) <span class="co"># H0 é que a variâncias são homogêneas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Bartlett test of homogeneity of variances
-
-data:  tcm by especie
-Bartlett's K-squared = 4.4367, df = 4, p-value = 0.3501</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Usando o pacote 'DHARMa'</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"DHARMA"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installing package into 'C:/Users/david/AppData/Local/R/win-library/4.3'
-(as 'lib' is unspecified)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'DHARMA' is not available for this version of R
-
-A version of this package for your version of R might be available elsewhere,
-see the ideas at
-https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Perhaps you meant 'DHARMa' ?</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>This is DHARMa 0.4.6. For overview type '?DHARMa'. For recent changes, type news(package = 'DHARMa')</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>presupposes <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(lm_micelial2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
-</div>
 </div>
 </section>
-<section id="o-pacote-performance-também-roda-as-presuposições" class="level2">
-<h2 class="anchored" data-anchor-id="o-pacote-performance-também-roda-as-presuposições">O pacote ‘performance’ também roda as presuposições</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-4_6f0238f816c3b23e7c40d43a42ab6deb">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(lm_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OK: residuals appear as normally distributed (p = 0.878).</code></pre>
+<section id="transformação-de-dados-e-alternativas-não-paramétricas-da-anova" class="level2">
+<h2 class="anchored" data-anchor-id="transformação-de-dados-e-alternativas-não-paramétricas-da-anova">Transformação de dados e alternativas não-paramétricas da ANOVA</h2>
+<p>E se as pressuposições não forem atendidas?</p>
+<p>Neste caso podemos aplicar diferentes transformações nos dados (raiz quadrada, logarítmica ou boxcox), para tentar atender às premissas de normalidade e homogeneidade das variâncias.</p>
+<p>Veremos as transformações para um novo conjunto de dados onde as premissas para a ANOVA não são atendidas:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-18_65712d283140cfe45dcd7e856f9e7d44">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="ot">&lt;-</span> InsectSprays</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(lm_micelial2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OK: Error variance appears to be homoscedastic (p = 0.880).</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>plot_presup <span class="ot">&lt;-</span> <span class="fu">check_model</span>(lm_micelial2)</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>plot_presup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="tranformação-por-raiz-quadrada-e-logarítmica" class="level3">
+<h3 class="anchored" data-anchor-id="tranformação-por-raiz-quadrada-e-logarítmica">Tranformação por raiz quadrada e logarítmica</h3>
+<p>Transformando os dados via raiz quadrada, realizando a ANOVA e testando as pressuposições, temos os seguintes chunks:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-19_a37a76d9f6a43b64aee7b45da6c8ab5f">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="ot">&lt;-</span> Inseticida <span class="sc">|&gt;</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">count2 =</span> <span class="fu">sqrt</span>(count))</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Vizualizando após a transformação</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="sc">|&gt;</span> </span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(spray, count2, <span class="at">fill=</span> spray))<span class="sc">+</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_few</span>()<span class="sc">+</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="tranformação-de-dados-e-alternativas-não-paramétricas-da-anova" class="level2">
-<h2 class="anchored" data-anchor-id="tranformação-de-dados-e-alternativas-não-paramétricas-da-anova">Tranformação de dados e alternativas não-paramétricas da ANOVA</h2>
-<p>E se as premissas não forem atendidas?</p>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-5_df6095383cc5e478011f9d2c47de3d8a">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="ot">&lt;-</span> InsectSprays</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="sc">|&gt;</span></span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(spray)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  spray  n
-1     A 12
-2     B 12
-3     C 12
-4     D 12
-5     E 12
-6     F 12</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="sc">|&gt;</span> </span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(spray, count))<span class="sc">+</span></span>
-<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"gray"</span>)<span class="sc">+</span></span>
-<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
-<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
-<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-6_e5bfebeb4935c06c171533212c6ab717">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span> (count <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: count
-          Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-spray      5 2668.8  533.77  34.702 &lt; 2.2e-16 ***
-Residuals 66 1015.2   15.38                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = count ~ spray, data = Inseticida)
-
-Residuals:
-   Min     1Q Median     3Q    Max 
--8.333 -1.958 -0.500  1.667  9.333 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  14.5000     1.1322  12.807  &lt; 2e-16 ***
-sprayB        0.8333     1.6011   0.520    0.604    
-sprayC      -12.4167     1.6011  -7.755 7.27e-11 ***
-sprayD       -9.5833     1.6011  -5.985 9.82e-08 ***
-sprayE      -11.0000     1.6011  -6.870 2.75e-09 ***
-sprayF        2.1667     1.6011   1.353    0.181    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 3.922 on 66 degrees of freedom
-Multiple R-squared:  0.7244,    Adjusted R-squared:  0.7036 
-F-statistic:  34.7 on 5 and 66 DF,  p-value: &lt; 2.2e-16</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(m1<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(m1<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Shapiro-Wilk normality test
-
-data:  m1$residuals
-W = 0.96006, p-value = 0.02226</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(m1<span class="sc">$</span>residuals)</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(m1<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(count <span class="sc">~</span> spray,</span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> Inseticida)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Bartlett test of homogeneity of variances
-
-data:  count by spray
-Bartlett's K-squared = 25.96, df = 5, p-value = 9.085e-05</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Warning: Non-normality of residuals detected (p = 0.022).</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Warning: Heteroscedasticity (non-constant error variance) detected (p &lt; .001).</code></pre>
-</div>
-</div>
-</section>
-<section id="tranformando-os-dados" class="level2">
-<h2 class="anchored" data-anchor-id="tranformando-os-dados">Tranformando os dados</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-7_bc714c27755f7310f1986ed0b958bc28">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="ot">&lt;-</span> Inseticida <span class="sc">|&gt;</span> </span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">count2 =</span> <span class="fu">sqrt</span>(count))</span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>Inseticida <span class="sc">|&gt;</span> </span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(spray, count2, <span class="at">fill=</span> spray))<span class="sc">+</span></span>
-<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
-<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_few</span>()<span class="sc">+</span></span>
-<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_few</span>()<span class="sc">+</span></span>
-<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span> (count2 <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-20_5b441614556e7b263ed52b8e15a4a770">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span> (count2 <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -818,137 +591,53 @@ Residuals 66 26.058  0.3948
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = count2 ~ spray, data = Inseticida)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--1.24486 -0.39970 -0.01902  0.42661  1.40089 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   3.7607     0.1814  20.733  &lt; 2e-16 ***
-sprayB        0.1160     0.2565   0.452    0.653    
-sprayC       -2.5158     0.2565  -9.807 1.64e-14 ***
-sprayD       -1.5963     0.2565  -6.223 3.80e-08 ***
-sprayE       -1.9512     0.2565  -7.606 1.34e-10 ***
-sprayF        0.2579     0.2565   1.006    0.318    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.6283 on 66 degrees of freedom
-Multiple R-squared:  0.7724,    Adjusted R-squared:  0.7552 
-F-statistic:  44.8 on 5 and 66 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(m2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-21_b19534704033b7ae260aabca7d61e814">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(m2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(m2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Shapiro-Wilk normality test
-
-data:  m2$residuals
-W = 0.98721, p-value = 0.6814</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(m2<span class="sc">$</span>residuals)</span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(m2<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A transformação logarítima pode ser feita substituindo a função <code>sqrt()</code> por <code>log()</code>.</p>
+</section>
+<section id="transformação-boxcox" class="level3">
+<h3 class="anchored" data-anchor-id="transformação-boxcox">Transformação BoxCox</h3>
+<p>A transformação Box-Cox é definida por uma família de transformações parametrizadas por lambda (λ)</p>
+<p>Processo de aplicação consiste em estimar lambda (λ), calculando a transformação para uma série de valores possíveis de λ (geralmente de -2 a 2, por exemplo) e escolhendo aquela que maximiza a normalidade dos dados transformados. Posteriormente, aplicar a transformação aos dados originais y^(λ), onde y é a variável de interesse.</p>
+<p>O pacote <strong>MASS</strong> possui as funções úteis para realizar essa transformação. Veja:</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-22_f1a28c704484fc9c20054b12dfa8eed7">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">boxcox</span>(<span class="fu">lm</span>(Inseticida<span class="sc">$</span>count<span class="fl">+0.1</span> <span class="sc">~</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(count2 <span class="sc">~</span> spray,</span>
-<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> Inseticida)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Bartlett test of homogeneity of variances
-
-data:  count2 by spray
-Bartlett's K-squared = 3.7525, df = 5, p-value = 0.5856</code></pre>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> b<span class="sc">$</span>x[<span class="fu">which.max</span>(b<span class="sc">$</span>y)]</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">=</span> <span class="fl">0.5</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>Inseticida<span class="sc">$</span>count3 <span class="ot">&lt;-</span>(Inseticida<span class="sc">$</span>count <span class="sc">^</span> lambda <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
-<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OK: residuals appear as normally distributed (p = 0.681).</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OK: Error variance appears to be homoscedastic (p = 0.854).</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(m2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-23_e260c1abadf9ac664237da180e7090f3">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(Inseticida<span class="sc">$</span>count3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-7-4.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-24_f39fdc4386bdfb2d0a6b37fb48778312">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span> (count3 <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(m3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
-<section id="agrupamento" class="level2">
-<h2 class="anchored" data-anchor-id="agrupamento">Agrupamento</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-8_045d045e3ca2a32465c961267c8c9668">
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>medias1 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m1, <span class="sc">~</span> spray)</span>
-<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> spray emmean   SE df lower.CL upper.CL .group
- C       2.08 1.13 66   -0.177     4.34  1    
- E       3.50 1.13 66    1.240     5.76  1    
- D       4.92 1.13 66    2.656     7.18  1    
- A      14.50 1.13 66   12.240    16.76   2   
- B      15.33 1.13 66   13.073    17.59   2   
- F      16.67 1.13 66   14.406    18.93   2   
-
-Confidence level used: 0.95 
-P value adjustment: tukey method for comparing a family of 6 estimates 
-significance level used: alpha = 0.05 
-NOTE: If two or more means share the same grouping symbol,
-      then we cannot show them to be different.
-      But we also did not show them to be the same. </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>cld1 <span class="ot">&lt;-</span> <span class="fu">cld</span>(<span class="fu">emmeans</span>(m1, <span class="sc">~</span> spray),<span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">letters =</span> LETTERS)</span>
-<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>cld1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> spray emmean   SE df lower.CL upper.CL .group
- C       2.08 1.13 66   -0.177     4.34  1    
- E       3.50 1.13 66    1.240     5.76  1    
- D       4.92 1.13 66    2.656     7.18  1    
- A      14.50 1.13 66   12.240    16.76   2   
- B      15.33 1.13 66   13.073    17.59   2   
- F      16.67 1.13 66   14.406    18.93   2   
-
-Confidence level used: 0.95 
-P value adjustment: tukey method for comparing a family of 6 estimates 
-significance level used: alpha = 0.01 
-NOTE: If two or more means share the same grouping symbol,
-      then we cannot show them to be different.
-      But we also did not show them to be the same. </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>medias2 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m2, <span class="sc">~</span> spray)</span>
-<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias2, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> spray emmean    SE df lower.CL upper.CL .group
- C       1.24 0.181 66    0.883     1.61  a    
- E       1.81 0.181 66    1.447     2.17  ab   
- D       2.16 0.181 66    1.802     2.53   b   
- A       3.76 0.181 66    3.399     4.12    c  
- B       3.88 0.181 66    3.514     4.24    c  
- F       4.02 0.181 66    3.656     4.38    c  
-
-Confidence level used: 0.95 
-P value adjustment: tukey method for comparing a family of 6 estimates 
-significance level used: alpha = 0.05 
-NOTE: If two or more means share the same grouping symbol,
-      then we cannot show them to be different.
-      But we also did not show them to be the same. </code></pre>
-</div>
-</div>
-</section>
-<section id="alternativa-2---não-paramétrico" class="level2">
-<h2 class="anchored" data-anchor-id="alternativa-2---não-paramétrico">Alternativa 2 - não paramétrico</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-9_8d75085769c432efee616c5513dfef37">
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(agricolae)</span>
-<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(count <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="teste-de-kruskal-walis" class="level3">
+<h3 class="anchored" data-anchor-id="teste-de-kruskal-walis">Teste de Kruskal-Walis</h3>
+<p>Se isso não for eficaz, podem ser utilizados testes não paramétricos, como o teste de Kruskal-Wallis, que não assume normalidade dos dados.</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-25_0dec11b95b5eaa699df5f72229e9b32e">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(agricolae)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(count <span class="sc">~</span> spray, <span class="at">data =</span> Inseticida)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Kruskal-Wallis rank sum test
@@ -956,10 +645,11 @@ NOTE: If two or more means share the same grouping symbol,
 data:  count by spray
 Kruskal-Wallis chi-squared = 54.691, df = 5, p-value = 1.511e-10</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">kruskal</span>(Inseticida<span class="sc">$</span>count,</span>
-<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>        Inseticida<span class="sc">$</span>spray,</span>
-<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">group =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a>m3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">kruskal</span>(Inseticida<span class="sc">$</span>count,</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>        Inseticida<span class="sc">$</span>spray,</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">group =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>m3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$statistics
      Chisq Df      p.chisq  t.value      MSD
@@ -995,18 +685,17 @@ attr(,"class")
 </div>
 </div>
 </section>
-<section id="alternativa-3---glms" class="level2">
-<h2 class="anchored" data-anchor-id="alternativa-3---glms">Alternativa 3 - GLMs</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-10_f1ea4710f0f08d1de6121919f1c90b63">
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glm</span>(count <span class="sc">~</span> spray,</span>
-<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">family =</span> poisson,</span>
-<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> Inseticida)</span>
-<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a>?glm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>starting httpd help server ... done</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>m4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="modelos-lineares-não-generelaziados" class="level3">
+<h3 class="anchored" data-anchor-id="modelos-lineares-não-generelaziados">Modelos Lineares Não Generelaziados</h3>
+<p>Os modelos lineares não generalizados permitem modelar relações entre variáveis dependentes e independentes, mesmo quando a distribuição dos dados não é normal ou quando a variância não é constante.</p>
+<p>Você pode utilizar a função <code>glm()</code> do R básico, identificando a distribuição que mais adequa aos seus dados no argumento <code>family =</code>.</p>
+<p>Aqui assumimos a distribuição de poisson.</p>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-26_406720494ee7823733612820ba2855b9">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">glm</span>(count <span class="sc">~</span> spray,</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">family =</span> poisson,</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> Inseticida)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>m4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:  glm(formula = count ~ spray, family = poisson, data = Inseticida)
@@ -1019,32 +708,9 @@ Degrees of Freedom: 71 Total (i.e. Null);  66 Residual
 Null Deviance:      409 
 Residual Deviance: 98.33    AIC: 376.6</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-glm(formula = count ~ spray, family = poisson, data = Inseticida)
-
-Coefficients:
-            Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  2.67415    0.07581  35.274  &lt; 2e-16 ***
-sprayB       0.05588    0.10574   0.528    0.597    
-sprayC      -1.94018    0.21389  -9.071  &lt; 2e-16 ***
-sprayD      -1.08152    0.15065  -7.179 7.03e-13 ***
-sprayE      -1.42139    0.17192  -8.268  &lt; 2e-16 ***
-sprayF       0.13926    0.10367   1.343    0.179    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-(Dispersion parameter for poisson family taken to be 1)
-
-    Null deviance: 409.041  on 71  degrees of freedom
-Residual deviance:  98.329  on 66  degrees of freedom
-AIC: 376.59
-
-Number of Fisher Scoring iterations: 5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-27_b1e256766ef119891da898bae3a0edc6">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Deviance Table
 
@@ -1058,34 +724,25 @@ Terms added sequentially (first to last)
 NULL                     71     409.04
 spray  5   310.71        66      98.33</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(m4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-28_e470883e3fdfade5cb052121090cef46">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(m4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a>medias4 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m4, <span class="sc">~</span> spray, <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a>medias4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> spray  rate    SE  df asymp.LCL asymp.UCL
- A     14.50 1.099 Inf     12.50     16.82
- B     15.33 1.130 Inf     13.27     17.72
- C      2.08 0.417 Inf      1.41      3.08
- D      4.92 0.640 Inf      3.81      6.35
- E      3.50 0.540 Inf      2.59      4.74
- F     16.67 1.179 Inf     14.51     19.14
-
-Confidence level used: 0.95 
-Intervals are back-transformed from the log scale </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-29_8ed980341b409c261973546fbc620334">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>medias4 <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m4, <span class="sc">~</span> spray, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cld</span>(medias4, <span class="at">Letters =</span> letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> spray  rate    SE  df asymp.LCL asymp.UCL .group
- C      2.08 0.417 Inf      1.41      3.08  1    
- E      3.50 0.540 Inf      2.59      4.74  12   
- D      4.92 0.640 Inf      3.81      6.35   2   
- A     14.50 1.099 Inf     12.50     16.82    3  
- B     15.33 1.130 Inf     13.27     17.72    3  
- F     16.67 1.179 Inf     14.51     19.14    3  
+ C      2.08 0.417 Inf      1.41      3.08  a    
+ E      3.50 0.540 Inf      2.59      4.74  ab   
+ D      4.92 0.640 Inf      3.81      6.35   b   
+ A     14.50 1.099 Inf     12.50     16.82    c  
+ B     15.33 1.130 Inf     13.27     17.72    c  
+ F     16.67 1.179 Inf     14.51     19.14    c  
 
 Confidence level used: 0.95 
 Intervals are back-transformed from the log scale 
@@ -1097,43 +754,9 @@ NOTE: If two or more means share the same grouping symbol,
       But we also did not show them to be the same. </code></pre>
 </div>
 </div>
+
+
 </section>
-<section id="transformação-boxcox" class="level2">
-<h2 class="anchored" data-anchor-id="transformação-boxcox">Transformação BoxCox</h2>
-<div class="cell" data-hash="Aula_6.1_cache/html/unnamed-chunk-11_9c5a61f722eac7f26026441bacd079a5">
-<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb127-3"><a href="#cb127-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">boxcox</span>(<span class="fu">lm</span>(Inseticida<span class="sc">$</span>count<span class="fl">+0.1</span> <span class="sc">~</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> b<span class="sc">$</span>x[<span class="fu">which.max</span>(b<span class="sc">$</span>y)]</span>
-<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">=</span> <span class="fl">0.5</span></span>
-<span id="cb128-3"><a href="#cb128-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb128-4"><a href="#cb128-4" aria-hidden="true" tabindex="-1"></a>Inseticida<span class="sc">$</span>count3 <span class="ot">&lt;-</span>(Inseticida<span class="sc">$</span>count <span class="sc">^</span> lambda <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> lambda</span>
-<span id="cb128-5"><a href="#cb128-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb128-6"><a href="#cb128-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(Inseticida<span class="sc">$</span>count3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Aula_6.1_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a>Inseticida<span class="sc">$</span>count3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  4.3245553  3.2915026  6.9442719  5.4833148  5.4833148  4.9282032
- [7]  4.3245553  7.5916630  6.2462113  6.9442719  5.4833148  5.2111026
-[13]  4.6332496  6.2462113  7.1651514  4.6332496  6.0000000  5.4833148
-[19]  6.2462113  6.2462113  6.7177979  7.1651514  3.2915026  5.2111026
-[25] -2.0000000  0.0000000  3.2915026  0.8284271  1.4641016  0.0000000
-[31]  0.8284271  0.0000000  1.4641016 -2.0000000  0.0000000  2.0000000
-[37]  1.4641016  2.4721360  4.9282032  2.8989795  2.0000000  1.4641016
-[43]  2.4721360  2.4721360  2.4721360  2.4721360  0.8284271  2.0000000
-[49]  1.4641016  2.4721360  1.4641016  2.4721360  1.4641016  2.8989795
-[55]  0.0000000  0.0000000  1.4641016  0.8284271  2.8989795  2.0000000
-[61]  4.6332496  4.0000000  5.7459667  7.3808315  5.7459667  6.0000000
-[67]  5.2111026  4.3245553  8.1980390  8.1980390  7.7979590  5.2111026</code></pre>
-</div>
-</div>
-
-
 </section>
 </section>
 

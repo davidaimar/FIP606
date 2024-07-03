@@ -245,6 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#instalando-um-pacote" id="toc-instalando-um-pacote" class="nav-link" data-scroll-target="#instalando-um-pacote">Instalando um Pacote:</a></li>
   <li><a href="#carregando-um-pacote" id="toc-carregando-um-pacote" class="nav-link" data-scroll-target="#carregando-um-pacote">Carregando um pacote</a></li>
+  <li><a href="#pacotes-r-em-outros-repositórios" id="toc-pacotes-r-em-outros-repositórios" class="nav-link" data-scroll-target="#pacotes-r-em-outros-repositórios">Pacotes R em outros repositórios</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -295,6 +296,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
+</div>
+</section>
+<section id="pacotes-r-em-outros-repositórios" class="level2">
+<h2 class="anchored" data-anchor-id="pacotes-r-em-outros-repositórios">Pacotes R em outros repositórios</h2>
+<p>Como já mencionamos, os pacotes R estão disponíveis em repositórios online. O repositório mais conhecido e utilizado é o CRAN (Comprehensive R Archive Network). No entanto, existem vários repositórios importantes que oferecem uma vasta gama de pacotes R.</p>
+<p>Veja como utilizar dois pacotes CRAN para para instalar pacotes de outros repositórios:</p>
+<div class="cell" data-hash="Aula_2_cache/html/unnamed-chunk-4_22cea7e45283994ca8c70463e7c61980">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pak)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#pak::pkg_install("Icens")</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#pak::pkg_install("emdelponte/r4pde")</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github("emdelponte/r4pde")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

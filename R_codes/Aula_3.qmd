@@ -7,20 +7,21 @@ format: html
 A análise de dados tem como pré-requisito básico, obviamente, a existência dos dados a serem analisados. Idependente do procedimento de coleta de dados os dados podem ser organizados em arquivos digitais de diversos formatos. Aqui você aprenderá como trazer os seus dados para o seu projeto no Rstudio. 
 
 Pacotes necessários
-```{r warning=FALSE}
+```{r warning=FALSE, message=FALSE}
 library(tidyverse)
 library(ggthemes)
 
 ```
 
+Você pode usar `{warning=FALSE, message=FALSE}` no cabeçalho do chunk para ocultar alertas e mensagens de carregamento.
+
 ## Dados em formato CSV
 
 Para importar dados no formato CSV você pode usar a função `read.csv()`.
-```{r}
+```{r warning=FALSE, message=FALSE}
 cr <- read_csv("https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv")
 
 ```
-Você pode usar `{warning=FALSE, message=FALSE}` no cabeçalho do chunk para ocultar aleetas e mensagens de carregamento!
 
 ## Arquivos Excel
 
@@ -76,7 +77,7 @@ cr |>
 ```
 #Fazendo boxplot para as mesma variável
 
-```{r}
+```{r warning=FALSE, message=FALSE}
 
 cr |> 
   ggplot(aes(x = inc)) +

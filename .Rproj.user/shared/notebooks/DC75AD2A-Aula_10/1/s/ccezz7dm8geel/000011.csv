@@ -1,0 +1,6 @@
+"0","Viçosa_2 <- leaflet(sbr) |> "
+"0","  addTiles() |> "
+"0","  addCircleMarkers(radius = 2)"
+"2","Assuming ""longitude"" and ""latitude"" are longitude and latitude, respectively
+"
+"0","Viçosa_2"
