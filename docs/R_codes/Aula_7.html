@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FIP606 -</title>
+<title>FIP606 - ANOVA em DBC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -272,8 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#anova-em-dbc" id="toc-anova-em-dbc" class="nav-link active" data-scroll-target="#anova-em-dbc">ANOVA em DBC</a></li>
-  <li><a href="#adicionando-as-letras-do-teste-tukey-em-gráficos" id="toc-adicionando-as-letras-do-teste-tukey-em-gráficos" class="nav-link" data-scroll-target="#adicionando-as-letras-do-teste-tukey-em-gráficos">Adicionando as letras do Teste Tukey em Gráficos</a></li>
+  <li><a href="#adicionando-as-letras-do-teste-tukey-em-gráficos" id="toc-adicionando-as-letras-do-teste-tukey-em-gráficos" class="nav-link active" data-scroll-target="#adicionando-as-letras-do-teste-tukey-em-gráficos">Adicionando as letras do Teste Tukey em Gráficos</a></li>
   <li><a href="#área-abaixo-da-curva-de-progresso-da-doença-aacpd" id="toc-área-abaixo-da-curva-de-progresso-da-doença-aacpd" class="nav-link" data-scroll-target="#área-abaixo-da-curva-de-progresso-da-doença-aacpd">Área Abaixo da Curva de Progresso da Doença (AACPD)</a></li>
   <li><a href="#coenficiente-de-variação-cv" id="toc-coenficiente-de-variação-cv" class="nav-link" data-scroll-target="#coenficiente-de-variação-cv">Coenficiente de Variação (CV)</a></li>
   </ul>
@@ -282,10 +281,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ANOVA em DBC</h1>
+</div>
 
 
-<section id="anova-em-dbc" class="level2">
-<h2 class="anchored" data-anchor-id="anova-em-dbc">ANOVA em DBC</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Experimentos em DBC (Delineamento em Blocos Casualizados), são um tipo de design experimental utilizado para controlar variações provenientes de um ambiente exeperimental não homogêneo (não aleatórias) entre unidades experimentais.</p>
 <p>Podemos utilizar a função <code>aov()</code> ou <code>lm()</code> para realizar a ANOVA. A fórmula <code>resposta ~ tratamento + Error(bloco)</code> especifica que a variável resposta é explicada pelo efeito do tratamento, considerando o bloco como um fator de bloqueio (variável de erro).</p>
 <p>Pacotes utilizados</p>
@@ -414,7 +426,6 @@ NOTE: If two or more means share the same grouping symbol,
 </div>
 </div>
 <p>Quando se tem mais de uma variável resposta no conjunto de dados a anova deve ser feita para cada uma.</p>
-</section>
 <section id="adicionando-as-letras-do-teste-tukey-em-gráficos" class="level2">
 <h2 class="anchored" data-anchor-id="adicionando-as-letras-do-teste-tukey-em-gráficos">Adicionando as letras do Teste Tukey em Gráficos</h2>
 <p>Os resultados da análise de variância junto com o teste tukey podem ser ilustrados em gráficos.</p>

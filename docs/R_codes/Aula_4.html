@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FIP606 -</title>
+<title>FIP606 - Obtendo dados através do copiar e colar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -241,8 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#obtendo-dados-através-do-copiar-e-colar" id="toc-obtendo-dados-através-do-copiar-e-colar" class="nav-link active" data-scroll-target="#obtendo-dados-através-do-copiar-e-colar">Obtendo dados através do copiar e colar</a></li>
-  <li><a href="#outros-tipos-de-gráficos" id="toc-outros-tipos-de-gráficos" class="nav-link" data-scroll-target="#outros-tipos-de-gráficos">Outros tipos de gráficos</a>
+  <li><a href="#outros-tipos-de-gráficos" id="toc-outros-tipos-de-gráficos" class="nav-link active" data-scroll-target="#outros-tipos-de-gráficos">Outros tipos de gráficos</a>
   <ul class="collapse">
   <li><a href="#montando-gráfico-à-partir-de-um-data-frame-criado" id="toc-montando-gráfico-à-partir-de-um-data-frame-criado" class="nav-link" data-scroll-target="#montando-gráfico-à-partir-de-um-data-frame-criado">Montando gráfico à partir de um data frame criado</a></li>
   <li><a href="#tabela-de-contigência" id="toc-tabela-de-contigência" class="nav-link" data-scroll-target="#tabela-de-contigência">Tabela de Contigência</a></li>
@@ -254,10 +253,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Obtendo dados através do copiar e colar</h1>
+</div>
 
 
-<section id="obtendo-dados-através-do-copiar-e-colar" class="level1">
-<h1>Obtendo dados através do copiar e colar</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Para obter dados diretamente de tabelas em sites ou qualquer outro documento digital e criar data.frames no R você pode utilizar dois pacotes, o <strong>tibble</strong> e o <strong>datapasta</strong>. Ambos compilam os dados copiados e organizam mantendo o formato original dentro do chunk, uma maneira simples que otimiza o seu <code>Ctrl + C</code> &amp; <code>Ctrl + V</code>.</p>
 <p>Usando o <strong>datapasta</strong>, após copiar três colunas de dados de uma planilha, basta clicar em <code>Addins...</code> e <code>Past as data.frame</code>.</p>
 <div class="cell" data-hash="Aula_4_cache/html/unnamed-chunk-1_5c3312328877329fbf8a89b8ab3c5f46">
@@ -410,7 +422,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 22 more rows</code></pre>
 </div>
 </div>
-</section>
 <section id="outros-tipos-de-gráficos" class="level1">
 <h1>Outros tipos de gráficos</h1>
 <section id="montando-gráfico-à-partir-de-um-data-frame-criado" class="level2">

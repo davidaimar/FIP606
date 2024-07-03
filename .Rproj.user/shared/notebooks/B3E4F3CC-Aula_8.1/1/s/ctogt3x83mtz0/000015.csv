@@ -1,8 +1,0 @@
-"0",""
-"0","library(ec50estimator)"
-"0","df_ec50 <- estimate_EC50(mean_germination ~ dose,"
-"0","                         data = sensi2,"
-"0","                         isolate_col = ""code"","
-"0","                         interval = ""delta"","
-"0","                         fct = drc :: LL.3())"
-"0","df_ec50"

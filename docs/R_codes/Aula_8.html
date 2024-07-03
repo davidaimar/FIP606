@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FIP606 -</title>
+<title>FIP606 - ANOVA Fatorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -272,8 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#anova-fatorial" id="toc-anova-fatorial" class="nav-link active" data-scroll-target="#anova-fatorial">ANOVA Fatorial</a></li>
-  <li><a href="#anova-em-experimentos-com-parcelas-subdivididas" id="toc-anova-em-experimentos-com-parcelas-subdivididas" class="nav-link" data-scroll-target="#anova-em-experimentos-com-parcelas-subdivididas">ANOVA em Experimentos com Parcelas Subdivididas</a>
+  <li><a href="#anova-em-experimentos-com-parcelas-subdivididas" id="toc-anova-em-experimentos-com-parcelas-subdivididas" class="nav-link active" data-scroll-target="#anova-em-experimentos-com-parcelas-subdivididas">ANOVA em Experimentos com Parcelas Subdivididas</a>
   <ul class="collapse">
   <li><a href="#modelo-para-anova-em-parcelas-subdivididas" id="toc-modelo-para-anova-em-parcelas-subdivididas" class="nav-link" data-scroll-target="#modelo-para-anova-em-parcelas-subdivididas">Modelo para Anova em parcelas subdivididas</a></li>
   <li><a href="#transformando-os-dados" id="toc-transformando-os-dados" class="nav-link" data-scroll-target="#transformando-os-dados">Transformando os dados</a></li>
@@ -285,10 +284,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ANOVA Fatorial</h1>
+</div>
 
 
-<section id="anova-fatorial" class="level2">
-<h2 class="anchored" data-anchor-id="anova-fatorial">ANOVA Fatorial</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Experimentos fatoriais são aqueles em que se estudam simultaneamente dois ou mais fatores, cada um deles com dois ou mais níveis.</p>
 <p>O fatorial é um tipo de esquema, ou seja, uma das maneiras de organizar os tratamentos e não um tipo de delineamento, que representa a maneira pela qual os tratamentos são distribuídos às unidades experimentais.</p>
 <p>Aqui você aprenderá a realizar uma ANOVA fatorial no R.</p>
@@ -385,7 +397,6 @@ NOTE: If two or more means share the same grouping symbol,
       But we also did not show them to be the same. </code></pre>
 </div>
 </div>
-</section>
 <section id="anova-em-experimentos-com-parcelas-subdivididas" class="level2">
 <h2 class="anchored" data-anchor-id="anova-em-experimentos-com-parcelas-subdivididas">ANOVA em Experimentos com Parcelas Subdivididas</h2>
 <p>Tal como no caso de fatorial, o termo parcelas subdivididas se refere a um esquema do experimento, ou seja, a maneira pela qual os tratamentos são organizados. Havendo dois fatores, eles são designados como fator primário e secundário.</p>

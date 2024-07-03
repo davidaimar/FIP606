@@ -1,4 +1,0 @@
-"0","#Combinando os dois gráficos mais uma vez"
-"0"," pacht <- (p5 / p6) +"
-"0","  plot_layout(guides = 'collect', axis_titles = 'collect')+"
-"0","  plot_annotation(tag_levels = 'A', title = ""Coffe rust in Ethiopia"") #Colocando o título no gráfico e separando as regiões em A e B"
