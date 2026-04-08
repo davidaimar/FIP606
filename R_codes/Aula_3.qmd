@@ -82,7 +82,7 @@ cr |>
 
 ```
 
-#Fazendo boxplot para as mesma variável
+# Fazendo boxplot para as mesma variável
 
 ```{r warning=FALSE, message=FALSE}
 
@@ -166,7 +166,7 @@ cr |>
 
 ```
 
-#Salvar o último gráfico
+# Salvar o último gráfico
 
 ```{r}
 ggsave("cr.png", bg = 'white')
