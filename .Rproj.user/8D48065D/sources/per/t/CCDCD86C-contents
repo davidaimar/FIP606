@@ -59,7 +59,7 @@ summary(cr$inc)
 
 ## Elaboração de gráficos
 
-Entendo o conteúdo dos nossos dados, podemos criar gráficos através do `ggplot()` para facilitar a vizualização
+Entendendo o conteúdo dos nossos dados, podemos criar gráficos através do `ggplot()` para facilitar a vizualização
 
 Gráficos do tipo **histograma** avaliando a incidência geral e por região:
 
@@ -82,7 +82,7 @@ cr |>
 
 ```
 
-# Fazendo boxplot para as mesma variável
+Fazendo boxplot para as mesma variável
 
 ```{r warning=FALSE, message=FALSE}
 
@@ -166,7 +166,7 @@ cr |>
 
 ```
 
-# Salvar o último gráfico
+Salvar o último gráfico
 
 ```{r}
 ggsave("cr.png", bg = 'white')
