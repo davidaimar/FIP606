@@ -246,6 +246,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#analisando-a-estrutura-dos-dados" id="toc-analisando-a-estrutura-dos-dados" class="nav-link" data-scroll-target="#analisando-a-estrutura-dos-dados">Analisando a estrutura dos dados</a>
   <ul class="collapse">
   <li><a href="#elaboração-de-gráficos" id="toc-elaboração-de-gráficos" class="nav-link" data-scroll-target="#elaboração-de-gráficos">Elaboração de gráficos</a></li>
+  </ul></li>
+  <li><a href="#fazendo-boxplot-para-as-mesma-variável" id="toc-fazendo-boxplot-para-as-mesma-variável" class="nav-link" data-scroll-target="#fazendo-boxplot-para-as-mesma-variável">Fazendo boxplot para as mesma variável</a></li>
+  <li><a href="#salvar-o-último-gráfico" id="toc-salvar-o-último-gráfico" class="nav-link" data-scroll-target="#salvar-o-último-gráfico">Salvar o último gráfico</a>
+  <ul class="collapse">
   <li><a href="#modificando-dados" id="toc-modificando-dados" class="nav-link" data-scroll-target="#modificando-dados">Modificando dados</a>
   <ul class="collapse">
   <li><a href="#criando-subconjuntos" id="toc-criando-subconjuntos" class="nav-link" data-scroll-target="#criando-subconjuntos">Criando subconjuntos</a></li>
@@ -356,7 +360,10 @@ $ sev2            &lt;dbl&gt; 55.57986, 17.90349, 8.25120, 46.10154, 12.25167, 1
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Separando para as duas regiões destacadas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>#Fazendo boxplot para as mesma variável</p>
+</section>
+</section>
+<section id="fazendo-boxplot-para-as-mesma-variável" class="level1">
+<h1>Fazendo boxplot para as mesma variável</h1>
 <div class="cell" data-hash="Aula_3_cache/html/unnamed-chunk-8_17ddf63b2c4b714e7d2accce909b63ab">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>cr <span class="sc">|&gt;</span> </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> inc)) <span class="sc">+</span></span>
@@ -477,7 +484,9 @@ $ sev2            &lt;dbl&gt; 55.57986, 17.90349, 8.25120, 46.10154, 12.25167, 1
 <p><img src="Aula_3_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>#Salvar o último gráfico</p>
+</section>
+<section id="salvar-o-último-gráfico" class="level1">
+<h1>Salvar o último gráfico</h1>
 <div class="cell" data-hash="Aula_3_cache/html/unnamed-chunk-14_8b2eca5d597925a7b1b55cd1ff3063de">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"cr.png"</span>, <span class="at">bg =</span> <span class="st">'white'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -485,7 +494,6 @@ $ sev2            &lt;dbl&gt; 55.57986, 17.90349, 8.25120, 46.10154, 12.25167, 1
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 </div>
-</section>
 <section id="modificando-dados" class="level2">
 <h2 class="anchored" data-anchor-id="modificando-dados">Modificando dados</h2>
 <p>A partir do conjunto de dados inicial podemos selecionar informações úteis para, juntamente com os gráficos, facilitar o entendimento dos mesmos.</p>
